@@ -6,8 +6,8 @@
     "lat": 37.3180614,
     "lng": 126.8394794,
     "situations": [
-      "team",
-      "friends"
+      "drink",
+      "team"
     ],
     "price": 2,
     "maxGroup": 20,
@@ -26,7 +26,7 @@
     "lat": 37.3174908,
     "lng": 126.8407616,
     "situations": [
-      "friends",
+      "drink",
       "team",
       "parents"
     ],
@@ -47,7 +47,7 @@
     "lat": 37.3137465,
     "lng": 126.8287203,
     "situations": [
-      "friends",
+      "drink",
       "team",
       "parents"
     ],
@@ -68,8 +68,7 @@
     "lat": 37.308368,
     "lng": 126.8282507,
     "situations": [
-      "date",
-      "friends"
+      "date"
     ],
     "price": 2,
     "maxGroup": 8,
@@ -88,8 +87,7 @@
     "lat": 37.309789,
     "lng": 126.8273272,
     "situations": [
-      "solo",
-      "study"
+      "solo"
     ],
     "price": 1,
     "maxGroup": 6,
@@ -108,7 +106,7 @@
     "lat": 37.3113383,
     "lng": 126.8320611,
     "situations": [
-      "friends",
+      "drink",
       "team"
     ],
     "price": 2,
@@ -129,7 +127,7 @@
     "lat": 37.3094054,
     "lng": 126.8274512,
     "situations": [
-      "friends",
+      "drink",
       "date"
     ],
     "price": 2,
@@ -150,7 +148,7 @@
     "lat": 37.3182899,
     "lng": 126.8399054,
     "situations": [
-      "friends",
+      "drink",
       "team"
     ],
     "price": 2,
@@ -171,7 +169,7 @@
     "lat": 37.3182051,
     "lng": 126.8402623,
     "situations": [
-      "friends",
+      "drink",
       "date"
     ],
     "price": 2,
@@ -192,7 +190,7 @@
     "lat": 37.3175031,
     "lng": 126.8417703,
     "situations": [
-      "friends",
+      "drink",
       "team"
     ],
     "price": 2,
@@ -213,7 +211,7 @@
     "lat": 37.3089848,
     "lng": 126.8286801,
     "situations": [
-      "friends",
+      "drink",
       "date"
     ],
     "price": 2,
@@ -234,7 +232,7 @@
     "lat": 37.314216,
     "lng": 126.8394157,
     "situations": [
-      "friends",
+      "drink",
       "date"
     ],
     "price": 2,
@@ -255,7 +253,7 @@
     "lat": 37.3106651,
     "lng": 126.8289998,
     "situations": [
-      "friends",
+      "drink",
       "date"
     ],
     "price": 2,
@@ -276,8 +274,8 @@
     "lat": 37.3193036,
     "lng": 126.8362786,
     "situations": [
-      "team",
-      "friends"
+      "drink",
+      "team"
     ],
     "price": 2,
     "maxGroup": 20,
@@ -296,8 +294,8 @@
     "lat": 37.31239,
     "lng": 126.8390202,
     "situations": [
-      "team",
-      "friends"
+      "drink",
+      "team"
     ],
     "price": 2,
     "maxGroup": 20,
@@ -316,8 +314,8 @@
     "lat": 37.3094637,
     "lng": 126.8283144,
     "situations": [
-      "team",
-      "friends"
+      "drink",
+      "team"
     ],
     "price": 2,
     "maxGroup": 20,
@@ -336,8 +334,8 @@
     "lat": 37.3196433,
     "lng": 126.8333135,
     "situations": [
-      "team",
-      "friends"
+      "drink",
+      "team"
     ],
     "price": 2,
     "maxGroup": 20,
@@ -356,8 +354,8 @@
     "lat": 37.3129938,
     "lng": 126.8316057,
     "situations": [
-      "team",
-      "friends"
+      "drink",
+      "team"
     ],
     "price": 2,
     "maxGroup": 20,
@@ -376,8 +374,7 @@
     "lat": 37.3181297,
     "lng": 126.8365323,
     "situations": [
-      "date",
-      "friends"
+      "date"
     ],
     "price": 2,
     "maxGroup": 8,
@@ -396,8 +393,7 @@
     "lat": 37.3111672,
     "lng": 126.8306156,
     "situations": [
-      "date",
-      "friends"
+      "date"
     ],
     "price": 2,
     "maxGroup": 8,
@@ -416,8 +412,7 @@
     "lat": 37.3186658,
     "lng": 126.8391025,
     "situations": [
-      "date",
-      "friends"
+      "date"
     ],
     "price": 2,
     "maxGroup": 8,
@@ -436,8 +431,7 @@
     "lat": 37.3112239,
     "lng": 126.829011,
     "situations": [
-      "date",
-      "friends"
+      "date"
     ],
     "price": 2,
     "maxGroup": 8,
@@ -456,8 +450,7 @@
     "lat": 37.3177147,
     "lng": 126.8395487,
     "situations": [
-      "friends",
-      "study"
+      "drink"
     ],
     "price": 2,
     "maxGroup": 12,
@@ -476,7 +469,7 @@
     "lat": 37.3176007,
     "lng": 126.8408795,
     "situations": [
-      "friends",
+      "drink",
       "team"
     ],
     "price": 2,
@@ -497,8 +490,7 @@
     "lat": 37.3193145,
     "lng": 126.8359058,
     "situations": [
-      "friends",
-      "study"
+      "drink"
     ],
     "price": 2,
     "maxGroup": 12,
@@ -517,8 +509,7 @@
     "lat": 37.3087131,
     "lng": 126.8283804,
     "situations": [
-      "date",
-      "study"
+      "date"
     ],
     "price": 1,
     "maxGroup": 6,
@@ -537,8 +528,7 @@
     "lat": 37.3082322,
     "lng": 126.8283814,
     "situations": [
-      "date",
-      "study"
+      "date"
     ],
     "price": 1,
     "maxGroup": 6,
@@ -557,8 +547,7 @@
     "lat": 37.3195645,
     "lng": 126.8324893,
     "situations": [
-      "date",
-      "study"
+      "date"
     ],
     "price": 1,
     "maxGroup": 6,
@@ -577,8 +566,7 @@
     "lat": 37.3187846,
     "lng": 126.8384524,
     "situations": [
-      "date",
-      "study"
+      "date"
     ],
     "price": 1,
     "maxGroup": 6,
@@ -597,8 +585,7 @@
     "lat": 37.3105331,
     "lng": 126.8315123,
     "situations": [
-      "friends",
-      "study"
+      "drink"
     ],
     "price": 2,
     "maxGroup": 12,
@@ -617,7 +604,7 @@
     "lat": 37.3109135,
     "lng": 126.8278648,
     "situations": [
-      "friends",
+      "drink",
       "team",
       "parents"
     ],
@@ -639,8 +626,7 @@
     "lng": 126.8394457,
     "situations": [
       "team",
-      "parents",
-      "study"
+      "parents"
     ],
     "price": 1,
     "maxGroup": 12,
@@ -660,8 +646,7 @@
     "lng": 126.8323238,
     "situations": [
       "team",
-      "parents",
-      "study"
+      "parents"
     ],
     "price": 1,
     "maxGroup": 12,
@@ -681,8 +666,7 @@
     "lng": 126.828581,
     "situations": [
       "team",
-      "parents",
-      "study"
+      "parents"
     ],
     "price": 1,
     "maxGroup": 12,
@@ -702,8 +686,7 @@
     "lng": 126.8279765,
     "situations": [
       "team",
-      "parents",
-      "study"
+      "parents"
     ],
     "price": 1,
     "maxGroup": 12,
@@ -723,8 +706,7 @@
     "lng": 126.8282742,
     "situations": [
       "team",
-      "parents",
-      "study"
+      "parents"
     ],
     "price": 1,
     "maxGroup": 12,
@@ -743,8 +725,7 @@
     "lat": 37.3106782,
     "lng": 126.8278451,
     "situations": [
-      "solo",
-      "study"
+      "solo"
     ],
     "price": 1,
     "maxGroup": 6,
@@ -782,8 +763,7 @@
     "lat": 37.3149264,
     "lng": 126.8309859,
     "situations": [
-      "date",
-      "friends"
+      "date"
     ],
     "price": 2,
     "maxGroup": 6,
@@ -802,8 +782,7 @@
     "lat": 37.3103073,
     "lng": 126.8285472,
     "situations": [
-      "date",
-      "friends"
+      "date"
     ],
     "price": 2,
     "maxGroup": 6,
@@ -843,8 +822,8 @@
     "lat": 37.317981,
     "lng": 126.8396634,
     "situations": [
-      "team",
-      "friends"
+      "drink",
+      "team"
     ],
     "price": 2,
     "maxGroup": 20,
@@ -884,8 +863,8 @@
     "lat": 37.310221,
     "lng": 126.8274177,
     "situations": [
-      "team",
-      "friends"
+      "drink",
+      "team"
     ],
     "price": 2,
     "maxGroup": 20,
@@ -904,8 +883,8 @@
     "lat": 37.319322,
     "lng": 126.828407,
     "situations": [
-      "team",
-      "friends"
+      "drink",
+      "team"
     ],
     "price": 2,
     "maxGroup": 20,
@@ -924,8 +903,7 @@
     "lat": 37.3184046,
     "lng": 126.8385152,
     "situations": [
-      "friends",
-      "study",
+      "drink",
       "team"
     ],
     "price": 2,
@@ -946,8 +924,7 @@
     "lat": 37.3112088,
     "lng": 126.8319274,
     "situations": [
-      "friends",
-      "study",
+      "drink",
       "team"
     ],
     "price": 2,
@@ -968,8 +945,7 @@
     "lat": 37.317668,
     "lng": 126.8390522,
     "situations": [
-      "friends",
-      "study",
+      "drink",
       "team"
     ],
     "price": 2,
@@ -990,8 +966,7 @@
     "lat": 37.3132383,
     "lng": 126.8321057,
     "situations": [
-      "friends",
-      "study",
+      "drink",
       "team"
     ],
     "price": 2,
@@ -1012,8 +987,7 @@
     "lat": 37.3109505,
     "lng": 126.8314196,
     "situations": [
-      "friends",
-      "study",
+      "drink",
       "team"
     ],
     "price": 2,
@@ -1034,7 +1008,7 @@
     "lat": 37.3105521,
     "lng": 126.829163,
     "situations": [
-      "friends",
+      "drink",
       "team"
     ],
     "price": 2,
@@ -1055,7 +1029,7 @@
     "lat": 37.3104316,
     "lng": 126.8285569,
     "situations": [
-      "friends",
+      "drink",
       "team"
     ],
     "price": 2,
@@ -1076,7 +1050,7 @@
     "lat": 37.3175419,
     "lng": 126.8349128,
     "situations": [
-      "friends",
+      "drink",
       "date"
     ],
     "price": 2,
@@ -1097,7 +1071,7 @@
     "lat": 37.313777,
     "lng": 126.828129,
     "situations": [
-      "friends",
+      "drink",
       "team"
     ],
     "price": 2,
@@ -1118,8 +1092,8 @@
     "lat": 37.3100753,
     "lng": 126.828907,
     "situations": [
-      "date",
-      "friends"
+      "drink",
+      "date"
     ],
     "price": 3,
     "maxGroup": 6,
@@ -1138,8 +1112,7 @@
     "lat": 37.3108096,
     "lng": 126.8319207,
     "situations": [
-      "friends",
-      "study"
+      "drink"
     ],
     "price": 3,
     "maxGroup": 16,
@@ -1158,8 +1131,7 @@
     "lat": 37.3111866,
     "lng": 126.8306781,
     "situations": [
-      "friends",
-      "study"
+      "drink"
     ],
     "price": 2,
     "maxGroup": 16,
@@ -1178,8 +1150,7 @@
     "lat": 37.3184046,
     "lng": 126.8385152,
     "situations": [
-      "friends",
-      "study"
+      "drink"
     ],
     "price": 2,
     "maxGroup": 16,
@@ -1198,7 +1169,7 @@
     "lat": 37.3180043,
     "lng": 126.8386032,
     "situations": [
-      "friends",
+      "drink",
       "team"
     ],
     "price": 2,
@@ -1219,8 +1190,7 @@
     "lat": 37.320088,
     "lng": 126.8298804,
     "situations": [
-      "solo",
-      "study"
+      "solo"
     ],
     "price": 1,
     "maxGroup": 8,
@@ -1239,8 +1209,7 @@
     "lat": 37.3174504,
     "lng": 126.8365194,
     "situations": [
-      "solo",
-      "study"
+      "solo"
     ],
     "price": 1,
     "maxGroup": 8,
@@ -1299,8 +1268,7 @@
     "lat": 37.300821,
     "lng": 126.8379377,
     "situations": [
-      "solo",
-      "study"
+      "solo"
     ],
     "price": 1,
     "maxGroup": 6,
@@ -1319,8 +1287,7 @@
     "lat": 37.3008578,
     "lng": 126.8376409,
     "situations": [
-      "date",
-      "study"
+      "date"
     ],
     "price": 1,
     "maxGroup": 6,
@@ -1339,8 +1306,7 @@
     "lat": 37.3007692,
     "lng": 126.8381539,
     "situations": [
-      "date",
-      "study"
+      "date"
     ],
     "price": 1,
     "maxGroup": 6,
@@ -1359,8 +1325,7 @@
     "lat": 37.301374,
     "lng": 126.8383579,
     "situations": [
-      "solo",
-      "study"
+      "solo"
     ],
     "price": 1,
     "maxGroup": 6,
@@ -1379,7 +1344,7 @@
     "lat": 37.3011695,
     "lng": 126.8395338,
     "situations": [
-      "friends",
+      "drink",
       "team"
     ],
     "price": 2,
@@ -1400,7 +1365,7 @@
     "lat": 37.3008578,
     "lng": 126.8376409,
     "situations": [
-      "friends",
+      "drink",
       "team"
     ],
     "price": 2,
@@ -1421,8 +1386,7 @@
     "lat": 37.3002927,
     "lng": 126.8400046,
     "situations": [
-      "friends",
-      "study"
+      "drink"
     ],
     "price": 2,
     "maxGroup": 10,
@@ -1442,8 +1406,7 @@
     "lat": 37.3011185,
     "lng": 126.8395231,
     "situations": [
-      "friends",
-      "study",
+      "drink",
       "team"
     ],
     "price": 2,
@@ -1464,7 +1427,7 @@
     "lat": 37.3011961,
     "lng": 126.8375572,
     "situations": [
-      "friends",
+      "drink",
       "team"
     ],
     "price": 2,
@@ -1485,7 +1448,7 @@
     "lat": 37.3093008,
     "lng": 126.8313147,
     "situations": [
-      "friends",
+      "drink",
       "date"
     ],
     "price": 2,
@@ -1506,7 +1469,7 @@
     "lat": 37.3093215,
     "lng": 126.8311582,
     "situations": [
-      "friends",
+      "drink",
       "date"
     ],
     "price": 2,
@@ -1527,8 +1490,8 @@
     "lat": 37.3013351,
     "lng": 126.8373101,
     "situations": [
-      "team",
-      "friends"
+      "drink",
+      "team"
     ],
     "price": 2,
     "maxGroup": 20,
@@ -1587,8 +1550,8 @@
     "lat": 37.2999772,
     "lng": 126.8400462,
     "situations": [
-      "team",
-      "friends"
+      "drink",
+      "team"
     ],
     "price": 2,
     "maxGroup": 20,
@@ -1607,8 +1570,7 @@
     "lat": 37.2996924,
     "lng": 126.8388122,
     "situations": [
-      "date",
-      "friends"
+      "date"
     ],
     "price": 2,
     "maxGroup": 8,
@@ -1627,8 +1589,7 @@
     "lat": 37.3012371,
     "lng": 126.8389292,
     "situations": [
-      "date",
-      "friends"
+      "date"
     ],
     "price": 2,
     "maxGroup": 8,
@@ -1647,8 +1608,7 @@
     "lat": 37.3010957,
     "lng": 126.8385945,
     "situations": [
-      "date",
-      "friends"
+      "date"
     ],
     "price": 2,
     "maxGroup": 8,
@@ -1667,8 +1627,7 @@
     "lat": 37.301103,
     "lng": 126.8386012,
     "situations": [
-      "date",
-      "friends"
+      "date"
     ],
     "price": 2,
     "maxGroup": 8,
@@ -1687,8 +1646,7 @@
     "lat": 37.3015769,
     "lng": 126.8398689,
     "situations": [
-      "date",
-      "friends"
+      "date"
     ],
     "price": 2,
     "maxGroup": 8,
@@ -1707,8 +1665,7 @@
     "lat": 37.3007796,
     "lng": 126.8376312,
     "situations": [
-      "solo",
-      "study"
+      "solo"
     ],
     "price": 1,
     "maxGroup": 6,
@@ -1727,8 +1684,7 @@
     "lat": 37.299762,
     "lng": 126.838483,
     "situations": [
-      "date",
-      "friends"
+      "date"
     ],
     "price": 2,
     "maxGroup": 8,
@@ -1747,8 +1703,7 @@
     "lat": 37.3004338,
     "lng": 126.8390245,
     "situations": [
-      "date",
-      "friends"
+      "date"
     ],
     "price": 2,
     "maxGroup": 8,
@@ -1767,8 +1722,7 @@
     "lat": 37.3018111,
     "lng": 126.8411972,
     "situations": [
-      "date",
-      "study"
+      "date"
     ],
     "price": 1,
     "maxGroup": 6,
@@ -1787,8 +1741,7 @@
     "lat": 37.3010968,
     "lng": 126.8406553,
     "situations": [
-      "date",
-      "study"
+      "date"
     ],
     "price": 1,
     "maxGroup": 6,
@@ -1807,8 +1760,7 @@
     "lat": 37.3013563,
     "lng": 126.8375253,
     "situations": [
-      "date",
-      "study"
+      "date"
     ],
     "price": 1,
     "maxGroup": 6,
@@ -1888,8 +1840,7 @@
     "lng": 126.8371374,
     "situations": [
       "team",
-      "parents",
-      "study"
+      "parents"
     ],
     "price": 1,
     "maxGroup": 12,
@@ -1908,8 +1859,7 @@
     "lat": 37.3009577,
     "lng": 126.8379091,
     "situations": [
-      "solo",
-      "study"
+      "solo"
     ],
     "price": 1,
     "maxGroup": 6,
@@ -1929,8 +1879,7 @@
     "lng": 126.8374018,
     "situations": [
       "team",
-      "parents",
-      "study"
+      "parents"
     ],
     "price": 1,
     "maxGroup": 12,
@@ -1950,8 +1899,7 @@
     "lng": 126.8426489,
     "situations": [
       "team",
-      "parents",
-      "study"
+      "parents"
     ],
     "price": 1,
     "maxGroup": 12,
@@ -1970,8 +1918,7 @@
     "lat": 37.3012778,
     "lng": 126.8379886,
     "situations": [
-      "solo",
-      "study"
+      "solo"
     ],
     "price": 1,
     "maxGroup": 6,
@@ -1990,8 +1937,7 @@
     "lat": 37.3014454,
     "lng": 126.8395438,
     "situations": [
-      "date",
-      "friends"
+      "date"
     ],
     "price": 2,
     "maxGroup": 6,
@@ -2010,8 +1956,7 @@
     "lat": 37.3009461,
     "lng": 126.8375273,
     "situations": [
-      "solo",
-      "study"
+      "solo"
     ],
     "price": 1,
     "maxGroup": 6,
@@ -2030,8 +1975,7 @@
     "lat": 37.30189,
     "lng": 126.8386186,
     "situations": [
-      "date",
-      "friends"
+      "date"
     ],
     "price": 2,
     "maxGroup": 6,
@@ -2050,8 +1994,7 @@
     "lat": 37.3001875,
     "lng": 126.8384414,
     "situations": [
-      "date",
-      "friends"
+      "date"
     ],
     "price": 2,
     "maxGroup": 6,
@@ -2070,8 +2013,7 @@
     "lat": 37.2992148,
     "lng": 126.8386454,
     "situations": [
-      "date",
-      "friends"
+      "date"
     ],
     "price": 2,
     "maxGroup": 6,
@@ -2090,8 +2032,7 @@
     "lat": 37.2997893,
     "lng": 126.8389167,
     "situations": [
-      "solo",
-      "study"
+      "solo"
     ],
     "price": 1,
     "maxGroup": 8,
@@ -2130,8 +2071,7 @@
     "lat": 37.3024359,
     "lng": 126.836576,
     "situations": [
-      "solo",
-      "study"
+      "solo"
     ],
     "price": 1,
     "maxGroup": 8,
@@ -2150,8 +2090,7 @@
     "lat": 37.3010042,
     "lng": 126.8378861,
     "situations": [
-      "friends",
-      "study",
+      "drink",
       "team"
     ],
     "price": 2,
@@ -2172,8 +2111,7 @@
     "lat": 37.3007425,
     "lng": 126.8398405,
     "situations": [
-      "friends",
-      "study",
+      "drink",
       "team"
     ],
     "price": 2,
@@ -2194,8 +2132,7 @@
     "lat": 37.2999563,
     "lng": 126.8404623,
     "situations": [
-      "friends",
-      "study",
+      "drink",
       "team"
     ],
     "price": 2,
@@ -2216,8 +2153,7 @@
     "lat": 37.3039642,
     "lng": 126.8391406,
     "situations": [
-      "friends",
-      "study",
+      "drink",
       "team"
     ],
     "price": 2,
@@ -2238,8 +2174,8 @@
     "lat": 37.3090195,
     "lng": 126.8277125,
     "situations": [
-      "date",
-      "friends"
+      "drink",
+      "date"
     ],
     "price": 3,
     "maxGroup": 6,
@@ -2258,8 +2194,8 @@
     "lat": 37.3090973,
     "lng": 126.8287145,
     "situations": [
-      "date",
-      "friends"
+      "drink",
+      "date"
     ],
     "price": 3,
     "maxGroup": 6,
@@ -2278,8 +2214,7 @@
     "lat": 37.299563,
     "lng": 126.8385349,
     "situations": [
-      "friends",
-      "study"
+      "drink"
     ],
     "price": 2,
     "maxGroup": 16,
@@ -2298,8 +2233,7 @@
     "lat": 37.3005714,
     "lng": 126.8408277,
     "situations": [
-      "friends",
-      "study"
+      "drink"
     ],
     "price": 2,
     "maxGroup": 16,
@@ -2318,8 +2252,7 @@
     "lat": 37.3088793,
     "lng": 126.8312557,
     "situations": [
-      "friends",
-      "study"
+      "drink"
     ],
     "price": 2,
     "maxGroup": 16,
@@ -2338,8 +2271,7 @@
     "lat": 37.302248,
     "lng": 126.8394456,
     "situations": [
-      "solo",
-      "study"
+      "solo"
     ],
     "price": 1,
     "maxGroup": 8,
@@ -2358,8 +2290,7 @@
     "lat": 37.2997968,
     "lng": 126.8382427,
     "situations": [
-      "solo",
-      "study"
+      "solo"
     ],
     "price": 1,
     "maxGroup": 8,
@@ -2378,8 +2309,7 @@
     "lat": 37.2964048,
     "lng": 126.8432298,
     "situations": [
-      "solo",
-      "study"
+      "solo"
     ],
     "price": 1,
     "maxGroup": 8,

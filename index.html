@@ -32,6 +32,11 @@ main{flex:1;min-height:0;display:grid;grid-template-columns:360px 1fr}
 .links{display:flex;gap:12px;font-size:13px}
 .links a{color:var(--acc);font-weight:600;text-decoration:none}
 .links a:hover{text-decoration:underline}
+.count{font-size:13px;color:var(--sub);font-weight:600;padding:0 2px}
+.st{font-size:12px;font-weight:700;border-radius:4px;padding:1px 6px;margin-left:6px;white-space:nowrap}
+.st.open{background:#e4f6ec;color:#07663a}
+.st.closed{background:#eceff1;color:#667380}
+.st.break{background:#fff3d6;color:#8a5a00}
 .empty{padding:28px 12px;text-align:center;color:var(--sub);font-size:14px;line-height:1.6}
 #mapwrap{position:relative;min-height:0}
 #map{position:absolute!important;top:0;left:0;right:0;bottom:0;width:100%!important;height:100%!important}
@@ -58,8 +63,10 @@ footer{padding:6px 14px;font-size:12px;color:var(--sub);background:var(--panel);
   <div class="filters">
     <div class="chips" id="chips" role="group" aria-label="상황 선택"></div>
     <label>인원
-      <select id="size"><option value="1">1명</option><option value="2">2명</option><option value="4" selected>3~4명</option><option value="8">5~8명</option><option value="20">9명 이상</option></select>
+      <select id="size"><option value="0" selected>상관없음</option><option value="1">1명</option><option value="2">2명</option><option value="4">3~4명</option><option value="8">5~8명</option><option value="20">9명 이상</option></select>
     </label>
+    <label>업종 <select id="kind"></select></label>
+    <button class="chip" id="openBtn" aria-pressed="false">영업중만 보기</button>
     <label>예산(1인)
       <select id="budget"><option value="3">제한 없음</option><option value="1">1만원 안팎</option><option value="2">2만원 안팎</option></select>
     </label>
@@ -81,8 +88,8 @@ const CONFIG = {
 
 /* ===== 상황 목록 ===== */
 const SITUATIONS = [
-  ["friends","친구들과 술 한잔"],["date","기념일 데이트"],["solo","혼밥"],
-  ["team","팀 회식"],["parents","부모님과 식사"],["study","팀플 뒤풀이"]
+  ["all","전체 보기"],["drink","일 끝나고 술 한잔"],["date","기념일 데이트"],
+  ["solo","혼밥"],["team","단체 회식"],["parents","부모님과 식사"]
 ];
 
 /* ===== 시연용 샘플 데이터 (가상 가게). 실제로는 shops.json으로 교체 ===== */
@@ -100,16 +107,85 @@ const SAMPLE = [
 ];
 
 /* ===== 상태 ===== */
-let SHOPS = [], current = "friends", selected = null, map = null, naverOn = false, leafletOn = false;
+let onlyOpen = false, unknownHidden = 0;
+let SHOPS = [], current = "all", selected = null, map = null, naverOn = false, leafletOn = false;
 const markers = [];
 const $ = s => document.querySelector(s);
 
 /* ===== 추천 로직: 조건 필터 + 상황 일치 순 정렬 ===== */
+const KINDS = ["술집","고기·치킨","한식","중식","일식·회","양식·간편식","카페·디저트","기타"];
+function kind(s){
+  const c = (s.category||"") + " " + s.name;
+  if(/이자카야|요리주점|맥주|호프|포장마차|포차|와인|BAR|오뎅|꼬치|술집|주점/.test(c)) return "술집";
+  if(/고기|구이|삼겹|소고기|갈비|곱창|치킨|닭/.test(c)) return "고기·치킨";
+  if(/중식|마라/.test(c)) return "중식";
+  if(/일식|돈가스|일본식|초밥|생선회/.test(c)) return "일식·회";
+  if(/양식|이탈리아|햄버거|샌드위치|멕시코|피자|파스타|베트남|아시/.test(c)) return "양식·간편식";
+  if(/카페|베이커리|디저트|커피/.test(c)) return "카페·디저트";
+  if(/한식|국밥|감자탕|순대|쌈밥|냉면|찌개|죽/.test(c)) return "한식";
+  return "기타";
+}
+function filterShops(skipOpen){
+  const size = +$("#size").value, budget = +$("#budget").value, k = $("#kind").value;
+  return SHOPS.filter(s =>
+    s.maxGroup >= size && s.price <= budget &&
+    (current === "all" || s.situations.includes(current)) &&
+    (k === "all" || kind(s) === k) &&
+    (skipOpen || !onlyOpen || openStatus(s).state === "open"));
+}
 function recommend(){
-  const size = +$("#size").value, budget = +$("#budget").value;
-  return SHOPS
-    .filter(s => s.maxGroup >= size && s.price <= budget && s.situations.includes(current))
-    .sort((a,b) => (b.situations.length === 1) - (a.situations.length === 1) || a.price - b.price);
+  const list = filterShops(false);
+  if(current === "all") return list.sort((a,b) => a.name.localeCompare(b.name, "ko"));
+  return list.sort((a,b) => (b.situations.length === 1) - (a.situations.length === 1) || a.price - b.price);
+}
+
+/* ===== 영업 여부 (한국 시간 기준) =====
+   shops.json 필드: hours "11:00-22:00" / hoursByDay {"fri":"17:00-03:00"} / closedDays ["mon"] / breakTime "15:00-17:00" */
+const DAYS = ["sun","mon","tue","wed","thu","fri","sat"];
+const DAYKO = {sun:"일",mon:"월",tue:"화",wed:"수",thu:"목",fri:"금",sat:"토"};
+function seoulNow(){
+  const p = new Intl.DateTimeFormat("en-US", {timeZone:"Asia/Seoul", weekday:"short", hour:"numeric", minute:"numeric", hourCycle:"h23"}).formatToParts(new Date());
+  const g = t => p.find(x => x.type === t).value;
+  return { day: g("weekday").slice(0,3).toLowerCase(), min: (+g("hour") % 24) * 60 + +g("minute") };
+}
+function parseRange(str){
+  if(!str) return null;
+  if(/^(24h|24시간)/.test(str)) return [0,1440];
+  const m = String(str).match(/^(\d{1,2}):(\d{2})\s*-\s*(\d{1,2}):(\d{2})$/);
+  if(!m) return null;
+  const a = +m[1]*60 + +m[2]; let b = +m[3]*60 + +m[4];
+  if(b <= a) b += 1440;
+  return [a, b];
+}
+function hoursFor(s, day){
+  if((s.closedDays||[]).includes(day)) return null;
+  return (s.hoursByDay && s.hoursByDay[day]) || s.hours || null;
+}
+function openStatus(s){
+  if(!s.hours && !s.hoursByDay) return {state:"unknown"};
+  const now = seoulNow();
+  const today = parseRange(hoursFor(s, now.day));
+  if(today && now.min >= today[0] && now.min < today[1]){
+    const br = parseRange(s.breakTime);
+    if(br && now.min >= br[0] && now.min < br[1]) return {state:"break"};
+    return {state:"open"};
+  }
+  const prev = DAYS[(DAYS.indexOf(now.day) + 6) % 7];
+  const y = parseRange(hoursFor(s, prev));
+  if(y && y[1] > 1440 && now.min < y[1] - 1440) return {state:"open"};
+  return {state:"closed"};
+}
+function statusChip(s){
+  const st = openStatus(s).state;
+  const label = {open:"영업중", closed:"영업 종료", break:"브레이크타임"}[st];
+  return label ? `<span class="st ${st}">${label}</span>` : "";
+}
+function hoursLine(s){
+  const parts = [];
+  if(s.hours) parts.push("영업 " + s.hours);
+  if(s.breakTime) parts.push("브레이크 " + s.breakTime);
+  if(s.closedDays && s.closedDays.length) parts.push("휴무 " + s.closedDays.map(d => DAYKO[d] || d).join("·"));
+  return parts.join(" · ");
 }
 
 /* ===== 렌더링 ===== */
@@ -124,12 +200,12 @@ function renderChips(){
 function won(p){ return ["","1만원 안팎","2만원 안팎","3만원 이상"][p]; }
 function renderList(items){
   if(!items.length){
-    $("#list").innerHTML = `<div class="empty">조건에 맞는 가게가 없어요.<br>인원이나 예산을 넓혀 보세요.</div>`; return;
+    $("#list").innerHTML = `<div class="empty">${onlyOpen?"지금 영업 중인 가게가 없거나, 영업시간 정보가 아직 입력되지 않았어요.":"조건에 맞는 가게가 없어요.<br>인원이나 예산을 넓혀 보세요."}</div>`; return;
   }
-  $("#list").innerHTML = items.map((s,i) => `
+  $("#list").innerHTML = `<div class="count">총 ${items.length}곳${onlyOpen?` · 영업중만 (영업시간 정보 없는 ${unknownHidden}곳은 제외)`:""}</div>` + items.map((s,i) => `
     <article class="card ${s===selected?"on":""}" data-i="${i}" tabindex="0">
-      <h3><span>${s.name}</span>${s.draft?`<span class="fit">태그 초안</span>`:""}</h3>
-      <div class="meta">${s.category.split(">").pop()} · ${s.area||s.address} · ${won(s.price)} · 최대 ${s.maxGroup}명</div>
+      <h3><span>${s.name}${statusChip(s)}</span>${s.draft?`<span class="fit">태그 초안</span>`:""}</h3>
+      <div class="meta">${s.category.split(">").pop()} · ${s.area||s.address} · ${won(s.price)} · 최대 ${s.maxGroup}명</div>${hoursLine(s)?`<div class="meta">${hoursLine(s)}</div>`:""}
       ${s.summary?`<p>${s.summary}</p>`:""}
       <div class="tags">${s.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div>
       <div class="links">
@@ -148,8 +224,9 @@ function renderList(items){
 function infoHTML(s){
   const q = encodeURIComponent(s.name.replace("[예시] ",""));
   return `<div class="iw">
-    <div class="iw-name">${s.name}${s.draft?` <span class="fit">태그 초안</span>`:""}</div>
+    <div class="iw-name">${s.name}${statusChip(s)}${s.draft?` <span class="fit">태그 초안</span>`:""}</div>
     <div class="iw-meta">${s.category.split(">").pop()} · ${s.area||s.address} · ${won(s.price)}</div>
+    ${hoursLine(s)?`<div class="iw-meta">${hoursLine(s)}</div>`:""}
     ${s.summary?`<div>${s.summary}</div>`:""}
     <div class="tags" style="margin:6px 0">${s.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div>
     <div class="links">
@@ -270,6 +347,7 @@ function loadLeaflet(){
 
 function update(){
   const items = recommend();
+  unknownHidden = onlyOpen ? filterShops(true).filter(s => openStatus(s).state === "unknown").length : 0;
   renderList(items); drawMarkers(items);
 }
 
@@ -278,11 +356,17 @@ async function start(){
   try{
     const r = await fetch(CONFIG.DATA_URL);
     if(!r.ok) throw 0;
-    SHOPS = (await r.json()).filter(s => s.situations && s.situations.length);
+    SHOPS = await r.json();
   }catch(e){ SHOPS = SAMPLE; }
   if(!SHOPS.length) SHOPS = SAMPLE;
+  SHOPS = SHOPS.filter(s => typeof s.lat === "number" && typeof s.lng === "number").map(s => ({
+    ...s, situations:(s.situations||[]).map(x => x === "friends" ? "drink" : x).filter(x => x !== "study"), tags:s.tags||[], category:s.category||"",
+    summary:s.summary||"", menu:s.menu||"", price:s.price||2, maxGroup:s.maxGroup||30
+  }));
+  $("#kind").innerHTML = '<option value="all">전체</option>' + KINDS.map(k => `<option>${k}</option>`).join("");
   renderChips();
-  ["#size","#budget"].forEach(id => $(id).onchange = () => { selected=null; update(); });
+  $("#openBtn").onclick = () => { onlyOpen = !onlyOpen; $("#openBtn").setAttribute("aria-pressed", onlyOpen); selected = null; update(); };
+  ["#size","#budget","#kind"].forEach(id => $(id).onchange = () => { selected=null; update(); });
   loadMap();
 }
 start();
