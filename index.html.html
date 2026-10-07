@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>안산 상황별 맛집 지도</title>
+<style>
+:root{--bg:#f2f5f4;--panel:#fff;--ink:#1c2530;--sub:#667380;--line:#dde3e6;--acc:#03a94d;--accbg:#e4f6ec}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",sans-serif;background:var(--bg);color:var(--ink);display:flex;flex-direction:column}
+header{padding:14px 18px 10px;background:var(--panel);border-bottom:1px solid var(--line)}
+h1{font-size:19px;margin:0 0 2px}
+header p{margin:0;font-size:13px;color:var(--sub)}
+.filters{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;margin-top:12px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 13px;font:inherit;font-size:14px;cursor:pointer;color:var(--ink)}
+.chip[aria-pressed=true]{background:var(--acc);border-color:var(--acc);color:#fff;font-weight:600}
+.chip:focus-visible,select:focus-visible,.card:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+label{font-size:13px;color:var(--sub);display:flex;align-items:center;gap:6px}
+select{font:inherit;font-size:14px;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:#fff}
+main{flex:1;min-height:0;display:grid;grid-template-columns:360px 1fr}
+#list{overflow:auto;padding:12px;display:flex;flex-direction:column;gap:10px;background:var(--bg)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;cursor:pointer}
+.card.on{border-color:var(--acc);box-shadow:0 0 0 2px var(--accbg)}
+.card h3{margin:0;font-size:16px;display:flex;justify-content:space-between;gap:8px}
+.meta{font-size:12.5px;color:var(--sub);margin:3px 0 6px}
+.card p{margin:0 0 6px;font-size:14px;line-height:1.5}
+.tags{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px}
+.tag{font-size:12px;background:var(--accbg);color:#07663a;border-radius:4px;padding:2px 7px}
+.fit{font-size:12px;color:var(--acc);font-weight:700;white-space:nowrap}
+.links{display:flex;gap:12px;font-size:13px}
+.links a{color:var(--acc);font-weight:600;text-decoration:none}
+.links a:hover{text-decoration:underline}
+.empty{padding:28px 12px;text-align:center;color:var(--sub);font-size:14px;line-height:1.6}
+#mapwrap{position:relative;min-height:0}
+#map{position:absolute!important;top:0;left:0;right:0;bottom:0;width:100%!important;height:100%!important}
+.fake{background:#e7eeea;overflow:hidden}
+.fake .note{position:absolute;left:10px;bottom:10px;right:10px;background:rgba(255,255,255,.92);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:12.5px;color:var(--sub);line-height:1.5}
+.fake .zone{position:absolute;font-size:12px;color:#7d8b85;font-weight:600}
+.lp{width:20px;height:20px;border-radius:50%;background:var(--acc);border:3px solid #fff;box-shadow:0 1px 5px rgba(0,0,0,.45)}
+.lp.on{background:#e8473b;width:26px;height:26px;margin:-3px 0 0 -3px}
+.banner{position:absolute;left:8px;right:8px;bottom:8px;z-index:1100;background:rgba(255,255,255,.96);border:1px solid #e0b4b4;border-radius:8px;padding:8px 10px;font-size:12px;line-height:1.5;color:#7a2b2b}
+.iw{font-size:13px;line-height:1.5;min-width:210px;padding:2px 4px;color:#1c2530}
+.iw-name{font-size:15px;font-weight:700}
+.iw-meta{font-size:12px;color:#667380;margin-bottom:4px}
+.iw .links a{color:#03a94d;font-weight:600;text-decoration:none}
+.pin{position:absolute;transform:translate(-50%,-100%);width:26px;height:26px;border-radius:50% 50% 50% 0;rotate:-45deg;background:var(--acc);border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.35);cursor:pointer;padding:0}
+.pin.on{background:#e8473b;width:32px;height:32px;z-index:5}
+footer{padding:6px 14px;font-size:12px;color:var(--sub);background:var(--panel);border-top:1px solid var(--line)}
+@media(max-width:800px){main{grid-template-columns:1fr;grid-template-rows:42% 1fr}#mapwrap{order:-1}}
+</style>
+</head>
+<body>
+<header>
+  <h1>오늘 어디 가지? 안산 고잔동 · ERICA 앞</h1>
+  <p>상황을 고르면 어울리는 가게를 먼저 보여드려요.</p>
+  <div class="filters">
+    <div class="chips" id="chips" role="group" aria-label="상황 선택"></div>
+    <label>인원
+      <select id="size"><option value="1">1명</option><option value="2">2명</option><option value="4" selected>3~4명</option><option value="8">5~8명</option><option value="20">9명 이상</option></select>
+    </label>
+    <label>예산(1인)
+      <select id="budget"><option value="3">제한 없음</option><option value="1">1만원 안팎</option><option value="2">2만원 안팎</option></select>
+    </label>
+  </div>
+</header>
+<main>
+  <section id="list" aria-live="polite"></section>
+  <section id="mapwrap"><div id="map"></div></section>
+</main>
+<footer>가게 정보 출처: 네이버 검색 API · 지도: OpenStreetMap(키 없을 때)/네이버 지도(키 입력 시) · 상황 태그와 소개는 직접 작성 · 아래 데이터는 시연용 가상 샘플입니다</footer>
+
+<script>
+/* ===== 설정 ===== */
+const CONFIG = {
+  NAVER_KEY: "i63k5hdv08",              // NCP 콘솔의 Maps 앱 Client ID를 여기에 입력 (비우면 간이 지도로 동작)
+  DATA_URL: "shops.json",     // 수집 스크립트가 만든 파일. 없으면 아래 SAMPLE 사용
+  CENTER: { lat: 37.3085, lng: 126.8335 }
+};
+
+/* ===== 상황 목록 ===== */
+const SITUATIONS = [
+  ["friends","친구들과 술 한잔"],["date","기념일 데이트"],["solo","혼밥"],
+  ["team","팀 회식"],["parents","부모님과 식사"],["study","팀플 뒤풀이"]
+];
+
+/* ===== 시연용 샘플 데이터 (가상 가게). 실제로는 shops.json으로 교체 ===== */
+const SAMPLE = [
+  {name:"[예시] 고잔 이자카야 하루",category:"이자카야",address:"고잔동 일대",lat:37.3168,lng:126.8348,situations:["friends","date"],tags:["분위기 좋음","안주 맛집","심야"],price:2,maxGroup:8,summary:"조명이 낮고 아늑해서 오래 앉아 이야기하기 좋은 곳.",menu:"모둠 사시미, 하이볼"},
+  {name:"[예시] 호수공원 레스토랑 모네",category:"양식",address:"고잔동 일대",lat:37.3141,lng:126.8302,situations:["date","parents"],tags:["기념일","조용함","예약 추천"],price:3,maxGroup:6,summary:"창가 좌석에서 야경이 보이는 코스 요리 전문점.",menu:"스테이크, 파스타 코스"},
+  {name:"[예시] 중앙동 삼겹살 두툼",category:"고깃집",address:"고잔동 일대",lat:37.3187,lng:126.8391,situations:["team","friends"],tags:["단체석","시끌벅적","가성비"],price:2,maxGroup:20,summary:"단체 회식에 자주 쓰이는 넓은 홀과 룸이 있는 고깃집.",menu:"생삼겹살, 된장찌개"},
+  {name:"[예시] 혼밥 국밥 한그릇",category:"한식",address:"고잔동 일대",lat:37.3159,lng:126.8366,situations:["solo","study"],tags:["빠른 식사","1인석","가성비"],price:1,maxGroup:3,summary:"바 좌석이 있어 혼자 와도 편한 돼지국밥집.",menu:"돼지국밥, 수육"},
+  {name:"[예시] 한식당 정담",category:"한정식",address:"고잔동 일대",lat:37.3112,lng:126.8321,situations:["parents","team"],tags:["룸","조용함","주차 가능"],price:3,maxGroup:12,summary:"룸이 분리되어 있어 어른들과 식사하기 편한 한정식.",menu:"정식 코스, 보쌈"},
+  {name:"[예시] 에리카 앞 치킨 투게더",category:"치킨/호프",address:"ERICA 앞",lat:37.2975,lng:126.8352,situations:["friends","study"],tags:["학생 많음","늦게까지","시끌벅적"],price:1,maxGroup:16,summary:"팀플 끝나고 모이기 좋은 대학가 호프집.",menu:"양념치킨, 골뱅이무침"},
+  {name:"[예시] 에리카 앞 마라탕 홍",category:"중식",address:"ERICA 앞",lat:37.2958,lng:126.8379,situations:["solo","study"],tags:["혼밥 가능","점심 인기","가성비"],price:1,maxGroup:6,summary:"혼자도 여럿이도 부담 없는 마라탕 전문점.",menu:"마라탕, 꿔바로우"},
+  {name:"[예시] 에리카 파스타 바질",category:"양식",address:"ERICA 앞",lat:37.2969,lng:126.8398,situations:["date","study"],tags:["감성","아늑함","사진 찍기 좋음"],price:2,maxGroup:6,summary:"학교 앞에서 데이트하기 좋은 아기자기한 파스타집.",menu:"크림파스타, 리조또"},
+  {name:"[예시] 에리카 포차 별밤",category:"포차",address:"ERICA 앞",lat:37.2946,lng:126.8361,situations:["friends","team"],tags:["심야","단체 가능","안주 다양"],price:2,maxGroup:20,summary:"새벽까지 영업해서 2차로 가기 좋은 포장마차 스타일 술집.",menu:"우동탕, 닭발"},
+  {name:"[예시] 고잔 와인바 오후",category:"와인바",address:"고잔동 일대",lat:37.3205,lng:126.8332,situations:["date","friends"],tags:["분위기 좋음","조용함","기념일"],price:3,maxGroup:4,summary:"둘이 조용히 이야기하기 좋은 작은 와인바.",menu:"와인 페어링 플레이트"}
+];
+
+/* ===== 상태 ===== */
+let SHOPS = [], current = "friends", selected = null, map = null, naverOn = false, leafletOn = false;
+const markers = [];
+const $ = s => document.querySelector(s);
+
+/* ===== 추천 로직: 조건 필터 + 상황 일치 순 정렬 ===== */
+function recommend(){
+  const size = +$("#size").value, budget = +$("#budget").value;
+  return SHOPS
+    .filter(s => s.maxGroup >= size && s.price <= budget && s.situations.includes(current))
+    .sort((a,b) => (b.situations.length === 1) - (a.situations.length === 1) || a.price - b.price);
+}
+
+/* ===== 렌더링 ===== */
+function renderChips(){
+  $("#chips").innerHTML = SITUATIONS.map(([k,l]) =>
+    `<button class="chip" data-k="${k}" aria-pressed="${k===current}">${l}</button>`).join("");
+  $("#chips").onclick = e => {
+    const b = e.target.closest(".chip"); if(!b) return;
+    current = b.dataset.k; selected = null; renderChips(); update();
+  };
+}
+function won(p){ return ["","1만원 안팎","2만원 안팎","3만원 이상"][p]; }
+function renderList(items){
+  if(!items.length){
+    $("#list").innerHTML = `<div class="empty">조건에 맞는 가게가 없어요.<br>인원이나 예산을 넓혀 보세요.</div>`; return;
+  }
+  $("#list").innerHTML = items.map((s,i) => `
+    <article class="card ${s===selected?"on":""}" data-i="${i}" tabindex="0">
+      <h3><span>${s.name}</span>${s.draft?`<span class="fit">태그 초안</span>`:""}</h3>
+      <div class="meta">${s.category.split(">").pop()} · ${s.area||s.address} · ${won(s.price)} · 최대 ${s.maxGroup}명</div>
+      ${s.summary?`<p>${s.summary}</p>`:""}
+      <div class="tags">${s.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div>
+      <div class="links">
+        <a href="https://map.naver.com/p/search/${encodeURIComponent(s.name.replace("[예시] ",""))}" target="_blank" rel="noopener">네이버 플레이스</a>
+        <a href="https://map.naver.com/p/directions/-/${s.lng},${s.lat},${encodeURIComponent(s.name)}/-/walk" target="_blank" rel="noopener">길찾기</a>
+      </div>
+      ${s.menu?`<div class="meta" style="margin:6px 0 0">추천 메뉴: ${s.menu}</div>`:""}
+    </article>`).join("");
+  $("#list").onclick = $("#list").onkeydown = e => {
+    if(e.type==="keydown" && e.key!=="Enter") return;
+    if(e.target.closest("a")) return;
+    const c = e.target.closest(".card"); if(!c) return;
+    select(items[+c.dataset.i], items);
+  };
+}
+function infoHTML(s){
+  const q = encodeURIComponent(s.name.replace("[예시] ",""));
+  return `<div class="iw">
+    <div class="iw-name">${s.name}${s.draft?` <span class="fit">태그 초안</span>`:""}</div>
+    <div class="iw-meta">${s.category.split(">").pop()} · ${s.area||s.address} · ${won(s.price)}</div>
+    ${s.summary?`<div>${s.summary}</div>`:""}
+    <div class="tags" style="margin:6px 0">${s.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div>
+    <div class="links">
+      <a href="https://map.naver.com/p/search/${q}" target="_blank" rel="noopener">네이버 플레이스</a>
+      <a href="https://map.naver.com/p/directions/-/${s.lng},${s.lat},${encodeURIComponent(s.name)}/-/walk" target="_blank" rel="noopener">길찾기</a>
+    </div></div>`;
+}
+let infoWin = null;
+function openInfo(s, m){
+  if(!infoWin) infoWin = new naver.maps.InfoWindow({ maxWidth:260, borderColor:"#dde3e6", borderWidth:1, anchorSize:new naver.maps.Size(12,12), pixelOffset:new naver.maps.Point(0,-4) });
+  infoWin.setContent(infoHTML(s));
+  infoWin.open(map, m);
+}
+function select(s, items){
+  selected = s; renderList(items); drawMarkers(items);
+  const c = $("#list .card.on"); if(c) c.scrollIntoView({block:"nearest", behavior:"smooth"});
+  if(naverOn) map.panTo(new naver.maps.LatLng(s.lat, s.lng));
+  if(leafletOn) map.panTo([s.lat, s.lng]);
+}
+
+/* ===== 지도: 네이버 지도 (키 없으면 간이 지도) ===== */
+function drawMarkers(items){
+  if(infoWin) infoWin.close();
+  markers.forEach(m => m.remove());
+  markers.length = 0;
+  items.forEach(s => {
+    if(leafletOn){
+      const m = L.marker([s.lat, s.lng], {
+        icon: L.divIcon({className:"", html:`<div class="lp ${s===selected?"on":""}"></div>`, iconSize:[22,22], iconAnchor:[11,11]}),
+        title: s.name
+      }).addTo(map);
+      m.bindTooltip(s.name);
+      m.bindPopup(infoHTML(s), {maxWidth:260});
+      m.on("click", () => select(s, items));
+      markers.push(m);
+      if(s===selected) m.openPopup();
+    } else if(naverOn){
+      const m = new naver.maps.Marker({ position:new naver.maps.LatLng(s.lat,s.lng), map, title:s.name });
+      naver.maps.Event.addListener(m,"click",()=>select(s,items));
+      m.remove = () => m.setMap(null);
+      markers.push(m);
+      if(s===selected) openInfo(s, m);
+    } else {
+      const el = document.createElement("button");
+      el.className = "pin" + (s===selected?" on":""); el.title = s.name; el.setAttribute("aria-label", s.name);
+      const b = bounds();
+      el.style.left = ((s.lng-b.w)/(b.e-b.w)*100)+"%";
+      el.style.top = ((b.n-s.lat)/(b.n-b.s)*100)+"%";
+      el.onclick = () => select(s, items);
+      $("#map").appendChild(el);
+      el.remove = () => el.parentNode && el.parentNode.removeChild(el);
+      markers.push(el);
+    }
+  });
+  if(leafletOn && items.length && !selected){
+    map.fitBounds(items.map(s => [s.lat, s.lng]), {padding:[40,40], maxZoom:16});
+  }
+}
+function bounds(){ return {n:37.3235,s:37.2875,w:126.8260,e:126.8470}; }
+
+function initFakeMap(msg){
+  const m = $("#map"); m.className = "fake";
+  m.innerHTML = `<span class="zone" style="left:38%;top:10%">고잔동 일대</span>
+    <span class="zone" style="left:50%;top:78%">한양대 ERICA 앞</span>
+    <div class="note">${msg}</div>`;
+}
+let naverFailed = false, tilesOk = false;
+function naverFail(reason){
+  if(naverFailed) return; naverFailed = true;
+  console.error("[네이버 지도 실패]", reason);
+  naverOn = false; markers.length = 0; map = null;
+  $("#mapwrap").innerHTML = '<div id="map"></div>';
+  const b = document.createElement("div");
+  b.className = "banner";
+  b.innerHTML = "<b>네이버 지도를 불러오지 못해 임시로 OpenStreetMap을 보여드려요.</b><br>원인: " + reason +
+    "<br>확인 ① Client ID가 <u>Maps Application</u>의 것인지 (NAVER API HUB 검색용 키는 안 됩니다) " +
+    "② NCP의 Web 서비스 URL에 <u>" + location.protocol + "//" + location.hostname + "</u> 가 등록돼 있는지 (포트 번호는 빼고 등록)";
+  $("#mapwrap").appendChild(b);
+  loadLeaflet();
+}
+function initNaver(){
+  try{
+    if(!(window.naver && naver.maps)) throw new Error("naver.maps 객체가 없습니다");
+    map = new naver.maps.Map("map", { center:new naver.maps.LatLng(CONFIG.CENTER.lat,CONFIG.CENTER.lng), zoom:14 });
+    naver.maps.Event.addListener(map, "tilesloaded", () => { tilesOk = true; });
+    naverOn = true; update();
+    setTimeout(() => { const h = $("#map").offsetHeight; if(h < 50) naverFail("지도 영역의 높이가 " + h + "px로 너무 작음"); }, 1500);
+  }catch(e){ naverFail("지도 생성 오류: " + e.message); }
+}
+function loadMap(){
+  if(!CONFIG.NAVER_KEY) return loadLeaflet();
+  window.navermap_authFailure = () => naverFail("네이버 인증 실패(키 또는 등록 URL 불일치)");
+  const sc = document.createElement("script");
+  sc.src = "https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=" + encodeURIComponent(CONFIG.NAVER_KEY.trim());
+  sc.onload = initNaver;
+  sc.onerror = () => naverFail("네이버 지도 스크립트를 불러올 수 없음(인터넷/차단 확인)");
+  document.head.appendChild(sc);
+  setTimeout(() => { if(!tilesOk && !naverFailed) naverFail("지도 화면(타일)이 로드되지 않음. 대부분 등록한 Web 서비스 URL 문제"); }, 6000);
+}
+
+/* 키 없이 쓰는 실제 지도 (OpenStreetMap + Leaflet) */
+function loadLeaflet(){
+  const css = document.createElement("link");
+  css.rel = "stylesheet"; css.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+  document.head.appendChild(css);
+  const sc = document.createElement("script");
+  sc.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
+  sc.onload = () => {
+    map = L.map("map").setView([CONFIG.CENTER.lat, CONFIG.CENTER.lng], 14);
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19, attribution: "&copy; OpenStreetMap contributors"
+    }).addTo(map);
+    leafletOn = true; update();
+  };
+  sc.onerror = () => { initFakeMap("지도를 불러오지 못했어요. 인터넷 연결을 확인하세요. (간이 지도로 표시 중)"); update(); };
+  document.head.appendChild(sc);
+}
+
+function update(){
+  const items = recommend();
+  renderList(items); drawMarkers(items);
+}
+
+/* ===== 시작 ===== */
+async function start(){
+  try{
+    const r = await fetch(CONFIG.DATA_URL);
+    if(!r.ok) throw 0;
+    SHOPS = (await r.json()).filter(s => s.situations && s.situations.length);
+  }catch(e){ SHOPS = SAMPLE; }
+  if(!SHOPS.length) SHOPS = SAMPLE;
+  renderChips();
+  ["#size","#budget"].forEach(id => $(id).onchange = () => { selected=null; update(); });
+  loadMap();
+}
+start();
+</script>
+</body>
+</html>

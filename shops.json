@@ -1,0 +1,2394 @@
+[
+  {
+    "name": "마장동김씨 안산중앙점",
+    "category": "음식점>한식>육류,고기요리",
+    "address": "경기도 안산시 단원구 고잔1길 54 1층 101호, 108호, 109호, 110호",
+    "lat": 37.3180614,
+    "lng": 126.8394794,
+    "situations": [
+      "team",
+      "friends"
+    ],
+    "price": 2,
+    "maxGroup": 20,
+    "tags": [
+      "고기구이"
+    ],
+    "summary": "고기구이 전문점",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "윤선장어시장 안산중앙점",
+    "category": "한식>생선회",
+    "address": "경기도 안산시 단원구 고잔2길 87",
+    "lat": 37.3174908,
+    "lng": 126.8407616,
+    "situations": [
+      "friends",
+      "team",
+      "parents"
+    ],
+    "price": 3,
+    "maxGroup": 12,
+    "tags": [
+      "회"
+    ],
+    "summary": "회와 해산물 전문점",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "어장관리 본점",
+    "category": "한식>생선회",
+    "address": "경기도 안산시 단원구 광덕3로 145-13 1층",
+    "lat": 37.3137465,
+    "lng": 126.8287203,
+    "situations": [
+      "friends",
+      "team",
+      "parents"
+    ],
+    "price": 3,
+    "maxGroup": 12,
+    "tags": [
+      "회"
+    ],
+    "summary": "회와 해산물 전문점",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "피제리아 라쪼",
+    "category": "음식점>이탈리아음식",
+    "address": "경기도 안산시 단원구 광덕1로 165 108호, 109호",
+    "lat": 37.308368,
+    "lng": 126.8282507,
+    "situations": [
+      "date",
+      "friends"
+    ],
+    "price": 2,
+    "maxGroup": 8,
+    "tags": [
+      "파스타/양식"
+    ],
+    "summary": "파스타와 양식 레스토랑",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "긴자료코 안산고잔점",
+    "category": "음식점>일식>돈가스",
+    "address": "경기도 안산시 단원구 광덕서로 56 107호",
+    "lat": 37.309789,
+    "lng": 126.8273272,
+    "situations": [
+      "solo",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 6,
+    "tags": [
+      "돈가스"
+    ],
+    "summary": "돈가스 전문점",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "육술",
+    "category": "술집>요리주점",
+    "address": "경기도 안산시 단원구 광덕2로 193-15 1층 육술",
+    "lat": 37.3113383,
+    "lng": 126.8320611,
+    "situations": [
+      "friends",
+      "team"
+    ],
+    "price": 2,
+    "maxGroup": 12,
+    "tags": [
+      "요리주점",
+      "안주"
+    ],
+    "summary": "안주 중심의 요리주점",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "이자카야 춘 본점",
+    "category": "술집>이자카야",
+    "address": "경기도 안산시 단원구 광덕서로 54 105호",
+    "lat": 37.3094054,
+    "lng": 126.8274512,
+    "situations": [
+      "friends",
+      "date"
+    ],
+    "price": 2,
+    "maxGroup": 8,
+    "tags": [
+      "이자카야",
+      "안주"
+    ],
+    "summary": "술과 안주를 즐기는 이자카야",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "참새주방 안산중앙동점",
+    "category": "술집>요리주점",
+    "address": "경기도 안산시 단원구 고잔1길 57 금산빌딩 103-105호",
+    "lat": 37.3182899,
+    "lng": 126.8399054,
+    "situations": [
+      "friends",
+      "team"
+    ],
+    "price": 2,
+    "maxGroup": 12,
+    "tags": [
+      "요리주점",
+      "안주"
+    ],
+    "summary": "안주 중심의 요리주점",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "오끼 안산중앙점",
+    "category": "술집>이자카야",
+    "address": "경기도 안산시 단원구 고잔1길 63 1층 110호, 111호",
+    "lat": 37.3182051,
+    "lng": 126.8402623,
+    "situations": [
+      "friends",
+      "date"
+    ],
+    "price": 2,
+    "maxGroup": 8,
+    "tags": [
+      "이자카야",
+      "안주"
+    ],
+    "summary": "술과 안주를 즐기는 이자카야",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "기술",
+    "category": "술집>요리주점",
+    "address": "경기도 안산시 단원구 고잔1길 76 115호 이자카야기술",
+    "lat": 37.3175031,
+    "lng": 126.8417703,
+    "situations": [
+      "friends",
+      "team"
+    ],
+    "price": 2,
+    "maxGroup": 12,
+    "tags": [
+      "요리주점",
+      "안주"
+    ],
+    "summary": "안주 중심의 요리주점",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "키테이",
+    "category": "술집>이자카야",
+    "address": "경기도 안산시 단원구 광덕대로 141 키테이",
+    "lat": 37.3089848,
+    "lng": 126.8286801,
+    "situations": [
+      "friends",
+      "date"
+    ],
+    "price": 2,
+    "maxGroup": 8,
+    "tags": [
+      "이자카야",
+      "안주"
+    ],
+    "summary": "술과 안주를 즐기는 이자카야",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "가모메",
+    "category": "술집>이자카야",
+    "address": "경기도 안산시 단원구 광덕4로 244 1층 106호",
+    "lat": 37.314216,
+    "lng": 126.8394157,
+    "situations": [
+      "friends",
+      "date"
+    ],
+    "price": 2,
+    "maxGroup": 8,
+    "tags": [
+      "이자카야",
+      "안주"
+    ],
+    "summary": "술과 안주를 즐기는 이자카야",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "료이키",
+    "category": "술집>이자카야",
+    "address": "경기도 안산시 단원구 광덕대로 155 116호 료이키",
+    "lat": 37.3106651,
+    "lng": 126.8289998,
+    "situations": [
+      "friends",
+      "date"
+    ],
+    "price": 2,
+    "maxGroup": 8,
+    "tags": [
+      "이자카야",
+      "안주"
+    ],
+    "summary": "술과 안주를 즐기는 이자카야",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "구삼육 본점",
+    "category": "한식>육류,고기요리",
+    "address": "경기도 안산시 단원구 고잔로 95 상가 2동 1층 105호 구삼육",
+    "lat": 37.3193036,
+    "lng": 126.8362786,
+    "situations": [
+      "team",
+      "friends"
+    ],
+    "price": 2,
+    "maxGroup": 20,
+    "tags": [
+      "고기구이"
+    ],
+    "summary": "고기구이 전문점",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "할매솥뚜껑삼겹살 안산고잔점",
+    "category": "한식>돼지고기구이",
+    "address": "경기도 안산시 단원구 민속공원로 78 1층 102호",
+    "lat": 37.31239,
+    "lng": 126.8390202,
+    "situations": [
+      "team",
+      "friends"
+    ],
+    "price": 2,
+    "maxGroup": 20,
+    "tags": [
+      "고기구이"
+    ],
+    "summary": "고기구이 전문점",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "제주화로집 안산고잔점",
+    "category": "한식>돼지고기구이",
+    "address": "경기도 안산시 단원구 광덕2로 164-4 1층",
+    "lat": 37.3094637,
+    "lng": 126.8283144,
+    "situations": [
+      "team",
+      "friends"
+    ],
+    "price": 2,
+    "maxGroup": 20,
+    "tags": [
+      "고기구이"
+    ],
+    "summary": "고기구이 전문점",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "방자화로 안산고잔점",
+    "category": "한식>육류,고기요리",
+    "address": "경기도 안산시 단원구 당곡로 27 2층 방자화로",
+    "lat": 37.3196433,
+    "lng": 126.8333135,
+    "situations": [
+      "team",
+      "friends"
+    ],
+    "price": 2,
+    "maxGroup": 20,
+    "tags": [
+      "고기구이"
+    ],
+    "summary": "고기구이 전문점",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "석암생소금구이 안산고잔점",
+    "category": "한식>육류,고기요리",
+    "address": "경기도 안산시 단원구 광덕3로 167-6 1층",
+    "lat": 37.3129938,
+    "lng": 126.8316057,
+    "situations": [
+      "team",
+      "friends"
+    ],
+    "price": 2,
+    "maxGroup": 20,
+    "tags": [
+      "고기구이"
+    ],
+    "summary": "고기구이 전문점",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "포크너",
+    "category": "음식점>이탈리아음식",
+    "address": "경기도 안산시 단원구 예술대학로 11 해남빌딩 1층 뒷골목",
+    "lat": 37.3181297,
+    "lng": 126.8365323,
+    "situations": [
+      "date",
+      "friends"
+    ],
+    "price": 2,
+    "maxGroup": 8,
+    "tags": [
+      "파스타/양식"
+    ],
+    "summary": "파스타와 양식 레스토랑",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "포크너 안산고잔점",
+    "category": "음식점>이탈리아음식",
+    "address": "경기도 안산시 단원구 광덕대로 168 신화타운 101호",
+    "lat": 37.3111672,
+    "lng": 126.8306156,
+    "situations": [
+      "date",
+      "friends"
+    ],
+    "price": 2,
+    "maxGroup": 8,
+    "tags": [
+      "파스타/양식"
+    ],
+    "summary": "파스타와 양식 레스토랑",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "어썸 파스타&스테이크",
+    "category": "음식점>양식",
+    "address": "경기도 안산시 단원구 고잔로 116 휴지오오피스텔 1층 112호 어썸",
+    "lat": 37.3186658,
+    "lng": 126.8391025,
+    "situations": [
+      "date",
+      "friends"
+    ],
+    "price": 2,
+    "maxGroup": 8,
+    "tags": [
+      "파스타/양식"
+    ],
+    "summary": "파스타와 양식 레스토랑",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "더져니",
+    "category": "음식점>양식",
+    "address": "경기도 안산시 단원구 광덕대로 161 105호",
+    "lat": 37.3112239,
+    "lng": 126.829011,
+    "situations": [
+      "date",
+      "friends"
+    ],
+    "price": 2,
+    "maxGroup": 8,
+    "tags": [
+      "파스타/양식"
+    ],
+    "summary": "파스타와 양식 레스토랑",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "원주통닭",
+    "category": "음식점>치킨,닭강정",
+    "address": "경기도 안산시 단원구 고잔2길 73 삼일빌딩",
+    "lat": 37.3177147,
+    "lng": 126.8395487,
+    "situations": [
+      "friends",
+      "study"
+    ],
+    "price": 2,
+    "maxGroup": 12,
+    "tags": [
+      "치킨/닭요리"
+    ],
+    "summary": "치킨·닭요리 전문점",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "문화주점사월",
+    "category": "술집>요리주점",
+    "address": "경기도 안산시 단원구 고잔2길 87",
+    "lat": 37.3176007,
+    "lng": 126.8408795,
+    "situations": [
+      "friends",
+      "team"
+    ],
+    "price": 2,
+    "maxGroup": 12,
+    "tags": [
+      "요리주점",
+      "안주"
+    ],
+    "summary": "안주 중심의 요리주점",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "1번지통닭 안산중앙점",
+    "category": "음식점>치킨,닭강정",
+    "address": "경기도 안산시 단원구 고잔로 95 상가2동 1층 101호",
+    "lat": 37.3193145,
+    "lng": 126.8359058,
+    "situations": [
+      "friends",
+      "study"
+    ],
+    "price": 2,
+    "maxGroup": 12,
+    "tags": [
+      "치킨/닭요리"
+    ],
+    "summary": "치킨·닭요리 전문점",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "플라워팟카페",
+    "category": "카페,디저트>베이커리",
+    "address": "경기도 안산시 단원구 광덕2로 164-12 금바다빌딩 1층",
+    "lat": 37.3087131,
+    "lng": 126.8283804,
+    "situations": [
+      "date",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 6,
+    "tags": [
+      "카페"
+    ],
+    "summary": "카페·디저트",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "라뽐블루",
+    "category": "음식점>카페,디저트",
+    "address": "경기도 안산시 단원구 광덕1로 165 1층 101호",
+    "lat": 37.3082322,
+    "lng": 126.8283814,
+    "situations": [
+      "date",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 6,
+    "tags": [
+      "카페"
+    ],
+    "summary": "카페·디저트",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "SORO",
+    "category": "음식점>카페,디저트",
+    "address": "경기도 안산시 단원구 고잔로 55 중앙오피스텔 105호, 106호",
+    "lat": 37.3195645,
+    "lng": 126.8324893,
+    "situations": [
+      "date",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 6,
+    "tags": [
+      "카페"
+    ],
+    "summary": "카페·디저트",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "젠젠 안산중앙점",
+    "category": "음식점>카페,디저트",
+    "address": "경기도 안산시 단원구 고잔로 112 201, 202호",
+    "lat": 37.3187846,
+    "lng": 126.8384524,
+    "situations": [
+      "date",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 6,
+    "tags": [
+      "카페"
+    ],
+    "summary": "카페·디저트",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "동명닭집 고잔직영점",
+    "category": "한식>닭요리",
+    "address": "경기도 안산시 단원구 광덕2로 185-10 101, 102호",
+    "lat": 37.3105331,
+    "lng": 126.8315123,
+    "situations": [
+      "friends",
+      "study"
+    ],
+    "price": 2,
+    "maxGroup": 12,
+    "tags": [
+      "치킨/닭요리"
+    ],
+    "summary": "치킨·닭요리 전문점",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "속초오징어어시장 안산고잔점",
+    "category": "한식>생선회",
+    "address": "경기도 안산시 단원구 광덕2로 155-12 해봉빌딩 1층",
+    "lat": 37.3109135,
+    "lng": 126.8278648,
+    "situations": [
+      "friends",
+      "team",
+      "parents"
+    ],
+    "price": 3,
+    "maxGroup": 12,
+    "tags": [
+      "회"
+    ],
+    "summary": "회와 해산물 전문점",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "팔도반점 본점",
+    "category": "중식>중식당",
+    "address": "경기도 안산시 단원구 고잔2길 73 1층 121, 122, 123, 124, 125호",
+    "lat": 37.3175389,
+    "lng": 126.8394457,
+    "situations": [
+      "team",
+      "parents",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 12,
+    "tags": [
+      "중식"
+    ],
+    "summary": "중식당",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "북경",
+    "category": "중식>중식당",
+    "address": "경기도 안산시 단원구 화랑로 402 1층",
+    "lat": 37.3208938,
+    "lng": 126.8323238,
+    "situations": [
+      "team",
+      "parents",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 12,
+    "tags": [
+      "중식"
+    ],
+    "summary": "중식당",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "오복당",
+    "category": "중식>중식당",
+    "address": "경기도 안산시 단원구 광덕2로 163-5 110호",
+    "lat": 37.3104705,
+    "lng": 126.828581,
+    "situations": [
+      "team",
+      "parents",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 12,
+    "tags": [
+      "중식"
+    ],
+    "summary": "중식당",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "동방명주",
+    "category": "중식>중식당",
+    "address": "경기도 안산시 단원구 광덕2로 155-12 2층",
+    "lat": 37.3109287,
+    "lng": 126.8279765,
+    "situations": [
+      "team",
+      "parents",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 12,
+    "tags": [
+      "중식"
+    ],
+    "summary": "중식당",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "홍푸",
+    "category": "중식>중식당",
+    "address": "경기도 안산시 단원구 광덕2로 164-12 2층",
+    "lat": 37.3087232,
+    "lng": 126.8282742,
+    "situations": [
+      "team",
+      "parents",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 12,
+    "tags": [
+      "중식"
+    ],
+    "summary": "중식당",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "돈카츠석",
+    "category": "음식점>일식>돈가스",
+    "address": "경기도 안산시 단원구 광덕2로 155-10 104호",
+    "lat": 37.3106782,
+    "lng": 126.8278451,
+    "situations": [
+      "solo",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 6,
+    "tags": [
+      "돈가스"
+    ],
+    "summary": "돈가스 전문점",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "휘니치로",
+    "category": "음식점>일식>일본식라면",
+    "address": "경기도 안산시 단원구 고잔1길 69 골든게이트빌 107호 휘니치로구큐슈라멘마차",
+    "lat": 37.3181429,
+    "lng": 126.84156,
+    "situations": [
+      "solo"
+    ],
+    "price": 1,
+    "maxGroup": 4,
+    "tags": [
+      "라멘"
+    ],
+    "summary": "일본식 라멘집",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "어화일식",
+    "category": "음식점>일식>일식당",
+    "address": "경기도 안산시 단원구 광덕대로 206 골든빌오피스텔 2층",
+    "lat": 37.3149264,
+    "lng": 126.8309859,
+    "situations": [
+      "date",
+      "friends"
+    ],
+    "price": 2,
+    "maxGroup": 6,
+    "tags": [
+      "일식"
+    ],
+    "summary": "일식당",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "코이아이",
+    "category": "음식점>일식>일식당",
+    "address": "경기도 안산시 단원구 광덕2로 163-5 도로가 1층 코카콜라 자판기",
+    "lat": 37.3103073,
+    "lng": 126.8285472,
+    "situations": [
+      "date",
+      "friends"
+    ],
+    "price": 2,
+    "maxGroup": 6,
+    "tags": [
+      "일식"
+    ],
+    "summary": "일식당",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "부드럽소 안산고잔본점",
+    "category": "한식>소고기구이",
+    "address": "경기도 안산시 단원구 광덕서로 78 대한법조",
+    "lat": 37.3116444,
+    "lng": 126.8277985,
+    "situations": [
+      "parents",
+      "team",
+      "date"
+    ],
+    "price": 3,
+    "maxGroup": 12,
+    "tags": [
+      "소고기"
+    ],
+    "summary": "소고기구이 전문점",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "엉터리 무한대패 안산중앙점",
+    "category": "한식>육류,고기요리",
+    "address": "경기도 안산시 단원구 고잔1길 54 207, 208, 209, 210호",
+    "lat": 37.317981,
+    "lng": 126.8396634,
+    "situations": [
+      "team",
+      "friends"
+    ],
+    "price": 2,
+    "maxGroup": 20,
+    "tags": [
+      "고기구이"
+    ],
+    "summary": "고기구이 전문점",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "대탐소실 안산점",
+    "category": "한식>소고기구이",
+    "address": "경기도 안산시 단원구 광덕대로 146 203, 204호",
+    "lat": 37.3095638,
+    "lng": 126.8304335,
+    "situations": [
+      "parents",
+      "team",
+      "date"
+    ],
+    "price": 3,
+    "maxGroup": 12,
+    "tags": [
+      "소고기"
+    ],
+    "summary": "소고기구이 전문점",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "아리화 안산고잔동 본점",
+    "category": "한식>육류,고기요리",
+    "address": "경기도 안산시 단원구 광덕서로 62 2층 아리화",
+    "lat": 37.310221,
+    "lng": 126.8274177,
+    "situations": [
+      "team",
+      "friends"
+    ],
+    "price": 2,
+    "maxGroup": 20,
+    "tags": [
+      "고기구이"
+    ],
+    "summary": "고기구이 전문점",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "진성관 안산점",
+    "category": "한식>육류,고기요리",
+    "address": "경기도 안산시 단원구 고잔로 18 늘봄스위트빌 2층",
+    "lat": 37.319322,
+    "lng": 126.828407,
+    "situations": [
+      "team",
+      "friends"
+    ],
+    "price": 2,
+    "maxGroup": 20,
+    "tags": [
+      "고기구이"
+    ],
+    "summary": "고기구이 전문점",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "달리는맥주",
+    "category": "술집>맥주,호프",
+    "address": "경기도 안산시 단원구 고잔1길 45 107, 108호",
+    "lat": 37.3184046,
+    "lng": 126.8385152,
+    "situations": [
+      "friends",
+      "study",
+      "team"
+    ],
+    "price": 2,
+    "maxGroup": 20,
+    "tags": [
+      "호프",
+      "맥주"
+    ],
+    "summary": "맥주와 안주를 즐기는 호프집",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "역전할머니맥주 안산고잔점",
+    "category": "술집>맥주,호프",
+    "address": "경기도 안산시 단원구 광덕2로 193-15 1층 106,107호",
+    "lat": 37.3112088,
+    "lng": 126.8319274,
+    "situations": [
+      "friends",
+      "study",
+      "team"
+    ],
+    "price": 2,
+    "maxGroup": 20,
+    "tags": [
+      "호프",
+      "맥주"
+    ],
+    "summary": "맥주와 안주를 즐기는 호프집",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "러너펍 안산점",
+    "category": "술집>맥주,호프",
+    "address": "경기도 안산시 단원구 고잔2길 71 안산프라자 306호",
+    "lat": 37.317668,
+    "lng": 126.8390522,
+    "situations": [
+      "friends",
+      "study",
+      "team"
+    ],
+    "price": 2,
+    "maxGroup": 20,
+    "tags": [
+      "호프",
+      "맥주"
+    ],
+    "summary": "맥주와 안주를 즐기는 호프집",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "김복남맥주 고잔신도시점",
+    "category": "음식점>술집>맥주,호프",
+    "address": "경기도 안산시 단원구 광덕3로 175-11 1층 김복남맥주",
+    "lat": 37.3132383,
+    "lng": 126.8321057,
+    "situations": [
+      "friends",
+      "study",
+      "team"
+    ],
+    "price": 2,
+    "maxGroup": 20,
+    "tags": [
+      "호프",
+      "맥주"
+    ],
+    "summary": "맥주와 안주를 즐기는 호프집",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "금별맥주 안산고잔점",
+    "category": "술집>맥주,호프",
+    "address": "경기도 안산시 단원구 광덕2로 185-14 1층 금별맥주",
+    "lat": 37.3109505,
+    "lng": 126.8314196,
+    "situations": [
+      "friends",
+      "study",
+      "team"
+    ],
+    "price": 2,
+    "maxGroup": 20,
+    "tags": [
+      "호프",
+      "맥주"
+    ],
+    "summary": "맥주와 안주를 즐기는 호프집",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "주술곳간",
+    "category": "술집>요리주점",
+    "address": "경기도 안산시 단원구 광덕대로 155 111호",
+    "lat": 37.3105521,
+    "lng": 126.829163,
+    "situations": [
+      "friends",
+      "team"
+    ],
+    "price": 2,
+    "maxGroup": 12,
+    "tags": [
+      "요리주점",
+      "안주"
+    ],
+    "summary": "안주 중심의 요리주점",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "누누",
+    "category": "술집>요리주점",
+    "address": "경기도 안산시 단원구 광덕2로 163-5 1층 111호",
+    "lat": 37.3104316,
+    "lng": 126.8285569,
+    "situations": [
+      "friends",
+      "team"
+    ],
+    "price": 2,
+    "maxGroup": 12,
+    "tags": [
+      "요리주점",
+      "안주"
+    ],
+    "summary": "안주 중심의 요리주점",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "큐베",
+    "category": "술집>이자카야",
+    "address": "경기도 안산시 단원구 고잔2길 38 1층 건물 안쪽 130호",
+    "lat": 37.3175419,
+    "lng": 126.8349128,
+    "situations": [
+      "friends",
+      "date"
+    ],
+    "price": 2,
+    "maxGroup": 8,
+    "tags": [
+      "이자카야",
+      "안주"
+    ],
+    "summary": "술과 안주를 즐기는 이자카야",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "불작당 안산고잔점",
+    "category": "술집>요리주점",
+    "address": "경기도 안산시 단원구 광덕3로 135-14 1층 112호 불작당",
+    "lat": 37.313777,
+    "lng": 126.828129,
+    "situations": [
+      "friends",
+      "team"
+    ],
+    "price": 2,
+    "maxGroup": 12,
+    "tags": [
+      "요리주점",
+      "안주"
+    ],
+    "summary": "안주 중심의 요리주점",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "아이언펌킨 안산고잔동점",
+    "category": "술집>바(BAR)",
+    "address": "경기도 안산시 단원구 광덕대로 151 삼영타운 2층 204호",
+    "lat": 37.3100753,
+    "lng": 126.828907,
+    "situations": [
+      "date",
+      "friends"
+    ],
+    "price": 3,
+    "maxGroup": 6,
+    "tags": [
+      "와인/바"
+    ],
+    "summary": "와인과 칵테일을 즐기는 바",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "공주회포차",
+    "category": "한식>생선회",
+    "address": "경기도 안산시 단원구 광덕2로 193-11 102호",
+    "lat": 37.3108096,
+    "lng": 126.8319207,
+    "situations": [
+      "friends",
+      "study"
+    ],
+    "price": 3,
+    "maxGroup": 16,
+    "tags": [
+      "포차"
+    ],
+    "summary": "포장마차 스타일 술집",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "회포차김도주",
+    "category": "술집>포장마차",
+    "address": "경기도 안산시 단원구 광덕대로 168 신화타운 2층 201호",
+    "lat": 37.3111866,
+    "lng": 126.8306781,
+    "situations": [
+      "friends",
+      "study"
+    ],
+    "price": 2,
+    "maxGroup": 16,
+    "tags": [
+      "포차"
+    ],
+    "summary": "포장마차 스타일 술집",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "청불천막집포차 안산중앙역점",
+    "category": "음식점>한식",
+    "address": "경기도 안산시 단원구 고잔1길 45 204~205호",
+    "lat": 37.3184046,
+    "lng": 126.8385152,
+    "situations": [
+      "friends",
+      "study"
+    ],
+    "price": 2,
+    "maxGroup": 16,
+    "tags": [
+      "포차"
+    ],
+    "summary": "포장마차 스타일 술집",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "미담",
+    "category": "술집>요리주점",
+    "address": "경기도 안산시 단원구 고잔1길 48 천혜빌딩 3층 306호 미담",
+    "lat": 37.3180043,
+    "lng": 126.8386032,
+    "situations": [
+      "friends",
+      "team"
+    ],
+    "price": 2,
+    "maxGroup": 12,
+    "tags": [
+      "요리주점",
+      "안주"
+    ],
+    "summary": "안주 중심의 요리주점",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "김사부의 진짜순대 감자탕",
+    "category": "한식>순대,순댓국",
+    "address": "경기도 안산시 단원구 광덕대로 263 브레스빌 109호",
+    "lat": 37.320088,
+    "lng": 126.8298804,
+    "situations": [
+      "solo",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 8,
+    "tags": [
+      "국밥/탕"
+    ],
+    "summary": "든든한 국밥·탕 한 끼",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "기울어진뚝배기 안산중앙점",
+    "category": "음식점>한식>국밥",
+    "address": "경기도 안산시 단원구 중앙대로 899 롯데프라자 1층 기뚝",
+    "lat": 37.3174504,
+    "lng": 126.8365194,
+    "situations": [
+      "solo",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 8,
+    "tags": [
+      "국밥/탕"
+    ],
+    "summary": "든든한 국밥·탕 한 끼",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "한라면옥 안산고잔점",
+    "category": "음식점>한식",
+    "address": "경기도 안산시 단원구 광덕대로 142 119, 120호 한라면옥",
+    "lat": 37.3089375,
+    "lng": 126.8308702,
+    "situations": [
+      "parents",
+      "team"
+    ],
+    "price": 2,
+    "maxGroup": 12,
+    "tags": [
+      "한식"
+    ],
+    "summary": "한식당",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "통영상회 본점",
+    "category": "음식점>한식",
+    "address": "경기도 안산시 상록구 한양대학로 18 1층",
+    "lat": 37.3018556,
+    "lng": 126.8412192,
+    "situations": [
+      "parents",
+      "team"
+    ],
+    "price": 2,
+    "maxGroup": 12,
+    "tags": [
+      "한식"
+    ],
+    "summary": "한식당",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "인더비엣 한양대에리카점",
+    "category": "음식점>베트남음식",
+    "address": "경기도 안산시 상록구 성안길 78-3 101호, 102호, 103호 인더비엣 한양대에리카점",
+    "lat": 37.300821,
+    "lng": 126.8379377,
+    "situations": [
+      "solo",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 6,
+    "tags": [
+      "쌀국수"
+    ],
+    "summary": "베트남 음식점",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "A.P. coffee&bakery",
+    "category": "음식점>카페,디저트",
+    "address": "경기도 안산시 상록구 한양대학로 60 한양타운 2층 201호, 202호",
+    "lat": 37.3008578,
+    "lng": 126.8376409,
+    "situations": [
+      "date",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 6,
+    "tags": [
+      "카페"
+    ],
+    "summary": "카페·디저트",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "스타벅스 안산한양대점",
+    "category": "카페,디저트>카페",
+    "address": "경기도 안산시 상록구 성안길 82-3 B동 1층 (사동)",
+    "lat": 37.3007692,
+    "lng": 126.8381539,
+    "situations": [
+      "date",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 6,
+    "tags": [
+      "카페"
+    ],
+    "summary": "카페·디저트",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "남월 쌀국수 안산한양대 본점",
+    "category": "음식점>베트남음식",
+    "address": "경기도 안산시 상록구 성안길 81 101호",
+    "lat": 37.301374,
+    "lng": 126.8383579,
+    "situations": [
+      "solo",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 6,
+    "tags": [
+      "쌀국수"
+    ],
+    "summary": "베트남 음식점",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "만취",
+    "category": "술집>요리주점",
+    "address": "경기도 안산시 상록구 한양대학로 36 2층",
+    "lat": 37.3011695,
+    "lng": 126.8395338,
+    "situations": [
+      "friends",
+      "team"
+    ],
+    "price": 2,
+    "maxGroup": 12,
+    "tags": [
+      "요리주점",
+      "안주"
+    ],
+    "summary": "안주 중심의 요리주점",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "육회바른연어 안산한양대점",
+    "category": "술집>요리주점",
+    "address": "경기도 안산시 상록구 한양대학로 60 108, 109호",
+    "lat": 37.3008578,
+    "lng": 126.8376409,
+    "situations": [
+      "friends",
+      "team"
+    ],
+    "price": 2,
+    "maxGroup": 12,
+    "tags": [
+      "요리주점",
+      "안주"
+    ],
+    "summary": "안주 중심의 요리주점",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "투다리 한양대학점",
+    "category": "술집>오뎅,꼬치",
+    "address": "경기도 안산시 상록구 학사2길 18",
+    "lat": 37.3002927,
+    "lng": 126.8400046,
+    "situations": [
+      "friends",
+      "study"
+    ],
+    "price": 2,
+    "maxGroup": 10,
+    "tags": [
+      "꼬치",
+      "오뎅"
+    ],
+    "summary": "꼬치와 오뎅 안주 술집",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "역전할머니맥주 안산한양대점",
+    "category": "술집>맥주,호프",
+    "address": "경기도 안산시 상록구 한양대학로 36",
+    "lat": 37.3011185,
+    "lng": 126.8395231,
+    "situations": [
+      "friends",
+      "study",
+      "team"
+    ],
+    "price": 2,
+    "maxGroup": 20,
+    "tags": [
+      "호프",
+      "맥주"
+    ],
+    "summary": "맥주와 안주를 즐기는 호프집",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "에이플러스",
+    "category": "술집>요리주점",
+    "address": "경기도 안산시 상록구 성안길 78-4 더에리카 건물 3층",
+    "lat": 37.3011961,
+    "lng": 126.8375572,
+    "situations": [
+      "friends",
+      "team"
+    ],
+    "price": 2,
+    "maxGroup": 12,
+    "tags": [
+      "요리주점",
+      "안주"
+    ],
+    "summary": "안주 중심의 요리주점",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "사이쵸쇼우지",
+    "category": "술집>이자카야",
+    "address": "경기도 안산시 단원구 광덕2로 186-3 105호",
+    "lat": 37.3093008,
+    "lng": 126.8313147,
+    "situations": [
+      "friends",
+      "date"
+    ],
+    "price": 2,
+    "maxGroup": 8,
+    "tags": [
+      "이자카야",
+      "안주"
+    ],
+    "summary": "술과 안주를 즐기는 이자카야",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "최군로바다야끼 고잔점",
+    "category": "술집>이자카야",
+    "address": "경기도 안산시 단원구 광덕2로 186-3 101, 102호",
+    "lat": 37.3093215,
+    "lng": 126.8311582,
+    "situations": [
+      "friends",
+      "date"
+    ],
+    "price": 2,
+    "maxGroup": 8,
+    "tags": [
+      "이자카야",
+      "안주"
+    ],
+    "summary": "술과 안주를 즐기는 이자카야",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "이서식당",
+    "category": "한식>육류,고기요리",
+    "address": "경기도 안산시 상록구 한양대학로 68 2층",
+    "lat": 37.3013351,
+    "lng": 126.8373101,
+    "situations": [
+      "team",
+      "friends"
+    ],
+    "price": 2,
+    "maxGroup": 20,
+    "tags": [
+      "고기구이"
+    ],
+    "summary": "고기구이 전문점",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "두루정 안산한양대점",
+    "category": "음식점>한식",
+    "address": "경기도 안산시 상록구 성안길 78-1 103~104호",
+    "lat": 37.3012627,
+    "lng": 126.8381027,
+    "situations": [
+      "parents",
+      "team"
+    ],
+    "price": 2,
+    "maxGroup": 12,
+    "tags": [
+      "한식"
+    ],
+    "summary": "한식당",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "구곡산장",
+    "category": "음식점>한식",
+    "address": "경기도 안산시 상록구 댕이길 12",
+    "lat": 37.2938712,
+    "lng": 126.8437109,
+    "situations": [
+      "parents",
+      "team"
+    ],
+    "price": 2,
+    "maxGroup": 12,
+    "tags": [
+      "한식"
+    ],
+    "summary": "한식당",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "91콩삼 콩나물삼겹살",
+    "category": "음식점>한식",
+    "address": "경기도 안산시 상록구 학사4길 15-1 1층 (사동)",
+    "lat": 37.2999772,
+    "lng": 126.8400462,
+    "situations": [
+      "team",
+      "friends"
+    ],
+    "price": 2,
+    "maxGroup": 20,
+    "tags": [
+      "고기구이"
+    ],
+    "summary": "고기구이 전문점",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "파앤피파스타하우스 한양대에리카점",
+    "category": "음식점>양식",
+    "address": "경기도 안산시 상록구 학사2길 6 1층 파앤피파스타하우스 한양대에리카",
+    "lat": 37.2996924,
+    "lng": 126.8388122,
+    "situations": [
+      "date",
+      "friends"
+    ],
+    "price": 2,
+    "maxGroup": 8,
+    "tags": [
+      "파스타/양식"
+    ],
+    "summary": "파스타와 양식 레스토랑",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "언니네화덕핏짜",
+    "category": "음식점>이탈리아음식",
+    "address": "경기도 안산시 상록구 성안길 87",
+    "lat": 37.3012371,
+    "lng": 126.8389292,
+    "situations": [
+      "date",
+      "friends"
+    ],
+    "price": 2,
+    "maxGroup": 8,
+    "tags": [
+      "파스타/양식"
+    ],
+    "summary": "파스타와 양식 레스토랑",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "쓰리파스타 한양대에리카점",
+    "category": "음식점>양식",
+    "address": "경기도 안산시 상록구 성안길 84-1 1층",
+    "lat": 37.3010957,
+    "lng": 126.8385945,
+    "situations": [
+      "date",
+      "friends"
+    ],
+    "price": 2,
+    "maxGroup": 8,
+    "tags": [
+      "파스타/양식"
+    ],
+    "summary": "파스타와 양식 레스토랑",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "앤의식탁",
+    "category": "음식점>양식",
+    "address": "경기도 안산시 상록구 성안길 84-1 102호",
+    "lat": 37.301103,
+    "lng": 126.8386012,
+    "situations": [
+      "date",
+      "friends"
+    ],
+    "price": 2,
+    "maxGroup": 8,
+    "tags": [
+      "파스타/양식"
+    ],
+    "summary": "파스타와 양식 레스토랑",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "투파인드피터 한양대에리카점",
+    "category": "음식점>양식>이탈리아음식",
+    "address": "경기도 안산시 상록구 성안길 97 1층",
+    "lat": 37.3015769,
+    "lng": 126.8398689,
+    "situations": [
+      "date",
+      "friends"
+    ],
+    "price": 2,
+    "maxGroup": 8,
+    "tags": [
+      "파스타/양식"
+    ],
+    "summary": "파스타와 양식 레스토랑",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "써브웨이 안산한양대점",
+    "category": "음식점>샌드위치",
+    "address": "경기도 안산시 상록구 한양대학로 60",
+    "lat": 37.3007796,
+    "lng": 126.8376312,
+    "situations": [
+      "solo",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 6,
+    "tags": [
+      "가벼운 식사"
+    ],
+    "summary": "가볍게 먹기 좋은 식당",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "도스마스 본점",
+    "category": "양식>멕시코,남미음식",
+    "address": "경기도 안산시 상록구 학사2길 3-1",
+    "lat": 37.299762,
+    "lng": 126.838483,
+    "situations": [
+      "date",
+      "friends"
+    ],
+    "price": 2,
+    "maxGroup": 8,
+    "tags": [
+      "파스타/양식"
+    ],
+    "summary": "파스타와 양식 레스토랑",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "슈퍼크리스피 한양대에리카점",
+    "category": "음식점>양식>햄버거",
+    "address": "경기도 안산시 상록구 한양대학로 43 1층 일부호(사동)",
+    "lat": 37.3004338,
+    "lng": 126.8390245,
+    "situations": [
+      "date",
+      "friends"
+    ],
+    "price": 2,
+    "maxGroup": 8,
+    "tags": [
+      "파스타/양식"
+    ],
+    "summary": "파스타와 양식 레스토랑",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "오멜트",
+    "category": "카페,디저트>베이커리",
+    "address": "경기도 안산시 상록구 한양대학로 18 2층",
+    "lat": 37.3018111,
+    "lng": 126.8411972,
+    "situations": [
+      "date",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 6,
+    "tags": [
+      "카페"
+    ],
+    "summary": "카페·디저트",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "오쏘커피",
+    "category": "음식점>카페,디저트",
+    "address": "경기도 안산시 상록구 한양대학로 27 1층",
+    "lat": 37.3010968,
+    "lng": 126.8406553,
+    "situations": [
+      "date",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 6,
+    "tags": [
+      "카페"
+    ],
+    "summary": "카페·디저트",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "더스크커피랩",
+    "category": "카페,디저트>카페",
+    "address": "경기도 안산시 상록구 성안길 76 1층",
+    "lat": 37.3013563,
+    "lng": 126.8375253,
+    "situations": [
+      "date",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 6,
+    "tags": [
+      "카페"
+    ],
+    "summary": "카페·디저트",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "동양솥밥 한양대에리카점",
+    "category": "음식점>한식",
+    "address": "경기도 안산시 상록구 한양대학로 48 102, 103호",
+    "lat": 37.300685,
+    "lng": 126.8383694,
+    "situations": [
+      "parents",
+      "team"
+    ],
+    "price": 2,
+    "maxGroup": 12,
+    "tags": [
+      "한식"
+    ],
+    "summary": "든든한 한식 한 상",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "한양솥밥 사동본점",
+    "category": "음식점>한식",
+    "address": "경기도 안산시 상록구 항가울로 241 1층",
+    "lat": 37.3018959,
+    "lng": 126.8431059,
+    "situations": [
+      "parents",
+      "team"
+    ],
+    "price": 2,
+    "maxGroup": 12,
+    "tags": [
+      "한식"
+    ],
+    "summary": "든든한 한식 한 상",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "오소돈",
+    "category": "한식>쌈밥",
+    "address": "경기도 안산시 상록구 댕이길 80",
+    "lat": 37.2943921,
+    "lng": 126.8427841,
+    "situations": [
+      "parents",
+      "team"
+    ],
+    "price": 2,
+    "maxGroup": 12,
+    "tags": [
+      "한식"
+    ],
+    "summary": "든든한 한식 한 상",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "도야짬뽕 안산한양대점",
+    "category": "음식점>중식당",
+    "address": "경기도 안산시 상록구 한양대학로 70-1 102호",
+    "lat": 37.3016125,
+    "lng": 126.8371374,
+    "situations": [
+      "team",
+      "parents",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 12,
+    "tags": [
+      "중식"
+    ],
+    "summary": "중식당",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "탕화쿵푸마라탕 한양대에리카점",
+    "category": "음식점>마라탕",
+    "address": "경기도 안산시 상록구 성안길 78-3 1층 탕화쿵푸마라탕",
+    "lat": 37.3009577,
+    "lng": 126.8379091,
+    "situations": [
+      "solo",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 6,
+    "tags": [
+      "마라탕"
+    ],
+    "summary": "마라탕 전문점",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "보배반점 안산한양대점",
+    "category": "음식점>중식당",
+    "address": "경기도 안산시 상록구 한양대학로 66 104.105.106호",
+    "lat": 37.3011609,
+    "lng": 126.8374018,
+    "situations": [
+      "team",
+      "parents",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 12,
+    "tags": [
+      "중식"
+    ],
+    "summary": "중식당",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "전국5대짬뽕교동짬뽕",
+    "category": "중식>중식당",
+    "address": "경기도 안산시 상록구 항가울로 166 1층",
+    "lat": 37.2956627,
+    "lng": 126.8426489,
+    "situations": [
+      "team",
+      "parents",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 12,
+    "tags": [
+      "중식"
+    ],
+    "summary": "중식당",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "찐하오마라탕",
+    "category": "중식>중식당",
+    "address": "경기도 안산시 상록구 성안길 78-1 1층 101~102호",
+    "lat": 37.3012778,
+    "lng": 126.8379886,
+    "situations": [
+      "solo",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 6,
+    "tags": [
+      "마라탕"
+    ],
+    "summary": "마라탕 전문점",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "에비수",
+    "category": "음식점>일식>일식당",
+    "address": "경기도 안산시 상록구 성안길 93 1층",
+    "lat": 37.3014454,
+    "lng": 126.8395438,
+    "situations": [
+      "date",
+      "friends"
+    ],
+    "price": 2,
+    "maxGroup": 6,
+    "tags": [
+      "일식"
+    ],
+    "summary": "일식당",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "백소정 안산한양대점",
+    "category": "음식점>일식>돈가스",
+    "address": "경기도 안산시 상록구 한양대학로 60 101-103호",
+    "lat": 37.3009461,
+    "lng": 126.8375273,
+    "situations": [
+      "solo",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 6,
+    "tags": [
+      "돈가스"
+    ],
+    "summary": "돈가스 전문점",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "코운즈",
+    "category": "음식점>일식>일식당",
+    "address": "경기도 안산시 상록구 성안2길 16 1층",
+    "lat": 37.30189,
+    "lng": 126.8386186,
+    "situations": [
+      "date",
+      "friends"
+    ],
+    "price": 2,
+    "maxGroup": 6,
+    "tags": [
+      "일식"
+    ],
+    "summary": "일식당",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "담결 한양대에리카점",
+    "category": "음식점>일식>일식당",
+    "address": "경기도 안산시 상록구 한양대학로 49 1층",
+    "lat": 37.3001875,
+    "lng": 126.8384414,
+    "situations": [
+      "date",
+      "friends"
+    ],
+    "price": 2,
+    "maxGroup": 6,
+    "tags": [
+      "일식"
+    ],
+    "summary": "일식당",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "면식당 안산한양대점",
+    "category": "음식점>일식>일식당",
+    "address": "경기도 안산시 상록구 학사4길 2 1층",
+    "lat": 37.2992148,
+    "lng": 126.8386454,
+    "situations": [
+      "date",
+      "friends"
+    ],
+    "price": 2,
+    "maxGroup": 6,
+    "tags": [
+      "일식"
+    ],
+    "summary": "일식당",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "원조감자탕일미집안산한양대점",
+    "category": "음식점>한식",
+    "address": "경기도 안산시 상록구 학사2길 6-1 1층 일미집",
+    "lat": 37.2997893,
+    "lng": 126.8389167,
+    "situations": [
+      "solo",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 8,
+    "tags": [
+      "국밥/탕"
+    ],
+    "summary": "든든한 국밥·탕 한 끼",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "신선샤브&칼국수",
+    "category": "음식점>한식",
+    "address": "경기도 안산시 상록구 성안1길 20 1층",
+    "lat": 37.3015709,
+    "lng": 126.838437,
+    "situations": [
+      "parents",
+      "team"
+    ],
+    "price": 2,
+    "maxGroup": 12,
+    "tags": [
+      "한식"
+    ],
+    "summary": "한식당",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "현가병천순대장터국밥",
+    "category": "한식>순대,순댓국",
+    "address": "경기도 안산시 상록구 한양대학로 82",
+    "lat": 37.3024359,
+    "lng": 126.836576,
+    "situations": [
+      "solo",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 8,
+    "tags": [
+      "국밥/탕"
+    ],
+    "summary": "든든한 국밥·탕 한 끼",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "로드락비어 안산한양대점",
+    "category": "술집>맥주,호프",
+    "address": "경기도 안산시 상록구 성안길 78-3 104호, 105호",
+    "lat": 37.3010042,
+    "lng": 126.8378861,
+    "situations": [
+      "friends",
+      "study",
+      "team"
+    ],
+    "price": 2,
+    "maxGroup": 20,
+    "tags": [
+      "호프",
+      "맥주"
+    ],
+    "summary": "맥주와 안주를 즐기는 호프집",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "동그라미",
+    "category": "술집>맥주,호프",
+    "address": "경기도 안산시 상록구 한양대학로 35",
+    "lat": 37.3007425,
+    "lng": 126.8398405,
+    "situations": [
+      "friends",
+      "study",
+      "team"
+    ],
+    "price": 2,
+    "maxGroup": 20,
+    "tags": [
+      "호프",
+      "맥주"
+    ],
+    "summary": "맥주와 안주를 즐기는 호프집",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "아지트",
+    "category": "술집>맥주,호프",
+    "address": "경기도 안산시 상록구 학사4길 20",
+    "lat": 37.2999563,
+    "lng": 126.8404623,
+    "situations": [
+      "friends",
+      "study",
+      "team"
+    ],
+    "price": 2,
+    "maxGroup": 20,
+    "tags": [
+      "호프",
+      "맥주"
+    ],
+    "summary": "맥주와 안주를 즐기는 호프집",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "머꼬가게",
+    "category": "술집>맥주,호프",
+    "address": "경기도 안산시 상록구 삼리로 24 상가동 104호",
+    "lat": 37.3039642,
+    "lng": 126.8391406,
+    "situations": [
+      "friends",
+      "study",
+      "team"
+    ],
+    "price": 2,
+    "maxGroup": 20,
+    "tags": [
+      "호프",
+      "맥주"
+    ],
+    "summary": "맥주와 안주를 즐기는 호프집",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "바이닐볼트",
+    "category": "술집>와인",
+    "address": "경기도 안산시 단원구 광덕2로 156-11 MK주차타워 201호",
+    "lat": 37.3090195,
+    "lng": 126.8277125,
+    "situations": [
+      "date",
+      "friends"
+    ],
+    "price": 3,
+    "maxGroup": 6,
+    "tags": [
+      "와인/바"
+    ],
+    "summary": "와인과 칵테일을 즐기는 바",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "사운드뱅",
+    "category": "술집>와인",
+    "address": "경기도 안산시 단원구 광덕대로 141 밀레니엄2 B동 1층 116호",
+    "lat": 37.3090973,
+    "lng": 126.8287145,
+    "situations": [
+      "date",
+      "friends"
+    ],
+    "price": 3,
+    "maxGroup": 6,
+    "tags": [
+      "와인/바"
+    ],
+    "summary": "와인과 칵테일을 즐기는 바",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "달달포차",
+    "category": "술집>포장마차",
+    "address": "경기도 안산시 상록구 학사2길 2-1 B01",
+    "lat": 37.299563,
+    "lng": 126.8385349,
+    "situations": [
+      "friends",
+      "study"
+    ],
+    "price": 2,
+    "maxGroup": 16,
+    "tags": [
+      "포차"
+    ],
+    "summary": "포장마차 스타일 술집",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "한양대포차",
+    "category": "술집>포장마차",
+    "address": "경기도 안산시 상록구 학사3길 3",
+    "lat": 37.3005714,
+    "lng": 126.8408277,
+    "situations": [
+      "friends",
+      "study"
+    ],
+    "price": 2,
+    "maxGroup": 16,
+    "tags": [
+      "포차"
+    ],
+    "summary": "포장마차 스타일 술집",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "포차천국 안산고잔점",
+    "category": "술집>포장마차",
+    "address": "경기도 안산시 단원구 광덕2로 186-7 포차천국 안산고잔점",
+    "lat": 37.3088793,
+    "lng": 126.8312557,
+    "situations": [
+      "friends",
+      "study"
+    ],
+    "price": 2,
+    "maxGroup": 16,
+    "tags": [
+      "포차"
+    ],
+    "summary": "포장마차 스타일 술집",
+    "menu": "",
+    "area": "고잔동 일대",
+    "draft": true
+  },
+  {
+    "name": "색시국밥 한대점",
+    "category": "한식>순대,순댓국",
+    "address": "경기도 안산시 상록구 성안2길 23 1층",
+    "lat": 37.302248,
+    "lng": 126.8394456,
+    "situations": [
+      "solo",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 8,
+    "tags": [
+      "국밥/탕"
+    ],
+    "summary": "든든한 국밥·탕 한 끼",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "순뼈감 안산한양대점",
+    "category": "한식>감자탕",
+    "address": "경기도 안산시 상록구 한양대학1길 3 1층",
+    "lat": 37.2997968,
+    "lng": 126.8382427,
+    "situations": [
+      "solo",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 8,
+    "tags": [
+      "국밥/탕"
+    ],
+    "summary": "든든한 국밥·탕 한 끼",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  },
+  {
+    "name": "소문난토종순대",
+    "category": "한식>순대,순댓국",
+    "address": "경기도 안산시 상록구 항가울로 176",
+    "lat": 37.2964048,
+    "lng": 126.8432298,
+    "situations": [
+      "solo",
+      "study"
+    ],
+    "price": 1,
+    "maxGroup": 8,
+    "tags": [
+      "국밥/탕"
+    ],
+    "summary": "든든한 국밥·탕 한 끼",
+    "menu": "",
+    "area": "ERICA 앞",
+    "draft": true
+  }
+]
