@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>안산 상황별 맛집 지도</title>
 <style>
-:root{--bg:#ececec;--panel:#f8f8f8;--ink:#1a1a1a;--sub:#6b6b6b;--line:#d6d6d6;--acc:#3a3a3a;--accbg:#e2e2e2;--sel:#000}
+:root{--bg:#f1ebdb;--panel:#faf6ea;--ink:#16130e;--sub:#6e665a;--line:#ddd4bf;--acc:#16130e;--accbg:#ebe3cf;--sel:#16130e}
 *{box-sizing:border-box}
 html,body{height:100%;margin:0}
 body{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",sans-serif;background:var(--bg);color:var(--ink);display:flex;flex-direction:column}
@@ -14,11 +14,11 @@ h1{font-size:19px;margin:0 0 2px}
 header p{margin:0;font-size:13px;color:var(--sub)}
 .filters{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;margin-top:12px}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
-.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 13px;font:inherit;font-size:14px;cursor:pointer;color:var(--ink)}
-.chip[aria-pressed=true]{background:var(--acc);border-color:var(--acc);color:#fff;font-weight:600}
+.chip{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:7px 13px;font:inherit;font-size:14px;cursor:pointer;color:var(--ink)}
+.chip[aria-pressed=true]{background:var(--acc);border-color:var(--acc);color:#faf6ea;font-weight:600}
 .chip:focus-visible,select:focus-visible,.card:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 label{font-size:13px;color:var(--sub);display:flex;align-items:center;gap:6px}
-select{font:inherit;font-size:14px;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:#fff}
+select{font:inherit;font-size:14px;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink)}
 main{flex:1;min-height:0;display:grid;grid-template-columns:360px 1fr}
 #list{overflow:auto;padding:12px;display:flex;flex-direction:column;gap:10px;background:var(--bg)}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;cursor:pointer}
@@ -27,33 +27,33 @@ main{flex:1;min-height:0;display:grid;grid-template-columns:360px 1fr}
 .meta{font-size:12.5px;color:var(--sub);margin:3px 0 6px}
 .card p{margin:0 0 6px;font-size:14px;line-height:1.5}
 .tags{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px}
-.tag{font-size:12px;background:var(--accbg);color:#3a3a3a;border-radius:4px;padding:2px 7px}
+.tag{font-size:12px;background:var(--accbg);color:#3b362c;border-radius:4px;padding:2px 7px}
 .fit{font-size:12px;color:var(--acc);font-weight:700;white-space:nowrap}
 .links{display:flex;gap:12px;font-size:13px}
 .links a{color:var(--acc);font-weight:600;text-decoration:none}
 .links a:hover{text-decoration:underline}
 .count{font-size:13px;color:var(--sub);font-weight:600;padding:0 2px}
 .st{font-size:12px;font-weight:700;border-radius:4px;padding:1px 6px;margin-left:6px;white-space:nowrap}
-.st.open{background:#3a3a3a;color:#fff}
-.st.closed{background:#e2e2e2;color:#777}
-.st.break{background:#c8c8c8;color:#333}
+.st.open{background:#16130e;color:#faf6ea}
+.st.closed{background:#ebe3cf;color:#8a8170}
+.st.break{background:#d9cfb6;color:#3b362c}
 .ph{display:block;width:100%;height:130px;object-fit:cover;border-radius:6px;margin-bottom:8px;background:var(--accbg)}
 .iw .ph{height:100px;margin-bottom:6px}
 .empty{padding:28px 12px;text-align:center;color:var(--sub);font-size:14px;line-height:1.6}
 #mapwrap{position:relative;min-height:0}
-#map{filter:grayscale(1) contrast(.96);position:absolute!important;top:0;left:0;right:0;bottom:0;width:100%!important;height:100%!important}
-.fake{background:#e2e2e2;overflow:hidden}
+#map{position:absolute!important;top:0;left:0;right:0;bottom:0;width:100%!important;height:100%!important}
+.fake{background:#e9e1cc;overflow:hidden}
 .fake .note{position:absolute;left:10px;bottom:10px;right:10px;background:rgba(255,255,255,.92);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:12.5px;color:var(--sub);line-height:1.5}
-.fake .zone{position:absolute;font-size:12px;color:#888;font-weight:600}
-.lp{width:20px;height:20px;border-radius:50%;background:var(--acc);border:3px solid #fff;box-shadow:0 1px 5px rgba(0,0,0,.45)}
-.lp.on{background:var(--sel);width:26px;height:26px;margin:-3px 0 0 -3px}
-.banner{position:absolute;left:8px;right:8px;bottom:8px;z-index:1100;background:rgba(255,255,255,.96);border:1px solid #bbb;border-radius:8px;padding:8px 10px;font-size:12px;line-height:1.5;color:#444}
-.iw{font-size:13px;line-height:1.5;min-width:210px;padding:2px 4px;color:#1a1a1a}
+.fake .zone{position:absolute;font-size:12px;color:#8a8170;font-weight:600}
+.lp{width:20px;height:20px;border-radius:50%;background:#16130e;border:3px solid #faf6ea;box-shadow:0 1px 5px rgba(0,0,0,.5)}
+.lp.on{background:#16130e;width:28px;height:28px;margin:-4px 0 0 -4px;box-shadow:0 0 0 3px #16130e,0 2px 8px rgba(0,0,0,.55)}
+.banner{position:absolute;left:8px;right:8px;bottom:8px;z-index:1100;background:rgba(255,255,255,.96);border:1px solid #cfc4a8;border-radius:8px;padding:8px 10px;font-size:12px;line-height:1.5;color:#3b362c}
+.iw{font-size:13px;line-height:1.5;min-width:210px;padding:2px 4px;color:#16130e}
 .iw-name{font-size:15px;font-weight:700}
-.iw-meta{font-size:12px;color:#6b6b6b;margin-bottom:4px}
-.iw .links a{color:#3a3a3a;font-weight:600;text-decoration:none}
-.pin{position:absolute;transform:translate(-50%,-100%);width:26px;height:26px;border-radius:50% 50% 50% 0;rotate:-45deg;background:var(--acc);border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.35);cursor:pointer;padding:0}
-.pin.on{background:var(--sel);width:32px;height:32px;z-index:5}
+.iw-meta{font-size:12px;color:#6e665a;margin-bottom:4px}
+.iw .links a{color:#16130e;font-weight:600;text-decoration:none}
+.pin{position:absolute;transform:translate(-50%,-100%);width:26px;height:26px;border-radius:50% 50% 50% 0;rotate:-45deg;background:#16130e;border:2px solid #faf6ea;box-shadow:0 1px 4px rgba(0,0,0,.4);cursor:pointer;padding:0}
+.pin.on{background:#16130e;width:34px;height:34px;z-index:5;box-shadow:0 0 0 3px #16130e}
 footer{padding:6px 14px;font-size:12px;color:var(--sub);background:var(--panel);border-top:1px solid var(--line)}
 @media(max-width:800px){main{grid-template-columns:1fr;grid-template-rows:42% 1fr}#mapwrap{order:-1}}
 </style>
@@ -269,7 +269,11 @@ function drawMarkers(items){
       markers.push(m);
       if(s===selected) m.openPopup();
     } else if(naverOn){
-      const m = new naver.maps.Marker({ position:new naver.maps.LatLng(s.lat,s.lng), map, title:s.name });
+      const m = new naver.maps.Marker({
+        position:new naver.maps.LatLng(s.lat,s.lng), map, title:s.name,
+        icon:{ content:`<div class="lp ${s===selected?"on":""}"></div>`, anchor:new naver.maps.Point(s===selected?14:10, s===selected?14:10) },
+        zIndex: s===selected ? 100 : 1
+      });
       naver.maps.Event.addListener(m,"click",()=>select(s,items));
       m.remove = () => m.setMap(null);
       markers.push(m);
