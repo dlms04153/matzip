@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>안산 상황별 맛집 지도</title>
 <style>
-:root{--bg:#f2f5f4;--panel:#fff;--ink:#1c2530;--sub:#667380;--line:#dde3e6;--acc:#03a94d;--accbg:#e4f6ec}
+:root{--bg:#ececec;--panel:#f8f8f8;--ink:#1a1a1a;--sub:#6b6b6b;--line:#d6d6d6;--acc:#3a3a3a;--accbg:#e2e2e2;--sel:#000}
 *{box-sizing:border-box}
 html,body{height:100%;margin:0}
 body{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",sans-serif;background:var(--bg);color:var(--ink);display:flex;flex-direction:column}
@@ -27,31 +27,33 @@ main{flex:1;min-height:0;display:grid;grid-template-columns:360px 1fr}
 .meta{font-size:12.5px;color:var(--sub);margin:3px 0 6px}
 .card p{margin:0 0 6px;font-size:14px;line-height:1.5}
 .tags{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px}
-.tag{font-size:12px;background:var(--accbg);color:#07663a;border-radius:4px;padding:2px 7px}
+.tag{font-size:12px;background:var(--accbg);color:#3a3a3a;border-radius:4px;padding:2px 7px}
 .fit{font-size:12px;color:var(--acc);font-weight:700;white-space:nowrap}
 .links{display:flex;gap:12px;font-size:13px}
 .links a{color:var(--acc);font-weight:600;text-decoration:none}
 .links a:hover{text-decoration:underline}
 .count{font-size:13px;color:var(--sub);font-weight:600;padding:0 2px}
 .st{font-size:12px;font-weight:700;border-radius:4px;padding:1px 6px;margin-left:6px;white-space:nowrap}
-.st.open{background:#e4f6ec;color:#07663a}
-.st.closed{background:#eceff1;color:#667380}
-.st.break{background:#fff3d6;color:#8a5a00}
+.st.open{background:#3a3a3a;color:#fff}
+.st.closed{background:#e2e2e2;color:#777}
+.st.break{background:#c8c8c8;color:#333}
+.ph{display:block;width:100%;height:130px;object-fit:cover;border-radius:6px;margin-bottom:8px;background:var(--accbg)}
+.iw .ph{height:100px;margin-bottom:6px}
 .empty{padding:28px 12px;text-align:center;color:var(--sub);font-size:14px;line-height:1.6}
 #mapwrap{position:relative;min-height:0}
-#map{position:absolute!important;top:0;left:0;right:0;bottom:0;width:100%!important;height:100%!important}
-.fake{background:#e7eeea;overflow:hidden}
+#map{filter:grayscale(1) contrast(.96);position:absolute!important;top:0;left:0;right:0;bottom:0;width:100%!important;height:100%!important}
+.fake{background:#e2e2e2;overflow:hidden}
 .fake .note{position:absolute;left:10px;bottom:10px;right:10px;background:rgba(255,255,255,.92);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:12.5px;color:var(--sub);line-height:1.5}
-.fake .zone{position:absolute;font-size:12px;color:#7d8b85;font-weight:600}
+.fake .zone{position:absolute;font-size:12px;color:#888;font-weight:600}
 .lp{width:20px;height:20px;border-radius:50%;background:var(--acc);border:3px solid #fff;box-shadow:0 1px 5px rgba(0,0,0,.45)}
-.lp.on{background:#e8473b;width:26px;height:26px;margin:-3px 0 0 -3px}
-.banner{position:absolute;left:8px;right:8px;bottom:8px;z-index:1100;background:rgba(255,255,255,.96);border:1px solid #e0b4b4;border-radius:8px;padding:8px 10px;font-size:12px;line-height:1.5;color:#7a2b2b}
-.iw{font-size:13px;line-height:1.5;min-width:210px;padding:2px 4px;color:#1c2530}
+.lp.on{background:var(--sel);width:26px;height:26px;margin:-3px 0 0 -3px}
+.banner{position:absolute;left:8px;right:8px;bottom:8px;z-index:1100;background:rgba(255,255,255,.96);border:1px solid #bbb;border-radius:8px;padding:8px 10px;font-size:12px;line-height:1.5;color:#444}
+.iw{font-size:13px;line-height:1.5;min-width:210px;padding:2px 4px;color:#1a1a1a}
 .iw-name{font-size:15px;font-weight:700}
-.iw-meta{font-size:12px;color:#667380;margin-bottom:4px}
-.iw .links a{color:#03a94d;font-weight:600;text-decoration:none}
+.iw-meta{font-size:12px;color:#6b6b6b;margin-bottom:4px}
+.iw .links a{color:#3a3a3a;font-weight:600;text-decoration:none}
 .pin{position:absolute;transform:translate(-50%,-100%);width:26px;height:26px;border-radius:50% 50% 50% 0;rotate:-45deg;background:var(--acc);border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.35);cursor:pointer;padding:0}
-.pin.on{background:#e8473b;width:32px;height:32px;z-index:5}
+.pin.on{background:var(--sel);width:32px;height:32px;z-index:5}
 footer{padding:6px 14px;font-size:12px;color:var(--sub);background:var(--panel);border-top:1px solid var(--line)}
 @media(max-width:800px){main{grid-template-columns:1fr;grid-template-rows:42% 1fr}#mapwrap{order:-1}}
 </style>
@@ -89,7 +91,8 @@ const CONFIG = {
 /* ===== 상황 목록 ===== */
 const SITUATIONS = [
   ["all","전체 보기"],["drink","일 끝나고 술 한잔"],["date","기념일 데이트"],
-  ["solo","혼밥"],["team","단체 회식"],["parents","부모님과 식사"]
+  ["solo","혼밥"],["team","단체 회식"],["parents","부모님과 식사"],
+  ["cafe_mood","분좋카","분위기 좋은 카페"],["cafe_study","카공","공부하기 좋은 카페"]
 ];
 
 /* ===== 시연용 샘플 데이터 (가상 가게). 실제로는 shops.json으로 교체 ===== */
@@ -190,8 +193,8 @@ function hoursLine(s){
 
 /* ===== 렌더링 ===== */
 function renderChips(){
-  $("#chips").innerHTML = SITUATIONS.map(([k,l]) =>
-    `<button class="chip" data-k="${k}" aria-pressed="${k===current}">${l}</button>`).join("");
+  $("#chips").innerHTML = SITUATIONS.map(([k,l,tip]) =>
+    `<button class="chip" data-k="${k}" title="${tip||l}" aria-pressed="${k===current}">${l}</button>`).join("");
   $("#chips").onclick = e => {
     const b = e.target.closest(".chip"); if(!b) return;
     current = b.dataset.k; selected = null; renderChips(); update();
@@ -204,6 +207,7 @@ function renderList(items){
   }
   $("#list").innerHTML = `<div class="count">총 ${items.length}곳${onlyOpen?` · 영업중만 (영업시간 정보 없는 ${unknownHidden}곳은 제외)`:""}</div>` + items.map((s,i) => `
     <article class="card ${s===selected?"on":""}" data-i="${i}" tabindex="0">
+      ${s.photo?`<img class="ph" src="${s.photo}" alt="${s.name}" loading="lazy" onerror="this.remove()">`:""}
       <h3><span>${s.name}${statusChip(s)}</span>${s.draft?`<span class="fit">태그 초안</span>`:""}</h3>
       <div class="meta">${s.category.split(">").pop()} · ${s.area||s.address} · ${won(s.price)} · 최대 ${s.maxGroup}명</div>${hoursLine(s)?`<div class="meta">${hoursLine(s)}</div>`:""}
       ${s.summary?`<p>${s.summary}</p>`:""}
@@ -224,6 +228,7 @@ function renderList(items){
 function infoHTML(s){
   const q = encodeURIComponent(s.name.replace("[예시] ",""));
   return `<div class="iw">
+    ${s.photo?`<img class="ph" src="${s.photo}" alt="${s.name}" loading="lazy" onerror="this.remove()">`:""}
     <div class="iw-name">${s.name}${statusChip(s)}${s.draft?` <span class="fit">태그 초안</span>`:""}</div>
     <div class="iw-meta">${s.category.split(">").pop()} · ${s.area||s.address} · ${won(s.price)}</div>
     ${hoursLine(s)?`<div class="iw-meta">${hoursLine(s)}</div>`:""}
@@ -361,7 +366,7 @@ async function start(){
   if(!SHOPS.length) SHOPS = SAMPLE;
   SHOPS = SHOPS.filter(s => typeof s.lat === "number" && typeof s.lng === "number").map(s => ({
     ...s, situations:(s.situations||[]).map(x => x === "friends" ? "drink" : x).filter(x => x !== "study"), tags:s.tags||[], category:s.category||"",
-    summary:s.summary||"", menu:s.menu||"", price:s.price||2, maxGroup:s.maxGroup||30
+    summary:s.summary||"", menu:s.menu||"", photo:s.photo||"", price:s.price||2, maxGroup:s.maxGroup||30
   }));
   $("#kind").innerHTML = '<option value="all">전체</option>' + KINDS.map(k => `<option>${k}</option>`).join("");
   renderChips();
