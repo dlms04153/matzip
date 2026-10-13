@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>가게 등록 도우미</title>
+<style>
+:root{--bg:#f1ebdb;--panel:#faf6ea;--ink:#16130e;--sub:#6e665a;--line:#ddd4bf;--soft:#ebe3cf;--warn:#8a3b12}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.5}
+.wrap{max-width:720px;margin:0 auto;padding:20px 16px 120px}
+h1{font-size:22px;margin:0 0 4px;letter-spacing:-.01em}
+.lead{color:var(--sub);font-size:14px;margin:0 0 18px}
+.lead a{color:var(--ink)}
+section{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:12px}
+h2{font-size:16px;margin:0 0 2px;display:flex;align-items:baseline;gap:8px}
+h2 .n{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--ink);color:var(--panel);font-size:12px;flex:none}
+.hint{font-size:13px;color:var(--sub);margin:0 0 10px}
+label{display:block;font-size:13px;color:var(--sub);margin:10px 0 4px}
+input,textarea,select{width:100%;font:inherit;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:8px;padding:9px 10px}
+textarea{min-height:96px;resize:vertical;font-size:14px}
+input:focus,textarea:focus,select:focus,button:focus-visible{outline:2px solid var(--ink);outline-offset:1px}
+.row{display:flex;gap:8px;align-items:flex-end}
+.row>*{flex:1}
+.row>.auto{flex:none}
+button{font:inherit;cursor:pointer;border-radius:8px;border:1px solid var(--ink);background:var(--ink);color:var(--panel);padding:9px 14px;font-weight:600}
+button.ghost{background:transparent;color:var(--ink)}
+button.small{padding:5px 10px;font-size:13px;font-weight:500}
+.toggles{display:flex;flex-wrap:wrap;gap:6px}
+.tg{background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:7px 13px;font-weight:500}
+.tg[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:var(--panel);font-weight:600}
+.days .tg{width:42px;padding:7px 0;text-align:center}
+.parsed{margin-top:10px;border-top:1px dashed var(--line);padding-top:10px}
+.ok{font-size:13px;color:var(--ink);font-weight:600}
+.warn{font-size:13px;color:var(--warn)}
+.st{font-size:12px;font-weight:700;border-radius:4px;padding:1px 7px;margin-left:6px}
+.st.open{background:var(--ink);color:var(--panel)}
+.st.closed{background:var(--soft);color:var(--sub)}
+.st.break{background:#d9cfb6;color:#3b362c}
+.menu{list-style:none;margin:8px 0 0;padding:0}
+.menu li{display:flex;gap:8px;align-items:center;padding:5px 0;border-bottom:1px solid var(--soft)}
+.menu li input[type=checkbox]{width:18px;height:18px;flex:none;accent-color:var(--ink)}
+.menu li input.nm{flex:1;padding:5px 8px}
+.menu li input.pr{width:96px;flex:none;padding:5px 8px;text-align:right}
+.menu li button{flex:none;background:transparent;color:var(--sub);border:0;padding:4px 6px}
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--ink);color:var(--panel);padding:12px 16px}
+.bar .in{max-width:720px;margin:0 auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.bar .cnt{flex:1;font-size:14px;min-width:120px}
+.bar button{background:var(--panel);color:var(--ink);border-color:var(--panel)}
+.bar button.ghost{background:transparent;color:var(--panel);border-color:#6e665a}
+.saved{list-style:none;padding:0;margin:8px 0 0}
+.saved li{display:flex;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid var(--soft);font-size:14px}
+.saved li .id{font-weight:700;width:64px;flex:none}
+.saved li .nm{flex:1}
+.saved li .sub{color:var(--sub);font-size:12px}
+.toast{position:fixed;left:50%;bottom:78px;transform:translateX(-50%);background:var(--ink);color:var(--panel);padding:9px 16px;border-radius:999px;font-size:14px;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.on{opacity:1}
+@media(prefers-reduced-motion:reduce){.toast{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>가게 등록 도우미</h1>
+  <p class="lead">네이버 플레이스에서 영업시간과 메뉴를 복사해 붙여넣으면 자동으로 정리돼요. 다 채우고 <b>목록에 담기</b>를 누른 뒤, 아래 <b>시트용으로 복사</b>로 공유 시트 수집 탭의 빈 N줄 A칸에 붙여넣으세요. <a href="./">지도로 돌아가기</a></p>
+
+  <section>
+    <h2><span class="n">1</span>가게 찾기</h2>
+    <div class="row">
+      <div><label for="who">담당자</label><input id="who" placeholder="이름"></div>
+      <div><label for="zone">구역</label>
+        <select id="zone"><option>중앙역 먹자골목</option><option>광덕대로·호수공원</option><option>ERICA 앞</option></select></div>
+    </div>
+    <label for="name">가게 이름 (지점명까지)</label>
+    <div class="row">
+      <input id="name" placeholder="예: 스타벅스 안산한양대점">
+      <button class="auto ghost" id="findBtn" type="button">네이버에서 열기</button>
+    </div>
+    <p class="hint" style="margin-top:6px">주소와 좌표는 비워 두면 지도에 올릴 때 네이버 API가 자동으로 채워요.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">2</span>영업시간</h2>
+    <p class="hint">플레이스의 영업시간을 <b>펼친 다음</b> 요일별 시간까지 통째로 드래그해 복사하고 붙여넣으세요.</p>
+    <textarea id="hoursPaste" placeholder="월&#10;11:30 - 22:00&#10;15:00 - 17:00 브레이크타임&#10;화&#10;정기휴무 (매주 화요일)&#10;..."></textarea>
+    <div class="parsed">
+      <div class="row">
+        <div><label for="hours">기본 영업시간</label><input id="hours" placeholder="11:00-22:00"></div>
+        <div><label for="brk">브레이크타임</label><input id="brk" placeholder="15:00-17:00"></div>
+      </div>
+      <label for="byday">요일별 영업시간 (평소와 다른 요일만)</label>
+      <input id="byday" placeholder="fri=17:00-03:00;sat=17:00-03:00">
+      <label>휴무 요일</label>
+      <div class="toggles days" id="days"></div>
+      <p id="hoursMsg" class="hint" style="margin:10px 0 0"></p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="n">3</span>메뉴와 가격</h2>
+    <p class="hint">플레이스 메뉴 탭에서 메뉴 목록을 드래그해 복사하고 붙여넣으세요. 메뉴 이름과 가격만 남기고 설명은 버려요.</p>
+    <textarea id="menuPaste" placeholder="모둠 사시미&#10;32,000원&#10;하이볼&#10;7,000원"></textarea>
+    <p id="menuMsg" class="hint" style="margin:8px 0 0"></p>
+    <ul class="menu" id="menuList"></ul>
+    <button class="ghost small" id="addMenu" type="button" style="margin-top:8px">메뉴 직접 추가</button>
+  </section>
+
+  <section>
+    <h2><span class="n">4</span>카테고리와 정보</h2>
+    <label style="margin-top:4px">업종 (먹고 싶은 메뉴)</label>
+    <div class="toggles" id="types"></div>
+    <p class="hint" style="margin:6px 0 0">고르지 않으면 네이버 업종으로 자동 분류돼요.</p>
+    <label>카테고리 (상황, 여러 개 가능)</label>
+    <div class="toggles" id="sits"></div>
+    <div id="pickFields" hidden>
+      <div class="row">
+        <div class="auto" style="width:34%"><label for="pickBy">추천한 사람</label><input id="pickBy" placeholder="이름"></div>
+        <div><label for="pickNote">추천 이유 (지도에 표시돼요)</label><input id="pickNote" placeholder="예: 시험 끝나고 꼭 가는 곳. 마늘 보쌈이 진짜 맛있어요"></div>
+      </div>
+    </div>
+    <label>가격대 (1인)</label>
+    <div class="toggles" id="price"></div>
+    <p id="priceMsg" class="hint" style="margin:6px 0 0"></p>
+    <div class="row">
+      <div><label for="maxg">최대 인원</label><input id="maxg" type="number" min="1" inputmode="numeric" placeholder="8"></div>
+      <div><label for="tags">태그 (; 로 구분)</label><input id="tags" placeholder="조용함;단체석;주차"></div>
+    </div>
+    <label for="summary">한 줄 소개 (내 말로)</label>
+    <input id="summary" placeholder="조명이 낮아 이야기하기 좋은 이자카야">
+    <label for="memo">메모 (지도에 안 나와요)</label>
+    <input id="memo">
+  </section>
+
+  <div class="row" style="gap:8px">
+    <button id="saveBtn" type="button">목록에 담기</button>
+    <button id="resetBtn" class="ghost auto" type="button">입력 비우기</button>
+  </div>
+
+  <section style="margin-top:16px">
+    <h2>담아 둔 가게</h2>
+    <p class="hint">이 브라우저에만 저장돼요. 시트에 붙여넣은 뒤에는 비워 주세요. 사진은 ID 이름(예: NK3Q7.jpg)으로 공유 폴더에 올려요.</p>
+    <ul class="saved" id="saved"></ul>
+  </section>
+</div>
+
+<div class="bar"><div class="in">
+  <span class="cnt" id="cnt">담아 둔 가게 0곳</span>
+  <button id="copyBtn" type="button">시트용으로 복사</button>
+  <button id="csvBtn" class="ghost" type="button">CSV 내려받기</button>
+  <button id="clearBtn" class="ghost" type="button">목록 비우기</button>
+</div></div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+/* ===== 공유 시트 '수집' 탭과 같은 칸 순서 ===== */
+const COLS = ["ID","구역","담당자","상태","가게이름","주소","업종","술한잔","데이트","혼밥","회식","부모님","분좋카","카공",
+  "가격대","최대인원","태그","한줄소개","추천메뉴","영업시간","요일별영업시간","휴무요일","브레이크타임","사진","메모","위도","경도",
+  "디저트","오순도순","추천한사람","추천이유","업종분류"];   /* 마지막 5칸은 시트 끝에 추가된 칸 */
+const SITS = [["카공","카공"],["분좋카","분좋카"],["디저트","디저트"],["데이트","데이트"],["혼밥","혼밥"],["회식","회식"],["오순도순","오순도순 맛zip"]];
+const TYPES = ["한식","양식","중식","일식","카페&디저트","고기&구이&회","아시아음식"];
+const WEEK = ["mon","tue","wed","thu","fri","sat","sun"];
+const KO2EN = {월:"mon",화:"tue",수:"wed",목:"thu",금:"fri",토:"sat",일:"sun"};
+const EN2KO = {mon:"월",tue:"화",wed:"수",thu:"목",fri:"금",sat:"토",sun:"일"};
+const $ = s => document.querySelector(s);
+
+/* ===== 영업시간 붙여넣기 해석 ===== */
+const pad = t => { const [h,m] = t.split(":"); return h.padStart(2,"0") + ":" + m; };
+function expandDays(label){
+  label = label.replace(/요일/g,"").replace(/\s/g,"");
+  if(label === "매일") return WEEK.slice();
+  if(label === "평일") return WEEK.slice(0,5);
+  if(label === "주말") return ["sat","sun"];
+  const out = [];
+  for(const part of label.split(/[,·]/)){
+    const r = part.match(/^([월화수목금토일])[~\-]([월화수목금토일])$/);
+    if(r){
+      let i = WEEK.indexOf(KO2EN[r[1]]); const j = WEEK.indexOf(KO2EN[r[2]]);
+      for(let k=0;k<7;k++){ out.push(WEEK[i]); if(i===j) break; i=(i+1)%7; }
+    } else if(KO2EN[part]) out.push(KO2EN[part]);
+  }
+  return out;
+}
+function parseHours(text){
+  const per = {}; WEEK.forEach(d => per[d] = {hours:null, brk:null, closed:false});
+  const notes = [];
+  const TIME = /(\d{1,2}:\d{2})\s*[-~–]\s*(?:익일\s*)?(\d{1,2}:\d{2})/;
+  const DAYLBL = /^(매일|평일|주말|[월화수목금토일](?:요일)?(?:\s*[,~\-·]\s*[월화수목금토일](?:요일)?)*)(?=\s|\(|$|\d|:)/;
+  let cur = null, any = false, spec = false;
+  for(let line of String(text).split(/\n/)){
+    line = line.trim(); if(!line) continue;
+    const m = line.match(DAYLBL);
+    let rest = line;
+    if(m){ cur = expandDays(m[1]); spec = !/^(매일|평일|주말)$/.test(m[1].replace(/\s/g,"")); rest = line.slice(m[0].length).replace(/^\([^)]*\)/,"").trim(); }
+    if(/휴무|쉬는\s*날|정기\s*휴일/.test(rest) || (m && /휴무/.test(line))){
+      if(/첫째|둘째|셋째|넷째|다섯째|마지막|격주|공휴일|명절|설날|추석|임시/.test(line)){ notes.push(line); continue; }
+      const named = [...line.matchAll(/([월화수목금토일])요일/g)].map(x => KO2EN[x[1]]);
+      const days = named.length ? named : (cur || []);
+      days.forEach(d => { per[d].closed = true; per[d].hours = null; });
+      any = any || days.length > 0; continue;
+    }
+    if(/라스트\s*오더|L\.?O/i.test(rest)) continue;
+    const days = cur || WEEK;
+    if(/24\s*시간/.test(rest)){ days.forEach(d => { if(!per[d].closed) per[d].hours = "24h"; }); any = true; continue; }
+    const t = rest.match(TIME);
+    if(!t) continue;
+    const range = pad(t[1]) + "-" + pad(t[2]);
+    if(/브레이크|휴게|break/i.test(rest)) days.forEach(d => per[d].brk = per[d].brk || range);
+    else days.forEach(d => {                      // 요일을 콕 집은 줄은 매일·평일 줄보다 우선
+      if(per[d].closed) return;
+      if(!per[d].hours || (spec && per[d].src !== "day")){ per[d].hours = range; per[d].src = (cur && spec) ? "day" : "group"; }
+    });
+    any = true;
+  }
+  const mode = arr => { const c = {}; arr.forEach(v => c[v] = (c[v]||0)+1); return Object.keys(c).sort((a,b) => c[b]-c[a])[0] || ""; };
+  const open = WEEK.filter(d => per[d].hours);
+  const hours = mode(open.map(d => per[d].hours));
+  const byDay = open.filter(d => per[d].hours !== hours).map(d => d + "=" + per[d].hours);
+  return { found: any, hours, byDay: byDay.join(";"), closed: WEEK.filter(d => per[d].closed),
+           brk: mode(WEEK.map(d => per[d].brk).filter(Boolean)), notes };
+}
+
+/* ===== 메뉴 붙여넣기 해석 ===== */
+const PRICE = /(\d{1,3}(?:,\d{3})+|\d{3,7})\s*원/;
+const SKIP = /^(대표|인기|추천|best|new|신메뉴|메뉴|메뉴판|메뉴\s*더보기|더보기|사진|이미지|원산지.*|가격.*|주문.*|포장|배달|예약|변동|시가)$/i;
+function nameLike(line){
+  return line.length <= 28 && !PRICE.test(line) && !SKIP.test(line) && !/[.!?。]$/.test(line) && !/^\d/.test(line) && (line.match(/\s/g)||[]).length <= 4;
+}
+function parseMenu(text){
+  const items = []; let pending = null;
+  for(let line of String(text).split(/\n/)){
+    line = line.replace(/\s+/g," ").trim(); if(!line) continue;
+    const p = line.match(PRICE);
+    if(p){
+      const price = +p[1].replace(/,/g,"");
+      const inline = line.slice(0, p.index).replace(/[·:\-~|]+\s*$/,"").trim();
+      const nm = inline && nameLike(inline) ? inline : pending;
+      if(nm) items.push({name:nm, price});
+      pending = null; continue;
+    }
+    if(/^(시가|변동|가격\s*변동)/.test(line) && pending){ items.push({name:pending, price:null}); pending = null; continue; }
+    if(pending === null && nameLike(line)) pending = line;
+  }
+  const seen = new Set();
+  return items.filter(it => !seen.has(it.name) && seen.add(it.name));
+}
+function priceTier(items){
+  const ps = items.map(i => i.price).filter(p => p && p >= 5000).sort((a,b) => a-b);
+  if(!ps.length) return 0;
+  const med = ps[Math.floor(ps.length/2)];
+  return med < 12000 ? 1 : med < 25000 ? 2 : 3;
+}
+
+/* ===== 지금 영업 여부 미리보기 (지도와 같은 규칙) ===== */
+function seoulNow(){
+  const p = new Intl.DateTimeFormat("en-US",{timeZone:"Asia/Seoul",weekday:"short",hour:"numeric",minute:"numeric",hourCycle:"h23"}).formatToParts(new Date());
+  const g = t => p.find(x => x.type === t).value;
+  return { day:g("weekday").slice(0,3).toLowerCase(), min:(+g("hour")%24)*60 + +g("minute") };
+}
+function rng(str){
+  if(!str) return null; if(/^(24h|24시간)/.test(str)) return [0,1440];
+  const m = String(str).match(/^(\d{1,2}):(\d{2})-(\d{1,2}):(\d{2})$/); if(!m) return null;
+  const a = +m[1]*60 + +m[2]; let b = +m[3]*60 + +m[4]; if(b <= a) b += 1440; return [a,b];
+}
+function statusOf(s){
+  if(!s.hours && !s.byDay) return null;
+  const by = Object.fromEntries((s.byDay||"").split(";").filter(Boolean).map(x => x.split("=")));
+  const hf = d => s.closed.includes(d) ? null : (by[d] || s.hours || null);
+  const now = seoulNow(), t = rng(hf(now.day));
+  if(t && now.min >= t[0] && now.min < t[1]){ const b = rng(s.brk); return b && now.min >= b[0] && now.min < b[1] ? "break" : "open"; }
+  const y = rng(hf(WEEK[(WEEK.indexOf(now.day)+6)%7]));
+  if(y && y[1] > 1440 && now.min < y[1]-1440) return "open";
+  return "closed";
+}
+
+/* ===== 화면 상태 ===== */
+const store = {
+  get(k, d){ try{ const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; }catch(e){ return d; } },
+  set(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+};
+let menu = [], closed = [], sits = [], price = 0, priceTouched = false, ftype = "";
+let saved = store.get("matjip_saved", []);
+
+function toast(msg){ const t = $("#toast"); t.textContent = msg; t.classList.add("on"); clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove("on"), 1800); }
+function renderDays(){
+  $("#days").innerHTML = WEEK.map(d => `<button type="button" class="tg" data-d="${d}" aria-pressed="${closed.includes(d)}">${EN2KO[d]}</button>`).join("");
+}
+function renderSits(){
+  $("#sits").innerHTML = SITS.map(([k,l]) => `<button type="button" class="tg" data-k="${k}" aria-pressed="${sits.includes(k)}">${l}</button>`).join("");
+  const on = sits.includes("오순도순");
+  $("#pickFields").hidden = !on;
+  if(on && !$("#pickBy").value) $("#pickBy").value = $("#who").value.trim();
+}
+function renderTypes(){
+  $("#types").innerHTML = TYPES.map(k => `<button type="button" class="tg" data-ty="${k}" aria-pressed="${ftype===k}">${k}</button>`).join("");
+}
+function renderPrice(){
+  $("#price").innerHTML = [[1,"1만원 안팎"],[2,"2만원 안팎"],[3,"3만원 이상"]].map(([v,l]) =>
+    `<button type="button" class="tg" data-p="${v}" aria-pressed="${price===v}">${l}</button>`).join("");
+}
+function renderMenu(){
+  $("#menuList").innerHTML = menu.map((m,i) => `<li>
+    <input type="checkbox" data-i="${i}" ${m.on?"checked":""} aria-label="지도에 표시">
+    <input class="nm" data-i="${i}" value="${esc(m.name)}" aria-label="메뉴 이름">
+    <input class="pr" data-i="${i}" value="${m.price ?? ""}" inputmode="numeric" placeholder="가격" aria-label="가격">
+    <button type="button" data-del="${i}" aria-label="삭제">✕</button></li>`).join("");
+  const on = menu.filter(m => m.on).length;
+  $("#menuMsg").textContent = menu.length ? `메뉴 ${menu.length}개 · 체크한 ${on}개가 지도에 표시돼요 (5개 이하 권장)` : "";
+  autoPrice();
+}
+function autoPrice(){
+  const t = priceTier(menu);
+  if(t && !priceTouched){ price = t; renderPrice(); }
+  $("#priceMsg").textContent = t ? `메뉴 가격으로 추정하면 ${["","1만원 안팎","2만원 안팎","3만원 이상"][t]}이에요. 술집처럼 나눠 먹는 곳은 직접 고쳐 주세요.` : "";
+}
+function hoursState(){ return { hours:$("#hours").value.trim(), byDay:$("#byday").value.trim(), closed, brk:$("#brk").value.trim() }; }
+function renderHoursMsg(extra){
+  const s = hoursState(), st = statusOf(s);
+  const label = {open:"영업중", closed:"영업 종료", break:"브레이크타임"}[st];
+  $("#hoursMsg").innerHTML = (label ? `지금 기준 미리보기: <span class="st ${st}">${label}</span>` : "영업시간이 비어 있어요.") + (extra || "");
+}
+function esc(s){ return String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+
+$("#hoursPaste").addEventListener("input", e => {
+  const r = parseHours(e.target.value);
+  if(!r.found){ renderHoursMsg(e.target.value.trim() ? `<br><span class="warn">시간을 찾지 못했어요. 영업시간을 펼친 뒤 다시 복사하거나 아래 칸에 직접 적어 주세요.</span>` : ""); return; }
+  $("#hours").value = r.hours; $("#byday").value = r.byDay; $("#brk").value = r.brk;
+  closed = r.closed; renderDays();
+  renderHoursMsg((r.notes.length ? `<br><span class="warn">자동으로 못 넣은 휴무 정보: ${esc(r.notes.join(" / "))} → 메모에 옮겨 두었어요.</span>` : "") );
+  if(r.notes.length){ const m = $("#memo"); if(!m.value.includes(r.notes[0])) m.value = (m.value ? m.value + " / " : "") + r.notes.join(" / "); }
+});
+["#hours","#byday","#brk"].forEach(id => $(id).addEventListener("input", () => renderHoursMsg()));
+$("#days").addEventListener("click", e => { const b = e.target.closest("[data-d]"); if(!b) return; const d = b.dataset.d; closed = closed.includes(d) ? closed.filter(x => x!==d) : [...closed, d]; renderDays(); renderHoursMsg(); });
+$("#sits").addEventListener("click", e => { const b = e.target.closest("[data-k]"); if(!b) return; const k = b.dataset.k; sits = sits.includes(k) ? sits.filter(x => x!==k) : [...sits, k]; renderSits(); });
+$("#types").addEventListener("click", e => { const b = e.target.closest("[data-ty]"); if(!b) return; ftype = ftype === b.dataset.ty ? "" : b.dataset.ty; renderTypes(); });
+$("#price").addEventListener("click", e => { const b = e.target.closest("[data-p]"); if(!b) return; price = +b.dataset.p; priceTouched = true; renderPrice(); });
+$("#menuPaste").addEventListener("input", e => {
+  const items = parseMenu(e.target.value);
+  menu = items.map((m,i) => ({...m, on: i < 5}));
+  renderMenu();
+  if(e.target.value.trim() && !items.length) $("#menuMsg").innerHTML = `<span class="warn">메뉴와 가격을 찾지 못했어요. '메뉴 직접 추가'로 넣어 주세요.</span>`;
+});
+$("#menuList").addEventListener("input", e => {
+  const i = +e.target.dataset.i; if(isNaN(i)) return;
+  if(e.target.type === "checkbox") menu[i].on = e.target.checked;
+  else if(e.target.classList.contains("nm")) menu[i].name = e.target.value;
+  else { const v = e.target.value.replace(/[^\d]/g,""); menu[i].price = v ? +v : null; autoPrice(); return; }
+  const on = menu.filter(m => m.on).length;
+  $("#menuMsg").textContent = `메뉴 ${menu.length}개 · 체크한 ${on}개가 지도에 표시돼요 (5개 이하 권장)`;
+});
+$("#menuList").addEventListener("click", e => { const b = e.target.closest("[data-del]"); if(!b) return; menu.splice(+b.dataset.del, 1); renderMenu(); });
+$("#addMenu").onclick = () => { menu.push({name:"", price:null, on:true}); renderMenu(); const ins = document.querySelectorAll("#menuList .nm"); ins[ins.length-1].focus(); };
+$("#findBtn").onclick = () => { const n = $("#name").value.trim(); if(!n){ $("#name").focus(); return; } window.open("https://map.naver.com/p/search/" + encodeURIComponent(n + " 안산"), "_blank", "noopener"); };
+
+function newId(){ return "N" + Date.now().toString(36).slice(-4).toUpperCase() + Math.floor(Math.random()*36).toString(36).toUpperCase(); }
+function clean(v){ return String(v ?? "").replace(/[\t\r\n]+/g," ").trim(); }
+function resetForm(keepWho){
+  ["#name","#hoursPaste","#hours","#byday","#brk","#menuPaste","#maxg","#tags","#summary","#memo","#pickBy","#pickNote"].forEach(id => $(id).value = "");
+  menu = []; closed = []; sits = []; price = 0; priceTouched = false; ftype = "";
+  renderDays(); renderSits(); renderTypes(); renderPrice(); renderMenu(); renderHoursMsg(); $("#menuMsg").textContent = "";
+  if(!keepWho) $("#who").value = "";
+}
+$("#saveBtn").onclick = () => {
+  const name = $("#name").value.trim();
+  if(!name){ toast("가게 이름을 적어 주세요"); $("#name").focus(); return; }
+  if(!sits.length && !confirm("카테고리를 하나도 고르지 않았어요. 그래도 담을까요? (전체 보기와 업종에서만 보여요)")) return;
+  if(sits.includes("오순도순") && !$("#pickNote").value.trim()){ toast("오순도순 맛zip은 추천 이유를 적어 주세요"); $("#pickNote").focus(); return; }
+  const h = hoursState();
+  const menuStr = menu.filter(m => m.on && m.name.trim()).map(m => clean(m.name).replace(/;/g,",") + (m.price ? " " + m.price : "")).join(";");
+  const rec = {
+    ID:newId(), 구역:$("#zone").value, 담당자:$("#who").value.trim(), 상태:"확인완료", 가게이름:name,
+    가격대: price || "", 최대인원: $("#maxg").value.trim(), 태그:$("#tags").value.trim(), 한줄소개:$("#summary").value.trim(),
+    추천메뉴: menuStr, 영업시간:h.hours, 요일별영업시간:h.byDay, 휴무요일: h.closed.map(d => EN2KO[d]).join(";"),
+    브레이크타임:h.brk, 메모:$("#memo").value.trim(), 업종분류: ftype,
+    추천한사람: sits.includes("오순도순") ? $("#pickBy").value.trim() : "",
+    추천이유: sits.includes("오순도순") ? $("#pickNote").value.trim() : ""
+  };
+  SITS.forEach(([k]) => rec[k] = sits.includes(k) ? "O" : "");
+  if(saved.some(r => r.가게이름 === name) && !confirm(`'${name}'은(는) 이미 담아 뒀어요. 하나 더 담을까요?`)) return;
+  saved.push(rec); store.set("matjip_saved", saved); store.set("matjip_who", rec.담당자); store.set("matjip_zone", rec.구역);
+  renderSaved(); resetForm(true); window.scrollTo({top:0, behavior:"smooth"});
+  toast(`담았어요 · 사진 이름은 ${rec.ID}.jpg`);
+};
+$("#resetBtn").onclick = () => resetForm(true);
+
+function renderSaved(){
+  $("#cnt").textContent = `담아 둔 가게 ${saved.length}곳`;
+  $("#saved").innerHTML = saved.length ? saved.map((r,i) => `<li><span class="id">${esc(r.ID)}</span>
+    <span class="nm">${esc(r.가게이름)}<br><span class="sub">${esc(r.구역)} · ${esc(r.업종분류 || "업종 자동")} · ${SITS.filter(([k]) => r[k]).map(([,l]) => l).join(", ") || "카테고리 없음"}</span></span>
+    <button type="button" class="ghost small" data-rm="${i}">삭제</button></li>`).join("")
+    : `<li class="sub">아직 없어요. 위에서 가게를 채우고 목록에 담기를 누르세요.</li>`;
+}
+$("#saved").addEventListener("click", e => { const b = e.target.closest("[data-rm]"); if(!b) return; if(!confirm("이 가게를 목록에서 뺄까요?")) return; saved.splice(+b.dataset.rm, 1); store.set("matjip_saved", saved); renderSaved(); });
+
+function rowsTSV(){ return saved.map(r => COLS.map(c => clean(r[c])).join("\t")).join("\n"); }
+$("#copyBtn").onclick = async () => {
+  if(!saved.length){ toast("담아 둔 가게가 없어요"); return; }
+  const text = rowsTSV();
+  try{ await navigator.clipboard.writeText(text); }
+  catch(e){ const ta = document.createElement("textarea"); ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand("copy"); ta.remove(); }
+  toast(`${saved.length}곳을 복사했어요 · 시트의 빈 N줄 A칸에 붙여넣기`);
+};
+$("#csvBtn").onclick = () => {
+  if(!saved.length){ toast("담아 둔 가게가 없어요"); return; }
+  const q = v => `"${String(v ?? "").replace(/"/g,'""')}"`;
+  const csv = "﻿" + [COLS.map(q).join(","), ...saved.map(r => COLS.map(c => q(clean(r[c]))).join(","))].join("\r\n");
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([csv], {type:"text/csv;charset=utf-8"}));
+  a.download = `new_shops_${($("#who").value.trim() || "team")}.csv`; a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+};
+$("#clearBtn").onclick = () => { if(!saved.length) return; if(!confirm(`담아 둔 ${saved.length}곳을 모두 지울까요? 시트에 붙여넣은 뒤에만 지우세요.`)) return; saved = []; store.set("matjip_saved", saved); renderSaved(); };
+
+$("#who").value = store.get("matjip_who", "");
+$("#zone").value = store.get("matjip_zone", "중앙역 먹자골목");
+renderDays(); renderSits(); renderTypes(); renderPrice(); renderMenu(); renderHoursMsg(); renderSaved();
+</script>
+</body>
+</html>

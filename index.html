@@ -14,6 +14,14 @@ h1{font-size:19px;margin:0 0 2px}
 header p{margin:0;font-size:13px;color:var(--sub)}
 .filters{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;margin-top:12px}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
+.frow{display:flex;align-items:center;gap:10px;margin-top:10px}
+.flabel{font-size:12px;font-weight:700;color:var(--sub);width:28px;flex:none}
+.chip.pick{border-color:var(--ink);font-weight:700}
+.pickbox{border-left:3px solid var(--ink);padding:4px 0 4px 9px;margin:4px 0 8px;font-size:13px}
+.pickbox b{font-size:12px}
+.lp.pk{display:grid;place-items:center}
+.lp.pk::after{content:"★";color:#faf6ea;font-size:10px;line-height:1}
+.lp.on.pk::after{font-size:13px}
 .chip{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:7px 13px;font:inherit;font-size:14px;cursor:pointer;color:var(--ink)}
 .chip[aria-pressed=true]{background:var(--acc);border-color:var(--acc);color:#faf6ea;font-weight:600}
 .chip:focus-visible,select:focus-visible,.card:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
@@ -39,6 +47,23 @@ main{flex:1;min-height:0;display:grid;grid-template-columns:360px 1fr}
 .st.break{background:#d9cfb6;color:#3b362c}
 .ph{display:block;width:100%;height:130px;object-fit:cover;border-radius:6px;margin-bottom:8px;background:var(--accbg)}
 .iw .ph{height:100px;margin-bottom:6px}
+.today{font-size:13px;margin:2px 0 6px}
+.today b{font-weight:700}
+.dim{color:var(--sub);font-size:12px}
+.sits{display:flex;flex-wrap:wrap;gap:4px;margin:4px 0 8px}
+.sit{font-size:12px;border:1px solid var(--ink);color:var(--ink);border-radius:999px;padding:1px 8px;font-weight:600}
+.menu{list-style:none;margin:4px 0 8px;padding:0;font-size:13px}
+.menu li{display:flex;align-items:baseline;gap:6px;padding:2px 0}
+.menu li i{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-3px)}
+.menu li b{font-weight:600;white-space:nowrap}
+.week{font-size:12.5px;margin:0 0 8px}
+.week summary{cursor:pointer;color:var(--sub)}
+.week table{border-collapse:collapse;margin:4px 0}
+.week th{font-weight:600;padding:1px 10px 1px 0;text-align:left;color:var(--sub)}
+.week td{padding:1px 0}
+.week tr.now th,.week tr.now td{color:var(--ink);font-weight:700}
+.iw{max-height:380px;overflow:auto}
+.iw-sum{margin:2px 0 6px}
 .empty{padding:28px 12px;text-align:center;color:var(--sub);font-size:14px;line-height:1.6}
 #mapwrap{position:relative;min-height:0}
 #map{position:absolute!important;top:0;left:0;right:0;bottom:0;width:100%!important;height:100%!important}
@@ -55,30 +80,30 @@ main{flex:1;min-height:0;display:grid;grid-template-columns:360px 1fr}
 .pin{position:absolute;transform:translate(-50%,-100%);width:26px;height:26px;border-radius:50% 50% 50% 0;rotate:-45deg;background:#16130e;border:2px solid #faf6ea;box-shadow:0 1px 4px rgba(0,0,0,.4);cursor:pointer;padding:0}
 .pin.on{background:#16130e;width:34px;height:34px;z-index:5;box-shadow:0 0 0 3px #16130e}
 footer{padding:6px 14px;font-size:12px;color:var(--sub);background:var(--panel);border-top:1px solid var(--line)}
-@media(max-width:800px){main{grid-template-columns:1fr;grid-template-rows:42% 1fr}#mapwrap{order:-1}}
+@media(max-width:800px){.frow .chips{flex-wrap:nowrap;overflow-x:auto;padding-bottom:2px}.chip{white-space:nowrap}main{grid-template-columns:1fr;grid-template-rows:42% 1fr}#mapwrap{order:-1}}
 </style>
 </head>
 <body>
 <header>
   <h1>오늘 어디 가지? 안산 고잔동 · ERICA 앞</h1>
-  <p>상황을 고르면 어울리는 가게를 먼저 보여드려요.</p>
+  <p>상황을 고르고, 먹고 싶은 메뉴를 고르면 어울리는 가게만 보여드려요.</p>
+  <div class="frow"><span class="flabel">상황</span><div class="chips" id="chips" role="group" aria-label="상황 선택"></div></div>
+  <div class="frow"><span class="flabel">메뉴</span><div class="chips" id="kinds" role="group" aria-label="업종 선택"></div></div>
   <div class="filters">
-    <div class="chips" id="chips" role="group" aria-label="상황 선택"></div>
     <label>인원
       <select id="size"><option value="0" selected>상관없음</option><option value="1">1명</option><option value="2">2명</option><option value="4">3~4명</option><option value="8">5~8명</option><option value="20">9명 이상</option></select>
     </label>
-    <label>업종 <select id="kind"></select></label>
-    <button class="chip" id="openBtn" aria-pressed="false">영업중만 보기</button>
     <label>예산(1인)
       <select id="budget"><option value="3">제한 없음</option><option value="1">1만원 안팎</option><option value="2">2만원 안팎</option></select>
     </label>
+    <button class="chip" id="openBtn" aria-pressed="false">영업중만 보기</button>
   </div>
 </header>
 <main>
   <section id="list" aria-live="polite"></section>
   <section id="mapwrap"><div id="map"></div></section>
 </main>
-<footer>가게 정보 출처: 네이버 검색 API · 지도: OpenStreetMap(키 없을 때)/네이버 지도(키 입력 시) · 상황 태그와 소개는 직접 작성 · 아래 데이터는 시연용 가상 샘플입니다</footer>
+<footer>가게 기본 정보: 네이버 검색 API · 영업시간·메뉴·추천 상황은 팀이 직접 확인해 입력한 정보라 실제와 다를 수 있어요. 방문 전에 네이버에서 최신 정보를 확인하세요.</footer>
 
 <script>
 /* ===== 설정 ===== */
@@ -90,10 +115,28 @@ const CONFIG = {
 
 /* ===== 상황 목록 ===== */
 const SITUATIONS = [
-  ["all","전체 보기"],["drink","일 끝나고 술 한잔"],["date","기념일 데이트"],
-  ["solo","혼밥"],["team","단체 회식"],["parents","부모님과 식사"],
-  ["cafe_mood","분좋카","분위기 좋은 카페"],["cafe_study","카공","공부하기 좋은 카페"]
+  ["all","전체"],
+  ["cafe_study","카공","공부하기 좋은 카페"],["cafe_mood","분좋카","분위기 좋은 카페"],["dessert","디저트"],
+  ["date","데이트"],["solo","혼밥"],["team","회식"],
+  ["pick","오순도순 맛zip","오순도순 팀원들이 직접 추천하는 맛집"]
 ];
+/* ===== 업종 (먹고 싶은 메뉴) ===== */
+const TYPES = ["한식","양식","중식","일식","카페&디저트","고기&구이&회","아시아음식"];
+const TYPE_RULES = [   /* food_type.py와 같은 규칙. shops.json에 type이 없을 때만 씀 */
+  ["카페&디저트", /카페|디저트|베이커리|커피|제과|빙수|케이크|도넛|와플/],
+  ["고기&구이&회", /고기|구이|삼겹|소고기|갈비|곱창|막창|생선회|횟집|회포차|육회|대패|족발|보쌈/],
+  ["아시아음식", /베트남|태국|인도|아시아|동남아|쌀국수|팟타이|커리|카레/],
+  ["중식", /중식|중국|마라|짬뽕|짜장|훠궈|양꼬치/],
+  ["일식", /일식|일본|돈가스|돈까스|라멘|초밥|스시|이자카야|오뎅|꼬치|우동|소바|규동|로바다/],
+  ["양식", /양식|이탈리아|피자|파스타|햄버거|버거|샌드위치|멕시코|스테이크|브런치|와인|BAR/],
+  ["한식", /한식|국밥|감자탕|순대|치킨|닭|포장마차|포차|주점|맥주|호프|쌈밥|냉면|찌개|백반|솥밥|칼국수|샤브|분식|떡볶이|술집/]
+];
+function typeOf(s){
+  if(TYPES.includes(s.type)) return s.type;
+  const t = (s.category||"") + " " + s.name;
+  const r = TYPE_RULES.find(([,rx]) => rx.test(t));
+  return r ? r[0] : "";
+}
 
 /* ===== 시연용 샘플 데이터 (가상 가게). 실제로는 shops.json으로 교체 ===== */
 const SAMPLE = [
@@ -111,34 +154,24 @@ const SAMPLE = [
 
 /* ===== 상태 ===== */
 let onlyOpen = false, unknownHidden = 0;
+let currentType = "all";
 let SHOPS = [], current = "all", selected = null, map = null, naverOn = false, leafletOn = false;
 const markers = [];
 const $ = s => document.querySelector(s);
 
 /* ===== 추천 로직: 조건 필터 + 상황 일치 순 정렬 ===== */
-const KINDS = ["술집","고기·치킨","한식","중식","일식·회","양식·간편식","카페·디저트","기타"];
-function kind(s){
-  const c = (s.category||"") + " " + s.name;
-  if(/이자카야|요리주점|맥주|호프|포장마차|포차|와인|BAR|오뎅|꼬치|술집|주점/.test(c)) return "술집";
-  if(/고기|구이|삼겹|소고기|갈비|곱창|치킨|닭/.test(c)) return "고기·치킨";
-  if(/중식|마라/.test(c)) return "중식";
-  if(/일식|돈가스|일본식|초밥|생선회/.test(c)) return "일식·회";
-  if(/양식|이탈리아|햄버거|샌드위치|멕시코|피자|파스타|베트남|아시/.test(c)) return "양식·간편식";
-  if(/카페|베이커리|디저트|커피/.test(c)) return "카페·디저트";
-  if(/한식|국밥|감자탕|순대|쌈밥|냉면|찌개|죽/.test(c)) return "한식";
-  return "기타";
-}
 function filterShops(skipOpen){
-  const size = +$("#size").value, budget = +$("#budget").value, k = $("#kind").value;
+  const size = +$("#size").value, budget = +$("#budget").value;
   return SHOPS.filter(s =>
     s.maxGroup >= size && s.price <= budget &&
     (current === "all" || s.situations.includes(current)) &&
-    (k === "all" || kind(s) === k) &&
+    (currentType === "all" || typeOf(s) === currentType) &&
     (skipOpen || !onlyOpen || openStatus(s).state === "open"));
 }
 function recommend(){
   const list = filterShops(false);
-  if(current === "all") return list.sort((a,b) => a.name.localeCompare(b.name, "ko"));
+  const pickFirst = (a,b) => b.situations.includes("pick") - a.situations.includes("pick");
+  if(current === "all") return list.sort((a,b) => pickFirst(a,b) || a.name.localeCompare(b.name, "ko"));
   return list.sort((a,b) => (b.situations.length === 1) - (a.situations.length === 1) || a.price - b.price);
 }
 
@@ -191,10 +224,59 @@ function hoursLine(s){
   return parts.join(" · ");
 }
 
+/* ===== 가게 상세 정보 (카드·말풍선 공통) ===== */
+const SITLABEL = Object.fromEntries(SITUATIONS.filter(x => x[0] !== "all").map(([k,l]) => [k,l]));
+const WEEKORDER = ["mon","tue","wed","thu","fri","sat","sun"];
+function esc(v){ return String(v ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+function showRange(r){ return r === "24h" || r === "24시간" ? "24시간" : r.replace("-", " – "); }
+function hasHours(s){ return !!(s.hours || s.hoursByDay); }
+function todayLine(s){
+  if(!hasHours(s)) return "";
+  const d = seoulNow().day, r = hoursFor(s, d);
+  return `<div class="today"><b>오늘(${DAYKO[d]})</b> ${r ? showRange(r) : "휴무"}${r && s.breakTime ? ` <span class="dim">브레이크 ${showRange(s.breakTime)}</span>` : ""}</div>`;
+}
+function weekTable(s){
+  if(!hasHours(s)) return "";
+  const today = seoulNow().day;
+  return `<details class="week"><summary>요일별 영업시간</summary><table>${WEEKORDER.map(d => {
+    const r = hoursFor(s, d);
+    return `<tr class="${d === today ? "now" : ""}"><th>${DAYKO[d]}</th><td>${r ? showRange(r) : "휴무"}</td></tr>`;
+  }).join("")}</table>${s.breakTime ? `<div class="dim">브레이크타임 ${showRange(s.breakTime)}</div>` : ""}</details>`;
+}
+function menuBlock(s, n){
+  const items = (s.menuItems || []).filter(m => m.name);
+  if(items.length) return `<ul class="menu">${items.slice(0, n).map(m =>
+    `<li><span>${esc(m.name)}</span><i></i><b>${m.price ? Number(m.price).toLocaleString("ko-KR") + "원" : "시가"}</b></li>`).join("")}</ul>`;
+  return s.menu ? `<div class="meta">추천 메뉴 · ${esc(s.menu)}</div>` : "";
+}
+function pickBlock(s){
+  if(!s.situations.includes("pick")) return "";
+  return `<div class="pickbox"><b>오순도순 추천${s.pickBy ? ` · ${esc(s.pickBy)}` : ""}</b>${s.pickNote ? `<div>${esc(s.pickNote)}</div>` : ""}</div>`;
+}
+function sitBlock(s){
+  return s.situations.length ? `<div class="sits">${s.situations.filter(k => k !== "pick").map(k => `<span class="sit">${SITLABEL[k] || k}</span>`).join("")}</div>` : "";
+}
+function linkBlock(s){
+  const q = encodeURIComponent(s.name.replace("[예시] ",""));
+  return `<div class="links">
+      <a href="https://map.naver.com/p/search/${q}" target="_blank" rel="noopener">네이버에서 최신 정보</a>
+      <a href="https://map.naver.com/p/directions/-/${s.lng},${s.lat},${encodeURIComponent(s.name)}/-/walk" target="_blank" rel="noopener">길찾기</a>
+    </div>`;
+}
+function metaLine(s){
+  return [typeOf(s) || s.category.split(">").pop(), s.area || s.address, s.price ? won(s.price) : "", s.maxGroup ? `최대 ${s.maxGroup}명` : ""].filter(Boolean).map(esc).join(" · ");
+}
+
 /* ===== 렌더링 ===== */
 function renderChips(){
   $("#chips").innerHTML = SITUATIONS.map(([k,l,tip]) =>
-    `<button class="chip" data-k="${k}" title="${tip||l}" aria-pressed="${k===current}">${l}</button>`).join("");
+    `<button class="chip${k==="pick"?" pick":""}" data-k="${k}" title="${tip||l}" aria-pressed="${k===current}">${l}</button>`).join("");
+  $("#kinds").innerHTML = [["all","전체"], ...TYPES.map(t => [t,t])].map(([k,l]) =>
+    `<button class="chip" data-t="${k}" aria-pressed="${k===currentType}">${l}</button>`).join("");
+  $("#kinds").onclick = e => {
+    const b = e.target.closest(".chip"); if(!b) return;
+    currentType = b.dataset.t; selected = null; renderChips(); update();
+  };
   $("#chips").onclick = e => {
     const b = e.target.closest(".chip"); if(!b) return;
     current = b.dataset.k; selected = null; renderChips(); update();
@@ -203,20 +285,19 @@ function renderChips(){
 function won(p){ return ["","1만원 안팎","2만원 안팎","3만원 이상"][p]; }
 function renderList(items){
   if(!items.length){
-    $("#list").innerHTML = `<div class="empty">${onlyOpen?"지금 영업 중인 가게가 없거나, 영업시간 정보가 아직 입력되지 않았어요.":"조건에 맞는 가게가 없어요.<br>인원이나 예산을 넓혀 보세요."}</div>`; return;
+    $("#list").innerHTML = `<div class="empty">${onlyOpen?"지금 영업 중인 가게가 없거나, 영업시간 정보가 아직 입력되지 않았어요.":"조건에 맞는 가게가 없어요.<br>상황이나 메뉴, 인원·예산을 바꿔 보세요."}</div>`; return;
   }
   $("#list").innerHTML = `<div class="count">총 ${items.length}곳${onlyOpen?` · 영업중만 (영업시간 정보 없는 ${unknownHidden}곳은 제외)`:""}</div>` + items.map((s,i) => `
     <article class="card ${s===selected?"on":""}" data-i="${i}" tabindex="0">
-      ${s.photo?`<img class="ph" src="${s.photo}" alt="${s.name}" loading="lazy" onerror="this.remove()">`:""}
-      <h3><span>${s.name}${statusChip(s)}</span>${s.draft?`<span class="fit">태그 초안</span>`:""}</h3>
-      <div class="meta">${s.category.split(">").pop()} · ${s.area||s.address} · ${won(s.price)} · 최대 ${s.maxGroup}명</div>${hoursLine(s)?`<div class="meta">${hoursLine(s)}</div>`:""}
-      ${s.summary?`<p>${s.summary}</p>`:""}
-      <div class="tags">${s.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div>
-      <div class="links">
-        <a href="https://map.naver.com/p/search/${encodeURIComponent(s.name.replace("[예시] ",""))}" target="_blank" rel="noopener">네이버 플레이스</a>
-        <a href="https://map.naver.com/p/directions/-/${s.lng},${s.lat},${encodeURIComponent(s.name)}/-/walk" target="_blank" rel="noopener">길찾기</a>
-      </div>
-      ${s.menu?`<div class="meta" style="margin:6px 0 0">추천 메뉴: ${s.menu}</div>`:""}
+      ${s.photo?`<img class="ph" src="${esc(s.photo)}" alt="${esc(s.name)}" loading="lazy" onerror="this.remove()">`:""}
+      <h3><span>${esc(s.name)}${statusChip(s)}</span>${s.draft?`<span class="fit">태그 초안</span>`:""}</h3>
+      <div class="meta">${metaLine(s)}</div>
+      ${todayLine(s)}
+      ${pickBlock(s)}
+      ${sitBlock(s)}
+      ${s.summary?`<p>${esc(s.summary)}</p>`:""}
+      ${menuBlock(s, 3)}
+      ${linkBlock(s)}
     </article>`).join("");
   $("#list").onclick = $("#list").onkeydown = e => {
     if(e.type==="keydown" && e.key!=="Enter") return;
@@ -226,22 +307,25 @@ function renderList(items){
   };
 }
 function infoHTML(s){
-  const q = encodeURIComponent(s.name.replace("[예시] ",""));
   return `<div class="iw">
-    ${s.photo?`<img class="ph" src="${s.photo}" alt="${s.name}" loading="lazy" onerror="this.remove()">`:""}
-    <div class="iw-name">${s.name}${statusChip(s)}${s.draft?` <span class="fit">태그 초안</span>`:""}</div>
-    <div class="iw-meta">${s.category.split(">").pop()} · ${s.area||s.address} · ${won(s.price)}</div>
-    ${hoursLine(s)?`<div class="iw-meta">${hoursLine(s)}</div>`:""}
-    ${s.summary?`<div>${s.summary}</div>`:""}
-    <div class="tags" style="margin:6px 0">${s.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div>
-    <div class="links">
-      <a href="https://map.naver.com/p/search/${q}" target="_blank" rel="noopener">네이버 플레이스</a>
-      <a href="https://map.naver.com/p/directions/-/${s.lng},${s.lat},${encodeURIComponent(s.name)}/-/walk" target="_blank" rel="noopener">길찾기</a>
-    </div></div>`;
+    ${s.photo?`<img class="ph" src="${esc(s.photo)}" alt="${esc(s.name)}" loading="lazy" onerror="this.remove()">`:""}
+    <div class="iw-name">${esc(s.name)}${statusChip(s)}</div>
+    <div class="iw-meta">${metaLine(s)}</div>
+    ${todayLine(s)}
+    ${weekTable(s)}
+    ${hasHours(s) ? "" : `<div class="iw-meta">영업시간 정보가 아직 없어요</div>`}
+    ${pickBlock(s)}
+    ${sitBlock(s)}
+    ${s.summary?`<div class="iw-sum">${esc(s.summary)}</div>`:""}
+    ${menuBlock(s, 6)}
+    ${s.tags.length?`<div class="tags">${s.tags.map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>`:""}
+    ${s.draft?`<div class="iw-meta">추천 상황은 업종으로 추정한 초안이에요</div>`:""}
+    ${linkBlock(s)}
+  </div>`;
 }
 let infoWin = null;
 function openInfo(s, m){
-  if(!infoWin) infoWin = new naver.maps.InfoWindow({ maxWidth:260, borderColor:"#dde3e6", borderWidth:1, anchorSize:new naver.maps.Size(12,12), pixelOffset:new naver.maps.Point(0,-4) });
+  if(!infoWin) infoWin = new naver.maps.InfoWindow({ maxWidth:320, borderColor:"#ddd4bf", borderWidth:1, anchorSize:new naver.maps.Size(12,12), pixelOffset:new naver.maps.Point(0,-4) });
   infoWin.setContent(infoHTML(s));
   infoWin.open(map, m);
 }
@@ -260,18 +344,18 @@ function drawMarkers(items){
   items.forEach(s => {
     if(leafletOn){
       const m = L.marker([s.lat, s.lng], {
-        icon: L.divIcon({className:"", html:`<div class="lp ${s===selected?"on":""}"></div>`, iconSize:[22,22], iconAnchor:[11,11]}),
+        icon: L.divIcon({className:"", html:`<div class="lp ${s===selected?"on":""} ${s.situations.includes("pick")?"pk":""}"></div>`, iconSize:[22,22], iconAnchor:[11,11]}),
         title: s.name
       }).addTo(map);
       m.bindTooltip(s.name);
-      m.bindPopup(infoHTML(s), {maxWidth:260});
+      m.bindPopup(infoHTML(s), {maxWidth:320, minWidth:260});
       m.on("click", () => select(s, items));
       markers.push(m);
       if(s===selected) m.openPopup();
     } else if(naverOn){
       const m = new naver.maps.Marker({
         position:new naver.maps.LatLng(s.lat,s.lng), map, title:s.name,
-        icon:{ content:`<div class="lp ${s===selected?"on":""}"></div>`, anchor:new naver.maps.Point(s===selected?14:10, s===selected?14:10) },
+        icon:{ content:`<div class="lp ${s===selected?"on":""} ${s.situations.includes("pick")?"pk":""}"></div>`, anchor:new naver.maps.Point(s===selected?14:10, s===selected?14:10) },
         zIndex: s===selected ? 100 : 1
       });
       naver.maps.Event.addListener(m,"click",()=>select(s,items));
@@ -361,6 +445,7 @@ function update(){
 }
 
 /* ===== 시작 ===== */
+const VALID_SIT = new Set(SITUATIONS.map(x => x[0]).filter(k => k !== "all"));
 async function start(){
   try{
     const r = await fetch(CONFIG.DATA_URL);
@@ -369,13 +454,12 @@ async function start(){
   }catch(e){ SHOPS = SAMPLE; }
   if(!SHOPS.length) SHOPS = SAMPLE;
   SHOPS = SHOPS.filter(s => typeof s.lat === "number" && typeof s.lng === "number").map(s => ({
-    ...s, situations:(s.situations||[]).map(x => x === "friends" ? "drink" : x).filter(x => x !== "study"), tags:s.tags||[], category:s.category||"",
-    summary:s.summary||"", menu:s.menu||"", photo:s.photo||"", price:s.price||2, maxGroup:s.maxGroup||30
+    ...s, situations:(s.situations||[]).filter(x => VALID_SIT.has(x)), tags:s.tags||[], category:s.category||"",
+    summary:s.summary||"", menu:s.menu||"", photo:s.photo||"", menuItems:Array.isArray(s.menuItems)?s.menuItems:[], price:s.price||2, maxGroup:s.maxGroup||30
   }));
-  $("#kind").innerHTML = '<option value="all">전체</option>' + KINDS.map(k => `<option>${k}</option>`).join("");
   renderChips();
   $("#openBtn").onclick = () => { onlyOpen = !onlyOpen; $("#openBtn").setAttribute("aria-pressed", onlyOpen); selected = null; update(); };
-  ["#size","#budget","#kind"].forEach(id => $(id).onchange = () => { selected=null; update(); });
+  ["#size","#budget"].forEach(id => $(id).onchange = () => { selected=null; update(); });
   loadMap();
 }
 start();

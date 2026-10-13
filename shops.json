@@ -6,7 +6,6 @@
     "lat": 37.3180614,
     "lng": 126.8394794,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -17,7 +16,8 @@
     "summary": "고기구이 전문점",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "고기&구이&회"
   },
   {
     "name": "윤선장어시장 안산중앙점",
@@ -26,9 +26,7 @@
     "lat": 37.3174908,
     "lng": 126.8407616,
     "situations": [
-      "drink",
-      "team",
-      "parents"
+      "team"
     ],
     "price": 3,
     "maxGroup": 12,
@@ -38,7 +36,8 @@
     "summary": "회와 해산물 전문점",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "고기&구이&회"
   },
   {
     "name": "어장관리 본점",
@@ -47,9 +46,7 @@
     "lat": 37.3137465,
     "lng": 126.8287203,
     "situations": [
-      "drink",
-      "team",
-      "parents"
+      "team"
     ],
     "price": 3,
     "maxGroup": 12,
@@ -59,7 +56,8 @@
     "summary": "회와 해산물 전문점",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "고기&구이&회"
   },
   {
     "name": "피제리아 라쪼",
@@ -78,7 +76,8 @@
     "summary": "파스타와 양식 레스토랑",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "양식"
   },
   {
     "name": "긴자료코 안산고잔점",
@@ -97,7 +96,8 @@
     "summary": "돈가스 전문점",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "일식"
   },
   {
     "name": "육술",
@@ -106,7 +106,6 @@
     "lat": 37.3113383,
     "lng": 126.8320611,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -118,7 +117,8 @@
     "summary": "안주 중심의 요리주점",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "이자카야 춘 본점",
@@ -127,7 +127,6 @@
     "lat": 37.3094054,
     "lng": 126.8274512,
     "situations": [
-      "drink",
       "date"
     ],
     "price": 2,
@@ -139,7 +138,8 @@
     "summary": "술과 안주를 즐기는 이자카야",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "일식"
   },
   {
     "name": "참새주방 안산중앙동점",
@@ -148,7 +148,6 @@
     "lat": 37.3182899,
     "lng": 126.8399054,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -160,7 +159,8 @@
     "summary": "안주 중심의 요리주점",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "오끼 안산중앙점",
@@ -169,7 +169,6 @@
     "lat": 37.3182051,
     "lng": 126.8402623,
     "situations": [
-      "drink",
       "date"
     ],
     "price": 2,
@@ -181,7 +180,8 @@
     "summary": "술과 안주를 즐기는 이자카야",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "일식"
   },
   {
     "name": "기술",
@@ -190,7 +190,6 @@
     "lat": 37.3175031,
     "lng": 126.8417703,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -202,7 +201,8 @@
     "summary": "안주 중심의 요리주점",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "키테이",
@@ -211,7 +211,6 @@
     "lat": 37.3089848,
     "lng": 126.8286801,
     "situations": [
-      "drink",
       "date"
     ],
     "price": 2,
@@ -223,7 +222,8 @@
     "summary": "술과 안주를 즐기는 이자카야",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "일식"
   },
   {
     "name": "가모메",
@@ -232,7 +232,6 @@
     "lat": 37.314216,
     "lng": 126.8394157,
     "situations": [
-      "drink",
       "date"
     ],
     "price": 2,
@@ -244,7 +243,8 @@
     "summary": "술과 안주를 즐기는 이자카야",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "일식"
   },
   {
     "name": "료이키",
@@ -253,7 +253,6 @@
     "lat": 37.3106651,
     "lng": 126.8289998,
     "situations": [
-      "drink",
       "date"
     ],
     "price": 2,
@@ -265,7 +264,8 @@
     "summary": "술과 안주를 즐기는 이자카야",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "일식"
   },
   {
     "name": "구삼육 본점",
@@ -274,7 +274,6 @@
     "lat": 37.3193036,
     "lng": 126.8362786,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -285,7 +284,8 @@
     "summary": "고기구이 전문점",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "고기&구이&회"
   },
   {
     "name": "할매솥뚜껑삼겹살 안산고잔점",
@@ -294,7 +294,6 @@
     "lat": 37.31239,
     "lng": 126.8390202,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -305,7 +304,8 @@
     "summary": "고기구이 전문점",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "고기&구이&회"
   },
   {
     "name": "제주화로집 안산고잔점",
@@ -314,7 +314,6 @@
     "lat": 37.3094637,
     "lng": 126.8283144,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -325,7 +324,8 @@
     "summary": "고기구이 전문점",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "고기&구이&회"
   },
   {
     "name": "방자화로 안산고잔점",
@@ -334,7 +334,6 @@
     "lat": 37.3196433,
     "lng": 126.8333135,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -345,7 +344,8 @@
     "summary": "고기구이 전문점",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "고기&구이&회"
   },
   {
     "name": "석암생소금구이 안산고잔점",
@@ -354,7 +354,6 @@
     "lat": 37.3129938,
     "lng": 126.8316057,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -365,7 +364,8 @@
     "summary": "고기구이 전문점",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "고기&구이&회"
   },
   {
     "name": "포크너",
@@ -384,7 +384,8 @@
     "summary": "파스타와 양식 레스토랑",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "양식"
   },
   {
     "name": "포크너 안산고잔점",
@@ -403,7 +404,8 @@
     "summary": "파스타와 양식 레스토랑",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "양식"
   },
   {
     "name": "어썸 파스타&스테이크",
@@ -422,7 +424,8 @@
     "summary": "파스타와 양식 레스토랑",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "양식"
   },
   {
     "name": "더져니",
@@ -441,7 +444,8 @@
     "summary": "파스타와 양식 레스토랑",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "양식"
   },
   {
     "name": "원주통닭",
@@ -449,9 +453,7 @@
     "address": "경기도 안산시 단원구 고잔2길 73 삼일빌딩",
     "lat": 37.3177147,
     "lng": 126.8395487,
-    "situations": [
-      "drink"
-    ],
+    "situations": [],
     "price": 2,
     "maxGroup": 12,
     "tags": [
@@ -460,7 +462,8 @@
     "summary": "치킨·닭요리 전문점",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "문화주점사월",
@@ -469,7 +472,6 @@
     "lat": 37.3176007,
     "lng": 126.8408795,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -481,7 +483,8 @@
     "summary": "안주 중심의 요리주점",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "1번지통닭 안산중앙점",
@@ -489,9 +492,7 @@
     "address": "경기도 안산시 단원구 고잔로 95 상가2동 1층 101호",
     "lat": 37.3193145,
     "lng": 126.8359058,
-    "situations": [
-      "drink"
-    ],
+    "situations": [],
     "price": 2,
     "maxGroup": 12,
     "tags": [
@@ -500,7 +501,8 @@
     "summary": "치킨·닭요리 전문점",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "플라워팟카페",
@@ -509,7 +511,9 @@
     "lat": 37.3087131,
     "lng": 126.8283804,
     "situations": [
-      "date"
+      "cafe_mood",
+      "cafe_study",
+      "dessert"
     ],
     "price": 1,
     "maxGroup": 6,
@@ -519,7 +523,8 @@
     "summary": "카페·디저트",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "카페&디저트"
   },
   {
     "name": "라뽐블루",
@@ -528,7 +533,8 @@
     "lat": 37.3082322,
     "lng": 126.8283814,
     "situations": [
-      "date"
+      "cafe_mood",
+      "cafe_study"
     ],
     "price": 1,
     "maxGroup": 6,
@@ -538,7 +544,8 @@
     "summary": "카페·디저트",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "카페&디저트"
   },
   {
     "name": "SORO",
@@ -547,7 +554,8 @@
     "lat": 37.3195645,
     "lng": 126.8324893,
     "situations": [
-      "date"
+      "cafe_mood",
+      "cafe_study"
     ],
     "price": 1,
     "maxGroup": 6,
@@ -557,7 +565,8 @@
     "summary": "카페·디저트",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "카페&디저트"
   },
   {
     "name": "젠젠 안산중앙점",
@@ -566,7 +575,8 @@
     "lat": 37.3187846,
     "lng": 126.8384524,
     "situations": [
-      "date"
+      "cafe_mood",
+      "cafe_study"
     ],
     "price": 1,
     "maxGroup": 6,
@@ -576,7 +586,8 @@
     "summary": "카페·디저트",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "카페&디저트"
   },
   {
     "name": "동명닭집 고잔직영점",
@@ -584,9 +595,7 @@
     "address": "경기도 안산시 단원구 광덕2로 185-10 101, 102호",
     "lat": 37.3105331,
     "lng": 126.8315123,
-    "situations": [
-      "drink"
-    ],
+    "situations": [],
     "price": 2,
     "maxGroup": 12,
     "tags": [
@@ -595,7 +604,8 @@
     "summary": "치킨·닭요리 전문점",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "속초오징어어시장 안산고잔점",
@@ -604,9 +614,7 @@
     "lat": 37.3109135,
     "lng": 126.8278648,
     "situations": [
-      "drink",
-      "team",
-      "parents"
+      "team"
     ],
     "price": 3,
     "maxGroup": 12,
@@ -616,7 +624,8 @@
     "summary": "회와 해산물 전문점",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "고기&구이&회"
   },
   {
     "name": "팔도반점 본점",
@@ -625,8 +634,7 @@
     "lat": 37.3175389,
     "lng": 126.8394457,
     "situations": [
-      "team",
-      "parents"
+      "team"
     ],
     "price": 1,
     "maxGroup": 12,
@@ -636,7 +644,8 @@
     "summary": "중식당",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "중식"
   },
   {
     "name": "북경",
@@ -645,8 +654,7 @@
     "lat": 37.3208938,
     "lng": 126.8323238,
     "situations": [
-      "team",
-      "parents"
+      "team"
     ],
     "price": 1,
     "maxGroup": 12,
@@ -656,7 +664,8 @@
     "summary": "중식당",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "중식"
   },
   {
     "name": "오복당",
@@ -665,8 +674,7 @@
     "lat": 37.3104705,
     "lng": 126.828581,
     "situations": [
-      "team",
-      "parents"
+      "team"
     ],
     "price": 1,
     "maxGroup": 12,
@@ -676,7 +684,8 @@
     "summary": "중식당",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "중식"
   },
   {
     "name": "동방명주",
@@ -685,8 +694,7 @@
     "lat": 37.3109287,
     "lng": 126.8279765,
     "situations": [
-      "team",
-      "parents"
+      "team"
     ],
     "price": 1,
     "maxGroup": 12,
@@ -696,7 +704,8 @@
     "summary": "중식당",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "중식"
   },
   {
     "name": "홍푸",
@@ -705,8 +714,7 @@
     "lat": 37.3087232,
     "lng": 126.8282742,
     "situations": [
-      "team",
-      "parents"
+      "team"
     ],
     "price": 1,
     "maxGroup": 12,
@@ -716,7 +724,8 @@
     "summary": "중식당",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "중식"
   },
   {
     "name": "돈카츠석",
@@ -735,7 +744,8 @@
     "summary": "돈가스 전문점",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "일식"
   },
   {
     "name": "휘니치로",
@@ -754,7 +764,8 @@
     "summary": "일본식 라멘집",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "일식"
   },
   {
     "name": "어화일식",
@@ -773,7 +784,8 @@
     "summary": "일식당",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "일식"
   },
   {
     "name": "코이아이",
@@ -792,7 +804,8 @@
     "summary": "일식당",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "일식"
   },
   {
     "name": "부드럽소 안산고잔본점",
@@ -801,7 +814,6 @@
     "lat": 37.3116444,
     "lng": 126.8277985,
     "situations": [
-      "parents",
       "team",
       "date"
     ],
@@ -813,7 +825,8 @@
     "summary": "소고기구이 전문점",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "고기&구이&회"
   },
   {
     "name": "엉터리 무한대패 안산중앙점",
@@ -822,7 +835,6 @@
     "lat": 37.317981,
     "lng": 126.8396634,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -833,7 +845,8 @@
     "summary": "고기구이 전문점",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "고기&구이&회"
   },
   {
     "name": "대탐소실 안산점",
@@ -842,7 +855,6 @@
     "lat": 37.3095638,
     "lng": 126.8304335,
     "situations": [
-      "parents",
       "team",
       "date"
     ],
@@ -854,7 +866,8 @@
     "summary": "소고기구이 전문점",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "고기&구이&회"
   },
   {
     "name": "아리화 안산고잔동 본점",
@@ -863,7 +876,6 @@
     "lat": 37.310221,
     "lng": 126.8274177,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -874,7 +886,8 @@
     "summary": "고기구이 전문점",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "고기&구이&회"
   },
   {
     "name": "진성관 안산점",
@@ -883,7 +896,6 @@
     "lat": 37.319322,
     "lng": 126.828407,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -894,7 +906,8 @@
     "summary": "고기구이 전문점",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "고기&구이&회"
   },
   {
     "name": "달리는맥주",
@@ -903,7 +916,6 @@
     "lat": 37.3184046,
     "lng": 126.8385152,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -915,7 +927,8 @@
     "summary": "맥주와 안주를 즐기는 호프집",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "역전할머니맥주 안산고잔점",
@@ -924,7 +937,6 @@
     "lat": 37.3112088,
     "lng": 126.8319274,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -936,7 +948,8 @@
     "summary": "맥주와 안주를 즐기는 호프집",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "러너펍 안산점",
@@ -945,7 +958,6 @@
     "lat": 37.317668,
     "lng": 126.8390522,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -957,7 +969,8 @@
     "summary": "맥주와 안주를 즐기는 호프집",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "김복남맥주 고잔신도시점",
@@ -966,7 +979,6 @@
     "lat": 37.3132383,
     "lng": 126.8321057,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -978,7 +990,8 @@
     "summary": "맥주와 안주를 즐기는 호프집",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "금별맥주 안산고잔점",
@@ -987,7 +1000,6 @@
     "lat": 37.3109505,
     "lng": 126.8314196,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -999,7 +1011,8 @@
     "summary": "맥주와 안주를 즐기는 호프집",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "주술곳간",
@@ -1008,7 +1021,6 @@
     "lat": 37.3105521,
     "lng": 126.829163,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -1020,7 +1032,8 @@
     "summary": "안주 중심의 요리주점",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "누누",
@@ -1029,7 +1042,6 @@
     "lat": 37.3104316,
     "lng": 126.8285569,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -1041,7 +1053,8 @@
     "summary": "안주 중심의 요리주점",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "큐베",
@@ -1050,7 +1063,6 @@
     "lat": 37.3175419,
     "lng": 126.8349128,
     "situations": [
-      "drink",
       "date"
     ],
     "price": 2,
@@ -1062,7 +1074,8 @@
     "summary": "술과 안주를 즐기는 이자카야",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "일식"
   },
   {
     "name": "불작당 안산고잔점",
@@ -1071,7 +1084,6 @@
     "lat": 37.313777,
     "lng": 126.828129,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -1083,7 +1095,8 @@
     "summary": "안주 중심의 요리주점",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "아이언펌킨 안산고잔동점",
@@ -1092,7 +1105,6 @@
     "lat": 37.3100753,
     "lng": 126.828907,
     "situations": [
-      "drink",
       "date"
     ],
     "price": 3,
@@ -1103,7 +1115,8 @@
     "summary": "와인과 칵테일을 즐기는 바",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "양식"
   },
   {
     "name": "공주회포차",
@@ -1111,9 +1124,7 @@
     "address": "경기도 안산시 단원구 광덕2로 193-11 102호",
     "lat": 37.3108096,
     "lng": 126.8319207,
-    "situations": [
-      "drink"
-    ],
+    "situations": [],
     "price": 3,
     "maxGroup": 16,
     "tags": [
@@ -1122,7 +1133,8 @@
     "summary": "포장마차 스타일 술집",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "고기&구이&회"
   },
   {
     "name": "회포차김도주",
@@ -1130,9 +1142,7 @@
     "address": "경기도 안산시 단원구 광덕대로 168 신화타운 2층 201호",
     "lat": 37.3111866,
     "lng": 126.8306781,
-    "situations": [
-      "drink"
-    ],
+    "situations": [],
     "price": 2,
     "maxGroup": 16,
     "tags": [
@@ -1141,7 +1151,8 @@
     "summary": "포장마차 스타일 술집",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "고기&구이&회"
   },
   {
     "name": "청불천막집포차 안산중앙역점",
@@ -1149,9 +1160,7 @@
     "address": "경기도 안산시 단원구 고잔1길 45 204~205호",
     "lat": 37.3184046,
     "lng": 126.8385152,
-    "situations": [
-      "drink"
-    ],
+    "situations": [],
     "price": 2,
     "maxGroup": 16,
     "tags": [
@@ -1160,7 +1169,8 @@
     "summary": "포장마차 스타일 술집",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "미담",
@@ -1169,7 +1179,6 @@
     "lat": 37.3180043,
     "lng": 126.8386032,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -1181,7 +1190,8 @@
     "summary": "안주 중심의 요리주점",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "김사부의 진짜순대 감자탕",
@@ -1200,7 +1210,8 @@
     "summary": "든든한 국밥·탕 한 끼",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "기울어진뚝배기 안산중앙점",
@@ -1219,7 +1230,8 @@
     "summary": "든든한 국밥·탕 한 끼",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "한라면옥 안산고잔점",
@@ -1228,7 +1240,6 @@
     "lat": 37.3089375,
     "lng": 126.8308702,
     "situations": [
-      "parents",
       "team"
     ],
     "price": 2,
@@ -1239,7 +1250,8 @@
     "summary": "한식당",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "통영상회 본점",
@@ -1248,7 +1260,6 @@
     "lat": 37.3018556,
     "lng": 126.8412192,
     "situations": [
-      "parents",
       "team"
     ],
     "price": 2,
@@ -1259,7 +1270,8 @@
     "summary": "한식당",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "인더비엣 한양대에리카점",
@@ -1278,7 +1290,8 @@
     "summary": "베트남 음식점",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "아시아음식"
   },
   {
     "name": "A.P. coffee&bakery",
@@ -1287,7 +1300,8 @@
     "lat": 37.3008578,
     "lng": 126.8376409,
     "situations": [
-      "date"
+      "cafe_mood",
+      "cafe_study"
     ],
     "price": 1,
     "maxGroup": 6,
@@ -1297,7 +1311,8 @@
     "summary": "카페·디저트",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "카페&디저트"
   },
   {
     "name": "스타벅스 안산한양대점",
@@ -1306,7 +1321,8 @@
     "lat": 37.3007692,
     "lng": 126.8381539,
     "situations": [
-      "date"
+      "cafe_mood",
+      "cafe_study"
     ],
     "price": 1,
     "maxGroup": 6,
@@ -1316,7 +1332,8 @@
     "summary": "카페·디저트",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "카페&디저트"
   },
   {
     "name": "남월 쌀국수 안산한양대 본점",
@@ -1335,7 +1352,8 @@
     "summary": "베트남 음식점",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "아시아음식"
   },
   {
     "name": "만취",
@@ -1344,7 +1362,6 @@
     "lat": 37.3011695,
     "lng": 126.8395338,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -1356,7 +1373,8 @@
     "summary": "안주 중심의 요리주점",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "육회바른연어 안산한양대점",
@@ -1365,7 +1383,6 @@
     "lat": 37.3008578,
     "lng": 126.8376409,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -1377,7 +1394,8 @@
     "summary": "안주 중심의 요리주점",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "고기&구이&회"
   },
   {
     "name": "투다리 한양대학점",
@@ -1385,9 +1403,7 @@
     "address": "경기도 안산시 상록구 학사2길 18",
     "lat": 37.3002927,
     "lng": 126.8400046,
-    "situations": [
-      "drink"
-    ],
+    "situations": [],
     "price": 2,
     "maxGroup": 10,
     "tags": [
@@ -1397,7 +1413,8 @@
     "summary": "꼬치와 오뎅 안주 술집",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "일식"
   },
   {
     "name": "역전할머니맥주 안산한양대점",
@@ -1406,7 +1423,6 @@
     "lat": 37.3011185,
     "lng": 126.8395231,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -1418,7 +1434,8 @@
     "summary": "맥주와 안주를 즐기는 호프집",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "에이플러스",
@@ -1427,7 +1444,6 @@
     "lat": 37.3011961,
     "lng": 126.8375572,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -1439,7 +1455,8 @@
     "summary": "안주 중심의 요리주점",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "사이쵸쇼우지",
@@ -1448,7 +1465,6 @@
     "lat": 37.3093008,
     "lng": 126.8313147,
     "situations": [
-      "drink",
       "date"
     ],
     "price": 2,
@@ -1460,7 +1476,8 @@
     "summary": "술과 안주를 즐기는 이자카야",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "일식"
   },
   {
     "name": "최군로바다야끼 고잔점",
@@ -1469,7 +1486,6 @@
     "lat": 37.3093215,
     "lng": 126.8311582,
     "situations": [
-      "drink",
       "date"
     ],
     "price": 2,
@@ -1481,7 +1497,8 @@
     "summary": "술과 안주를 즐기는 이자카야",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "일식"
   },
   {
     "name": "이서식당",
@@ -1490,7 +1507,6 @@
     "lat": 37.3013351,
     "lng": 126.8373101,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -1501,7 +1517,8 @@
     "summary": "고기구이 전문점",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "고기&구이&회"
   },
   {
     "name": "두루정 안산한양대점",
@@ -1510,7 +1527,6 @@
     "lat": 37.3012627,
     "lng": 126.8381027,
     "situations": [
-      "parents",
       "team"
     ],
     "price": 2,
@@ -1521,7 +1537,8 @@
     "summary": "한식당",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "구곡산장",
@@ -1530,7 +1547,6 @@
     "lat": 37.2938712,
     "lng": 126.8437109,
     "situations": [
-      "parents",
       "team"
     ],
     "price": 2,
@@ -1541,7 +1557,8 @@
     "summary": "한식당",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "91콩삼 콩나물삼겹살",
@@ -1550,7 +1567,6 @@
     "lat": 37.2999772,
     "lng": 126.8400462,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -1561,7 +1577,8 @@
     "summary": "고기구이 전문점",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "고기&구이&회"
   },
   {
     "name": "파앤피파스타하우스 한양대에리카점",
@@ -1580,7 +1597,8 @@
     "summary": "파스타와 양식 레스토랑",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "양식"
   },
   {
     "name": "언니네화덕핏짜",
@@ -1599,7 +1617,8 @@
     "summary": "파스타와 양식 레스토랑",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "양식"
   },
   {
     "name": "쓰리파스타 한양대에리카점",
@@ -1618,7 +1637,8 @@
     "summary": "파스타와 양식 레스토랑",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "양식"
   },
   {
     "name": "앤의식탁",
@@ -1637,7 +1657,8 @@
     "summary": "파스타와 양식 레스토랑",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "양식"
   },
   {
     "name": "투파인드피터 한양대에리카점",
@@ -1656,7 +1677,8 @@
     "summary": "파스타와 양식 레스토랑",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "양식"
   },
   {
     "name": "써브웨이 안산한양대점",
@@ -1675,7 +1697,8 @@
     "summary": "가볍게 먹기 좋은 식당",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "양식"
   },
   {
     "name": "도스마스 본점",
@@ -1694,7 +1717,8 @@
     "summary": "파스타와 양식 레스토랑",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "양식"
   },
   {
     "name": "슈퍼크리스피 한양대에리카점",
@@ -1713,7 +1737,8 @@
     "summary": "파스타와 양식 레스토랑",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "양식"
   },
   {
     "name": "오멜트",
@@ -1722,7 +1747,9 @@
     "lat": 37.3018111,
     "lng": 126.8411972,
     "situations": [
-      "date"
+      "cafe_mood",
+      "cafe_study",
+      "dessert"
     ],
     "price": 1,
     "maxGroup": 6,
@@ -1732,7 +1759,8 @@
     "summary": "카페·디저트",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "카페&디저트"
   },
   {
     "name": "오쏘커피",
@@ -1741,7 +1769,8 @@
     "lat": 37.3010968,
     "lng": 126.8406553,
     "situations": [
-      "date"
+      "cafe_mood",
+      "cafe_study"
     ],
     "price": 1,
     "maxGroup": 6,
@@ -1751,7 +1780,8 @@
     "summary": "카페·디저트",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "카페&디저트"
   },
   {
     "name": "더스크커피랩",
@@ -1760,7 +1790,8 @@
     "lat": 37.3013563,
     "lng": 126.8375253,
     "situations": [
-      "date"
+      "cafe_mood",
+      "cafe_study"
     ],
     "price": 1,
     "maxGroup": 6,
@@ -1770,7 +1801,8 @@
     "summary": "카페·디저트",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "카페&디저트"
   },
   {
     "name": "동양솥밥 한양대에리카점",
@@ -1779,7 +1811,6 @@
     "lat": 37.300685,
     "lng": 126.8383694,
     "situations": [
-      "parents",
       "team"
     ],
     "price": 2,
@@ -1790,7 +1821,8 @@
     "summary": "든든한 한식 한 상",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "한양솥밥 사동본점",
@@ -1799,7 +1831,6 @@
     "lat": 37.3018959,
     "lng": 126.8431059,
     "situations": [
-      "parents",
       "team"
     ],
     "price": 2,
@@ -1810,7 +1841,8 @@
     "summary": "든든한 한식 한 상",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "오소돈",
@@ -1819,7 +1851,6 @@
     "lat": 37.2943921,
     "lng": 126.8427841,
     "situations": [
-      "parents",
       "team"
     ],
     "price": 2,
@@ -1830,7 +1861,8 @@
     "summary": "든든한 한식 한 상",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "도야짬뽕 안산한양대점",
@@ -1839,8 +1871,7 @@
     "lat": 37.3016125,
     "lng": 126.8371374,
     "situations": [
-      "team",
-      "parents"
+      "team"
     ],
     "price": 1,
     "maxGroup": 12,
@@ -1850,7 +1881,8 @@
     "summary": "중식당",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "중식"
   },
   {
     "name": "탕화쿵푸마라탕 한양대에리카점",
@@ -1869,7 +1901,8 @@
     "summary": "마라탕 전문점",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "중식"
   },
   {
     "name": "보배반점 안산한양대점",
@@ -1878,8 +1911,7 @@
     "lat": 37.3011609,
     "lng": 126.8374018,
     "situations": [
-      "team",
-      "parents"
+      "team"
     ],
     "price": 1,
     "maxGroup": 12,
@@ -1889,7 +1921,8 @@
     "summary": "중식당",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "중식"
   },
   {
     "name": "전국5대짬뽕교동짬뽕",
@@ -1898,8 +1931,7 @@
     "lat": 37.2956627,
     "lng": 126.8426489,
     "situations": [
-      "team",
-      "parents"
+      "team"
     ],
     "price": 1,
     "maxGroup": 12,
@@ -1909,7 +1941,8 @@
     "summary": "중식당",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "중식"
   },
   {
     "name": "찐하오마라탕",
@@ -1928,7 +1961,8 @@
     "summary": "마라탕 전문점",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "중식"
   },
   {
     "name": "에비수",
@@ -1947,7 +1981,8 @@
     "summary": "일식당",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "일식"
   },
   {
     "name": "백소정 안산한양대점",
@@ -1966,7 +2001,8 @@
     "summary": "돈가스 전문점",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "일식"
   },
   {
     "name": "코운즈",
@@ -1985,7 +2021,8 @@
     "summary": "일식당",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "일식"
   },
   {
     "name": "담결 한양대에리카점",
@@ -2004,7 +2041,8 @@
     "summary": "일식당",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "일식"
   },
   {
     "name": "면식당 안산한양대점",
@@ -2023,7 +2061,8 @@
     "summary": "일식당",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "일식"
   },
   {
     "name": "원조감자탕일미집안산한양대점",
@@ -2042,7 +2081,8 @@
     "summary": "든든한 국밥·탕 한 끼",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "신선샤브&칼국수",
@@ -2051,7 +2091,6 @@
     "lat": 37.3015709,
     "lng": 126.838437,
     "situations": [
-      "parents",
       "team"
     ],
     "price": 2,
@@ -2062,7 +2101,8 @@
     "summary": "한식당",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "현가병천순대장터국밥",
@@ -2081,7 +2121,8 @@
     "summary": "든든한 국밥·탕 한 끼",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "로드락비어 안산한양대점",
@@ -2090,7 +2131,6 @@
     "lat": 37.3010042,
     "lng": 126.8378861,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -2102,7 +2142,8 @@
     "summary": "맥주와 안주를 즐기는 호프집",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "동그라미",
@@ -2111,7 +2152,6 @@
     "lat": 37.3007425,
     "lng": 126.8398405,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -2123,7 +2163,8 @@
     "summary": "맥주와 안주를 즐기는 호프집",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "아지트",
@@ -2132,7 +2173,6 @@
     "lat": 37.2999563,
     "lng": 126.8404623,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -2144,7 +2184,8 @@
     "summary": "맥주와 안주를 즐기는 호프집",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "머꼬가게",
@@ -2153,7 +2194,6 @@
     "lat": 37.3039642,
     "lng": 126.8391406,
     "situations": [
-      "drink",
       "team"
     ],
     "price": 2,
@@ -2165,7 +2205,8 @@
     "summary": "맥주와 안주를 즐기는 호프집",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "바이닐볼트",
@@ -2174,7 +2215,6 @@
     "lat": 37.3090195,
     "lng": 126.8277125,
     "situations": [
-      "drink",
       "date"
     ],
     "price": 3,
@@ -2185,7 +2225,8 @@
     "summary": "와인과 칵테일을 즐기는 바",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "양식"
   },
   {
     "name": "사운드뱅",
@@ -2194,7 +2235,6 @@
     "lat": 37.3090973,
     "lng": 126.8287145,
     "situations": [
-      "drink",
       "date"
     ],
     "price": 3,
@@ -2205,7 +2245,8 @@
     "summary": "와인과 칵테일을 즐기는 바",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "양식"
   },
   {
     "name": "달달포차",
@@ -2213,9 +2254,7 @@
     "address": "경기도 안산시 상록구 학사2길 2-1 B01",
     "lat": 37.299563,
     "lng": 126.8385349,
-    "situations": [
-      "drink"
-    ],
+    "situations": [],
     "price": 2,
     "maxGroup": 16,
     "tags": [
@@ -2224,7 +2263,8 @@
     "summary": "포장마차 스타일 술집",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "한양대포차",
@@ -2232,9 +2272,7 @@
     "address": "경기도 안산시 상록구 학사3길 3",
     "lat": 37.3005714,
     "lng": 126.8408277,
-    "situations": [
-      "drink"
-    ],
+    "situations": [],
     "price": 2,
     "maxGroup": 16,
     "tags": [
@@ -2243,7 +2281,8 @@
     "summary": "포장마차 스타일 술집",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "포차천국 안산고잔점",
@@ -2251,9 +2290,7 @@
     "address": "경기도 안산시 단원구 광덕2로 186-7 포차천국 안산고잔점",
     "lat": 37.3088793,
     "lng": 126.8312557,
-    "situations": [
-      "drink"
-    ],
+    "situations": [],
     "price": 2,
     "maxGroup": 16,
     "tags": [
@@ -2262,7 +2299,8 @@
     "summary": "포장마차 스타일 술집",
     "menu": "",
     "area": "고잔동 일대",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "색시국밥 한대점",
@@ -2281,7 +2319,8 @@
     "summary": "든든한 국밥·탕 한 끼",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "순뼈감 안산한양대점",
@@ -2300,7 +2339,8 @@
     "summary": "든든한 국밥·탕 한 끼",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   },
   {
     "name": "소문난토종순대",
@@ -2319,6 +2359,7 @@
     "summary": "든든한 국밥·탕 한 끼",
     "menu": "",
     "area": "ERICA 앞",
-    "draft": true
+    "draft": true,
+    "type": "한식"
   }
 ]
