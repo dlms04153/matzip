@@ -85,7 +85,7 @@ footer{padding:6px 14px;font-size:12px;color:var(--sub);background:var(--panel);
 </head>
 <body>
 <header>
-  <h1>오늘 어디 가지? 안산 고잔동 · ERICA 앞</h1>
+  <h1>오늘 어디 가지? 안산 중앙동 · 고잔동 · ERICA 앞</h1>
   <p>상황을 고르고, 먹고 싶은 메뉴를 고르면 어울리는 가게만 보여드려요.</p>
   <div class="frow"><span class="flabel">상황</span><div class="chips" id="chips" role="group" aria-label="상황 선택"></div></div>
   <div class="frow"><span class="flabel">메뉴</span><div class="chips" id="kinds" role="group" aria-label="업종 선택"></div></div>
@@ -382,7 +382,7 @@ function bounds(){ return {n:37.3235,s:37.2875,w:126.8260,e:126.8470}; }
 
 function initFakeMap(msg){
   const m = $("#map"); m.className = "fake";
-  m.innerHTML = `<span class="zone" style="left:38%;top:10%">고잔동 일대</span>
+  m.innerHTML = `<span class="zone" style="left:38%;top:10%">중앙동 · 고잔동</span>
     <span class="zone" style="left:50%;top:78%">한양대 ERICA 앞</span>
     <div class="note">${msg}</div>`;
 }
